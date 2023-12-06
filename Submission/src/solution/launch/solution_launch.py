@@ -1,9 +1,13 @@
-from launch import LaunchDescription
+import os
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription, LaunchContext
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, GroupAction, LogInfo, OpaqueFunction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
+from launch_ros.substitutions import FindPackageShare, LaunchConfiguration
 from launch_ros.actions import Node
+package_name = 'solutions'
 
 def group_action(context : LaunchContext):
     num_robots = int(context.launch_configurations['num_robots'])
@@ -12,34 +16,22 @@ def group_action(context : LaunchContext):
 
     match num_robots:
         case 1:
-            robots_list["robot1"] = {}
-            robots_list["robot1"]["y"] =  0.0
+            robots_list = ["robot1"]
         case 2:
-            robots_list["robot1"] = {}
-            robots_list["robot1"]["y"] =  1.0
-
-            robots_list["robot2"] = {}
-            robots_list["robot2"]["y"] = -1.0
+            robots_list = ["robot1", "robot2"] 
         case _:
-            robots_list["robot1"] = {}
-            robots_list["robot1"]["y"] =  2.0
-
-            robots_list["robot2"] = {}
-            robots_list["robot2"]["y"] =  0.0
-
-            robots_list["robot3"] = {}
-            robots_list["robot3"]["y"] = -2.0
+            robots_list = ["robot1", "robot2", "robot3"]
 
     bringup_cmd_group = []
 
     for robot_name in robots_list:
-        group = GroupAction([
-            robot_controller_cmd = Node(
-            package='solution',
-            executable='robot_controller',
-            output='screen',
-            namespace=robot_name)
-        ])
+        group = GroupAction(
+            Node(
+                package='solution',
+                executable='robot_controller',
+                output='screen',
+                namespace=robot_name)
+        )
         
         bringup_cmd_group.append(group)
 
@@ -72,7 +64,7 @@ def generate_launch_description():
                           }.items()
     )
 
-    bringup_cmd_group = OpaqueFunction(function=group_action)
+    bringup_sol_cmd_group = OpaqueFunction(function=group_action)
 
     ld = LaunchDescription()
 

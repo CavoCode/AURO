@@ -1,1 +1,1 @@
-String result
+string result

@@ -1,7 +1,3 @@
-#############
-## Imports ##
-#############
-
 import sys
 
 import rclpy
@@ -12,11 +8,11 @@ from rclpy.qos import QoSPresetProfiles
 
 #IMPORT MSG SPECIFICS
 from geometry_msgs.msg import Twist, Pose, PoseStamped
-from std_msgs.msg import Header
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
+from auto_interfaces.msg import StringWithPose
 from assessment_interfaces.msg import HomeZone
-from solution_interfaces.msg import GoalStatus, GoHome, StringWithPose
+from solution_interfaces.msg import GoalStatus, GoHome
 
 from tf_transformations import euler_from_quaternion
 import angles
@@ -24,10 +20,6 @@ import angles
 from enum import Enum
 import random
 import math
-
-######################
-## Global Variables ##
-######################
 
 LINEAR_VELOCITY  = 0.3 # Metres per second
 ANGULAR_VELOCITY = 0.5 # Radians per second
@@ -42,10 +34,7 @@ SCAN_LEFT = 1
 SCAN_BACK = 2
 SCAN_RIGHT = 3
 
-############
-## States ##
-############
-
+#Finite State machine (FSM) states for the overall machine
 class State(Enum):
     IDLE = 0
     MOVING_TO_GOAL = 1
@@ -53,15 +42,7 @@ class State(Enum):
     LOCATE_HOME = 4
     TURNING_TO_AVOID_OBSTACLE = 5
 
-##########
-## Node ##
-##########
-
 class RobotController(Node):
-
-    ####################
-    ## Initialisation ##
-    ####################
 
     def __init__(self):
         super().__init__('robot_controller')
@@ -77,6 +58,7 @@ class RobotController(Node):
         self.previous_yaw = 0.0
         self.turn_angle = 0.0
         self.turn_direction = TURN_LEFT
+        
         self.scan_triggered = [False] * 4
 
         ################################
@@ -157,7 +139,7 @@ class RobotController(Node):
         current_time = self.get_clock().now().to_msg()
 
         if abs((msg.header.stamp - current_time).to_sec()) < time_window:
-            self.goHome_trigger = msg.go_home_trigger 
+            self.goHome_trigger = msg.GoHome_Trigger 
 
             if self.goHome_trigger == True:
                 self.state = State.RETURNING_HOME
@@ -173,6 +155,7 @@ class RobotController(Node):
             self.home_goal_pose.position.x = msg.x
             self.home_goal_pose.position.y = msg.y
             self.home_goal_size = msg.size
+
 
     def item_callback(self, msg):
         self.items = msg
@@ -223,11 +206,10 @@ class RobotController(Node):
             case State.IDLE:
                 self.stop_robot()
 
-                if self.goHome_trigger == True and self.is_robot_home != True:
+                if self.goHome_trigger == True:
                     self.state = State.RETURNING_HOME
                 elif self.goal_pose_updated == True:
                     self.state = State.MOVING_TO_GOAL
-                    self.is_robot_home = False
                 elif self.is_robot_home == True:
                     self.goal_publisher.publish('Home')
                 else:
@@ -244,7 +226,6 @@ class RobotController(Node):
                 cmd_vel_msg.linear.x = min(0.5, 0.1 * distance_to_goal)
                 cmd_vel_msg.angular.z = 0.1 * angle_to_goal
                 self.cmd_vel_publisher.publish(cmd_vel_msg)
-                self.goal_publisher.publish('Processing')
 
                 if distance_to_goal < 0.1:
                     self.previous_state = self.state
@@ -416,6 +397,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.try_shutdown()
+
 
 if __name__ == '__main__':
     main()
