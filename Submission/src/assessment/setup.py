@@ -37,11 +37,11 @@ setup(
     name=package_name,
     version='0.0.0',
     packages=find_packages(exclude=['test']),
-    data_files=package_files(data_files, ['models/', 'launch/', 'worlds/', 'rviz/']),
+    data_files=package_files(data_files, ['models/', 'launch/', 'worlds/', 'rviz/', 'params/', 'maps/', 'config/']),
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='N/A',
-    maintainer_email='N/A',
+    maintainer='am567',
+    maintainer_email='alan.millard@york.ac.uk',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
@@ -51,7 +51,6 @@ setup(
             'item_sensor = assessment.item_sensor:main',
             'home_zone_sensor = assessment.home_zone_sensor:main',
             'robot_sensor = assessment.robot_sensor:main',
-            'robot_controller = assessment.robot_controller:main' 
         ],
     },
 )

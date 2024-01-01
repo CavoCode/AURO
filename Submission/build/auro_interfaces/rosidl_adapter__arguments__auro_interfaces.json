@@ -1,0 +1,8 @@
+{
+  "package_name": "auro_interfaces",
+  "non_idl_tuples": [
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/auro_interfaces:msg/StringWithPose.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/auro_interfaces:msg/Item.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/auro_interfaces:msg/ItemList.msg"
+  ]
+}
