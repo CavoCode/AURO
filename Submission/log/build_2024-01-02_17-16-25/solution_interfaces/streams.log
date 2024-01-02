@@ -1,0 +1,199 @@
+[1.890s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[2.050s] [  1%] Built target solution_interfaces__cpp
+[2.142s] [  1%] Built target ament_cmake_python_copy_solution_interfaces
+[2.220s] [ 12%] Built target solution_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.297s] [ 23%] Built target solution_interfaces__rosidl_typesupport_introspection_cpp
+[3.493s] running egg_info
+[3.497s] writing solution_interfaces.egg-info/PKG-INFO
+[3.497s] writing dependency_links to solution_interfaces.egg-info/dependency_links.txt
+[3.498s] writing top-level names to solution_interfaces.egg-info/top_level.txt
+[3.509s] reading manifest file 'solution_interfaces.egg-info/SOURCES.txt'
+[3.509s] writing manifest file 'solution_interfaces.egg-info/SOURCES.txt'
+[3.604s] [ 23%] Built target ament_cmake_python_build_solution_interfaces_egg
+[3.682s] [ 34%] Built target solution_interfaces__rosidl_typesupport_cpp
+[3.756s] [ 45%] Built target solution_interfaces__rosidl_generator_c
+[3.923s] [ 56%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c
+[4.073s] [ 67%] Built target solution_interfaces__rosidl_typesupport_c
+[4.292s] [ 78%] Built target solution_interfaces__rosidl_typesupport_introspection_c
+[4.362s] [ 78%] Built target solution_interfaces
+[4.433s] [ 80%] Built target solution_interfaces__py
+[4.526s] [ 89%] Built target solution_interfaces__rosidl_generator_py
+[4.601s] [ 92%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.677s] [ 96%] Built target solution_interfaces__rosidl_typesupport_c__pyext
+[4.791s] [100%] Built target solution_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.840s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[5.716s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+[5.739s] -- Install configuration: ""
+[5.743s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/rosidl_interfaces/solution_interfaces
+[5.743s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.744s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.745s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/example.h
+[5.745s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/goal_status.h
+[5.746s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_generator_c__visibility_control.h
+[5.746s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/go_home.h
+[5.746s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/string_with_pose.h
+[5.747s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.747s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__functions.c
+[5.748s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__type_support.h
+[5.748s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.h
+[5.749s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__struct.h
+[5.749s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__type_support.h
+[5.749s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__struct.h
+[5.750s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__functions.h
+[5.751s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.h
+[5.751s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__struct.h
+[5.751s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__functions.h
+[5.752s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__struct.h
+[5.752s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__functions.c
+[5.752s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__functions.c
+[5.752s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__functions.h
+[5.753s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__functions.c
+[5.753s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__functions.h
+[5.753s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/library_path.sh
+[5.753s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/library_path.dsv
+[5.754s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_generator_c.so
+[5.754s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.754s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.754s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.755s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.755s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__rosidl_typesupport_fastrtps_c.h
+[5.755s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_fastrtps_c.h
+[5.755s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_c.h
+[5.756s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_c.h
+[5.756s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.756s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.756s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.757s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/string_with_pose.hpp
+[5.757s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.757s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__struct.hpp
+[5.757s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__traits.hpp
+[5.758s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__traits.hpp
+[5.758s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__builder.hpp
+[5.758s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__struct.hpp
+[5.759s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__traits.hpp
+[5.759s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__builder.hpp
+[5.759s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__builder.hpp
+[5.759s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__struct.hpp
+[5.760s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__traits.hpp
+[5.760s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__builder.hpp
+[5.760s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__struct.hpp
+[5.760s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/goal_status.hpp
+[5.761s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/example.hpp
+[5.761s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/go_home.hpp
+[5.761s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.762s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.762s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.762s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.762s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__rosidl_typesupport_fastrtps_cpp.hpp
+[5.763s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_cpp.hpp
+[5.763s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/dds_fastrtps
+[5.763s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_fastrtps_cpp.hpp
+[5.763s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[5.764s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.764s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.764s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.764s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.765s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.765s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__rosidl_typesupport_introspection_c.h
+[5.765s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_introspection_c.h
+[5.766s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__type_support.c
+[5.766s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_introspection_c.h
+[5.766s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__type_support.c
+[5.766s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_introspection_c.h
+[5.767s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.c
+[5.767s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.c
+[5.767s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_introspection_c.so
+[5.767s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_c.so
+[5.768s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[5.768s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[5.768s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[5.769s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_introspection_cpp.hpp
+[5.769s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_introspection_cpp.hpp
+[5.769s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_introspection_cpp.hpp
+[5.769s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__rosidl_typesupport_introspection_cpp.hpp
+[5.770s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/go_home__type_support.cpp
+[5.770s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.cpp
+[5.770s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/goal_status__type_support.cpp
+[5.770s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.cpp
+[5.771s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.771s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_cpp.so
+[5.771s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/pythonpath.sh
+[5.771s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/pythonpath.dsv
+[5.772s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info
+[5.772s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[5.772s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[5.772s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.773s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.773s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces
+[5.773s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.774s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_c.c
+[5.774s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.774s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/__init__.py
+[5.774s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so
+[5.775s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.775s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg
+[5.776s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_string_with_pose_s.c
+[5.776s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_example_s.c
+[5.776s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_goal_status.py
+[5.776s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_example.py
+[5.777s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_string_with_pose.py
+[5.777s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_go_home_s.c
+[5.777s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_go_home.py
+[5.778s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/__init__.py
+[5.778s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_goal_status_s.c
+[5.778s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[5.779s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.844s] Listing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces'...
+[5.844s] Listing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg'...
+[5.854s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.854s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.855s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.856s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_generator_py.so
+[5.857s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/Example.idl
+[5.857s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/GoalStatus.idl
+[5.858s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/GoHome.idl
+[5.858s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/StringWithPose.idl
+[5.858s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/Example.msg
+[5.859s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/GoalStatus.msg
+[5.859s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/GoHome.msg
+[5.860s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/StringWithPose.msg
+[5.860s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/package_run_dependencies/solution_interfaces
+[5.860s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/parent_prefix_path/solution_interfaces
+[5.861s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/ament_prefix_path.sh
+[5.861s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/ament_prefix_path.dsv
+[5.862s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/path.sh
+[5.862s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/path.dsv
+[5.863s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.bash
+[5.863s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.sh
+[5.864s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.zsh
+[5.864s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.dsv
+[5.865s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.dsv
+[5.865s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/packages/solution_interfaces
+[5.866s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cExport.cmake
+[5.866s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.867s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.867s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.868s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cppExport.cmake
+[5.868s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.869s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.869s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.869s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.869s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cExport.cmake
+[5.870s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.870s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.870s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.870s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cppExport.cmake
+[5.871s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.871s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_pyExport.cmake
+[5.871s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.871s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.872s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.872s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.872s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.872s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.873s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.873s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.873s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfacesConfig.cmake
+[5.873s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfacesConfig-version.cmake
+[5.874s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.xml
+[6.626s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces

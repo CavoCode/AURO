@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from solution_interfaces/msg/GoHome.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module solution_interfaces {
+  module msg {
+    struct GoHome {
+      std_msgs::msg::Header header;
+
+      boolean go_home_trigger;
+    };
+  };
+};

@@ -48,6 +48,7 @@ def robot_controller_actions(context : LaunchContext):
             Node(
                 package='solution',
                 executable='robot_state_manager',
+                # prefix=['gnome-terminal --tab --execute'],
                 output='screen'
             )
 

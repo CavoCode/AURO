@@ -8,6 +8,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.signals import SignalHandlerOptions
 from rclpy.executors import ExternalShutdownException
+from rclpy.qos import QoSPresetProfiles
 
 #IMPORT MSG SPECIFICS
 from geometry_msgs.msg import Pose, PoseStamped
@@ -40,7 +41,8 @@ class State_Manager(Node):
     ####################
 
     def __init__(self):
-
+        super().__init__('robot_state_manager')
+        
         ##########################
         ## Initialise variables ##
         ##########################
@@ -54,25 +56,23 @@ class State_Manager(Node):
         ################################
 
         self.item_subscriber = self.create_subscription(
-            ItemList,
-            '/items',
-            self.item_callback,
-            10
-        )
+            msg_type=ItemList,
+            topic='/items',
+            callback=self.item_callback,
+            qos_profile=10,
+            callback_group=None)
 
         self.pose_subscriber = self.create_subscription(
             Pose,
             '/current_pose',
             self.pose_callback,
-            10
-        )
+            10)
 
         self.goal_subscriber = self.create_subscription(
             GoalStatus,
             '/goal_status',
             self.pose_callback,
-            10
-        )
+            10)
 
         ###############################
         ## Initialise ROS Publishers ##
@@ -99,10 +99,7 @@ class State_Manager(Node):
         self.goal_status = msg
     
     def item_callback(self, msg):
-        if msg != []:
-            self.items = msg
-        else:
-            self.items = None
+        self.items = msg
 
     ##################
     ## Control Loop ##

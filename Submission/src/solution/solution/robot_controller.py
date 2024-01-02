@@ -18,9 +18,8 @@ from sensor_msgs.msg import LaserScan
 from assessment_interfaces.msg import HomeZone
 from solution_interfaces.msg import GoalStatus, GoHome, StringWithPose
 
-from tf_transformations import euler_from_quaternion
+#Math
 import angles
-
 from enum import Enum
 import random
 import math
@@ -86,7 +85,7 @@ class RobotController(Node):
         self.goal_subscriber = self.create_subscription(
             PoseStamped,
             '/goal_pose',
-            self.goal_status_callback,
+            self.goal_pose_callback,
             10)
         
         self.goHome_subscriber = self.create_subscription(

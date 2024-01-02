@@ -3,7 +3,19 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp"
   "rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp"
   "rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/go_home__builder.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/go_home__struct.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/go_home__traits.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__builder.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__traits.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__builder.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__traits.hpp"
   "rosidl_generator_cpp/solution_interfaces/msg/example.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/go_home.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/goal_status.hpp"
+  "rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

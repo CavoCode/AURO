@@ -1,1 +1,4 @@
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/Example.idl
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/GoalStatus.idl
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/GoHome.idl
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/StringWithPose.idl

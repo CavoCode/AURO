@@ -1,10 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/example__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/example__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/go_home__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/go_home__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp.o.d"
   "libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
   "libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/example__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/go_home__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/go_home__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_cpp.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

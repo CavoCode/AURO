@@ -1,10 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/example__type_support.c.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/example__type_support.c.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/go_home__type_support.c.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/go_home__type_support.c.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/goal_status__type_support.c.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/goal_status__type_support.c.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.c.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.c.o.d"
   "libsolution_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libsolution_interfaces__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/example__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/example__type_support.c"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/go_home__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/go_home__type_support.c"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/goal_status__type_support.c"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

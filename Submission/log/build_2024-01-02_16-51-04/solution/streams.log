@@ -1,0 +1,48 @@
+[4.651s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[6.258s] running egg_info
+[6.269s] creating ../../build/solution/solution.egg-info
+[6.270s] writing ../../build/solution/solution.egg-info/PKG-INFO
+[6.270s] writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt
+[6.271s] writing entry points to ../../build/solution/solution.egg-info/entry_points.txt
+[6.272s] writing requirements to ../../build/solution/solution.egg-info/requires.txt
+[6.272s] writing top-level names to ../../build/solution/solution.egg-info/top_level.txt
+[6.272s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[6.290s] reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[6.295s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[6.296s] running build
+[6.296s] running build_py
+[6.296s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build
+[6.296s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib
+[6.297s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution
+[6.297s] copying solution/robot_state_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution
+[6.303s] copying solution/robot_controller.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution
+[6.304s] copying solution/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution
+[6.314s] copying solution/data_logger.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution
+[6.315s] running install
+[6.315s] running install_lib
+[6.315s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[6.315s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/robot_state_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[6.316s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/robot_controller.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[6.316s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[6.316s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/data_logger.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[6.316s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_state_manager.py to robot_state_manager.cpython-310.pyc
+[6.319s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_controller.py to robot_controller.cpython-310.pyc
+[6.332s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__init__.py to __init__.cpython-310.pyc
+[6.332s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/data_logger.py to data_logger.cpython-310.pyc
+[6.333s] running install_data
+[6.333s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index
+[6.333s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index
+[6.341s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index/packages
+[6.344s] copying resource/solution -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index/packages
+[6.346s] copying package.xml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution
+[6.347s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch
+[6.347s] copying launch/solution_nav2_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch/
+[6.348s] copying launch/solution_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch/
+[6.349s] running install_egg_info
+[6.355s] Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info
+[6.380s] running install_scripts
+[6.485s] Installing data_logger script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[6.487s] Installing robot_controller script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[6.489s] Installing robot_state_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[6.491s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log'
+[6.599s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log --single-version-externally-managed

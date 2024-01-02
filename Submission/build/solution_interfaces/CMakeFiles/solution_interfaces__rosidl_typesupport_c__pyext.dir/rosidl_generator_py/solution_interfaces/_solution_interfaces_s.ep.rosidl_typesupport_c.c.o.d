@@ -205,4 +205,19 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/example__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
- /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/example__functions.h
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/example__functions.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/goal_status__type_support.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/goal_status__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/go_home__type_support.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/go_home__struct.h \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+ /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/go_home__functions.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h
