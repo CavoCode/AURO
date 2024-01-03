@@ -160,7 +160,7 @@ class RobotController(Node):
             if msg.locateHome == False:
                 self.get_logger().info(f"State Manager cannot locate home - Moving Accordingly")
                 self.state = State.LOCATE_HOME
-                
+
             else:
                 self.state = State.IDLE
 
@@ -313,9 +313,9 @@ class RobotController(Node):
         goal_status.status = status
 
         if goal_type != None:
-            goal_status.goal_type = goal_type
+            goal_status.goalType = goal_type
         else:
-            goal_status.goal_type = self.current_goal_type
+            goal_status.goalType = self.current_goal_type
 
         self.goal_publisher.publish(goal_status)
 
