@@ -13,8 +13,8 @@ from rclpy.qos import QoSPresetProfiles
 #IMPORT MSG SPECIFICS
 from geometry_msgs.msg import Pose, PoseStamped
 from std_msgs.msg import Header
-from assessment_interfaces.msg import Item, ItemList
-from solution_interfaces.msg import GoalStatus, GoHome
+from assessment_interfaces.msg import Item, ItemList, HomeZone
+from solution_interfaces.msg import GoalStatus, GoalPosition, LocateHome
 
 from enum import Enum
 import random
@@ -25,10 +25,12 @@ import math
 ############
 
 class State(Enum):
-    IDLE = 0
+    STARTUP = 0
     SEARCH = 1
-    ASSESS_AND_COLLECT_ITEM = 2
-    GO_HOME = 3
+    ASSESS = 2
+    COLLECT = 3
+    CHECK_HOME = 4
+    GO_HOME = 5
 
 ##########
 ## Node ##
@@ -47,11 +49,13 @@ class State_Manager(Node):
         ## Initialise variables ##
         ##########################
 
-        self.state = State.IDLE
+        self.state = State.STARTUP
+        self.status = 'IDLE'
+
+        self.goal_item = Item()
         self.goal_value = 0
-        self.goal_pose_timer = 0
-        self.status = "Goal Request"
-        self.robot_spawned = True
+        self.goal_timer = 0
+
         self.items = ItemList()
         self.pose = Pose()
 
@@ -78,12 +82,19 @@ class State_Manager(Node):
             self.pose_callback,
             10)
 
+        self.homeZone_subscriber = self.create_subscription(
+            HomeZone,
+            '/HomeZone',
+            self.homeZone_callback,
+            10)
+
+
         ###############################
         ## Initialise ROS Publishers ##
         ###############################
 
-        self.goal_pose_publisher = self.create_publisher(PoseStamped, '/goal_pose', 10)
-        self.state_goHome_publisher = self.create_publisher(GoHome, '/goHome_trigger', 10)
+        self.goal_pose_publisher = self.create_publisher(GoalPosition, '/goal_pose', 10)
+        self.locate_home_publisher = self.create_publisher(LocateHome, '/locate_home', 10)
 
         ######################
         ## Initialise Timer ##
@@ -100,7 +111,17 @@ class State_Manager(Node):
         self.pose = msg
 
     def goal_callback(self, msg):
-        self.status = msg.result
+        self.status = msg.status
+        self.goal_type = msg.goalType
+
+    def homeZone_callback(self, msg):
+        self.homeZone_visible = msg.visible
+
+        if self.homeZone_visible == True:
+            self.home_goal_pose = Pose()
+            self.home_goal_pose.position.x = msg.x
+            self.home_goal_pose.position.y = msg.y
+            self.home_goal_size = msg.size
     
     def item_callback(self, msg):
         self.items = msg
@@ -114,142 +135,118 @@ class State_Manager(Node):
         self.get_logger().info(f"State: {self.state}")
 
         match self.state:
-            case State.IDLE:
-                if self.is_robot_carrying():
-                    self.previous_state = self.state
-                    self.state = State.GO_HOME
+            case State.STARTUP:
+                header = Header()
+                header.stamp = self.get_clock().now().to_msg()
+                header.frame_id = 'MOVE TO IDLE'
 
-                else:
-                    if self.robot_spawned: 
-                        self.robot_spawned = False
-                        self.previous_state = self.state
-                        self.state = State.SEARCH
-                    
-                    elif self.is_robot_home():
-                        self.previous_state = self.state
-                        self.state = State.SEARCH
-                    
-                    else:
-                        self.state = self.previous_state
-                        self.previous_state = State.IDLE
-                
-                return
+                locateHomeMsg = LocateHome()
+                locateHomeMsg.header = header
+                locateHomeMsg.locateHome = True
+
+                self.locate_home_publisher.publish(locateHomeMsg)
+                self.state = State.SEARCH
 
             case State.SEARCH:
                 if len(self.items.data) > 0:
                     self.previous_state = self.state
-                    self.state = State.ASSESS_AND_COLLECT_ITEM
-                    self.goal_pose_timer = 0
+                    self.state = State.ASSESS
+                    self.goal_timer = 0
 
                 else:
-                    if self.status == 'Completed':
-                        goal_poseStamped = self.randomize_position()
-                        self.goal_pose_publisher.publish(goal_poseStamped)
-                        self.goal_pose_timer = 0
+                    if self.status == 'IDLE':
+                        self.send_pose('Search')
+                        self.goal_timer = 0
 
-                    elif self.status == 'Processing' and self.goal_pose_timer > 5:
-                        goal_poseStamped = self.randomize_position()
-                        self.goal_pose_publisher.publish(goal_poseStamped)
-                        self.goal_pose_timer = 0
+                    elif self.status == 'Completed' and self.goal_type == 'Home':
+                        self.send_pose('Search')
+                        self.goal_timer = 0
 
-                    elif self.status == 'Goal Request':
-                        goal_poseStamped = self.randomize_position()
-                        self.goal_pose_publisher.publish(goal_poseStamped)
-                        self.goal_pose_timer = 0
+                    elif self.status == 'Completed' and self.goal_type == 'Search':
+                        self.send_pose('Search')
+                        self.goal_timer = 0
+
+                    elif self.status == 'Processing' and self.goal_type == 'Search' and self.goal_timer >= 5:
+                        self.send_pose('Search')
+                        self.goal_timer = 0
+
+                    elif self.status == 'Processing' and self.goal_timer >= 10:
+                        self.send_pose('Search')
+                        self.goal_timer = 0
 
                     else:
-                        self.goal_pose_time += 0.1
+                        self.goal_timer += 0.1
                 
                 return
 
-            case State.ASSESS_AND_COLLECT_ITEM:
+            case State.ASSESS:
                 # Check if the robot is carrying items
-                if self.status != 'Completed':
-                    if self.is_robot_carrying():
-                        if self.goal_value <= self.holding_value:
-                            best_item, distance_to_item = self.assess_items(self.holding_value, 0.5, 1)
-                            
-                            if best_item is not None:
-                                # Set goal to the new item coordinates
-                                self.prev_goal = self.goal_pose
-                                self.goal_pose.pose.position.x = best_item.x
-                                self.goal_pose.pose.position.y = best_item.y
-                                self.goal_value = best_item.value
-                                self.goal_distance = distance_to_item
-
-                                self.send_goal_pose("Item_Goal")
-                                return
-                            else:
-                                self.state = self.previous_state
-                                self.previous_state = State.ASSESS_AND_COLLECT_ITEM
-                        else:
-                            self.send_goal_pose("Item_Goal")
-                            return
-
+                if self.status != 'Completed' and self.goal_type == 'Collect':
+                    better_item_found = self.assess_items(self.goal_value)
+                    
+                    if better_item_found:
+                        self.state = State.COLLECT
                     else:
-                        best_item, distance_to_item = self.assess_items(self.goal_value)
+                        self.state = self.previous_state
+                        self.previous_state = State.ASSESS
+
                         
-                        self.get_logger().info(f"ITEM: {best_item}")
+                elif self.status != 'Completed' and self.goal_type == 'Home':
+                    better_item_found = self.assess_items(self.holding_value)
 
-                        if best_item is not None:
-                            # Set goal to the new item coordinates
-                            self.prev_goal = self.goal_pose
-                            self.goal_pose.pose.position.x = best_item.x
-                            self.goal_pose.pose.position.y = best_item.y
-                            self.goal_value = best_item.value
-                            self.goal_distance = distance_to_item
+                    if better_item_found:
+                        self.state = State.COLLECT
+                    else:
+                        self.state = self.previous_state
+                        self.previous_state = State.ASSESS
 
-                            self.send_goal_pose("Item_Goal")
-                            return
-
-                        else:
-                            self.get_logger().info(f"no best item found - potential infinite loop detected")
-                            return
-                
                 else:
+                    better_item_found = self.assess_items(0)
+                    self.state = State.COLLECT
+
+
+            case State.COLLECT:
+                if len(self.items.data) > 0:
                     self.previous_state = self.state
-                    self.state = State.IDLE
-                    return
+                    self.state = State.ASSESS
+
+                    self.goal_timer = 0
+                
+                if self.status != 'Processing' and self.previous_state == State.ASSESS:
+                    if self.goal_item.x != self.goal_pose.pose.position.x and self.goal_item.y != self.goal_pose.pose.position.y: 
+                        self.goal_pose.pose.position.x = self.goal_item.x
+                        self.goal_pose.pose.position.y = self.goal_item.y
+                        self.send_pose('Collect')
+
+                    elif self.status == 'Completed' and self.goal_type == 'Collect':
+                        self.state = State.CHECK_HOME
+                    
+                    else:
+                        self.send_pose('Collect')
+                else:
+                    if self.goal_timer >= 5:
+                        self.state = State.SEARCH
+                        return
+
+                    self.goal_timer += 0.1        
+            
+
+                return
+
+            case State.CHECK_HOME:
+                if self.homeZone_visible:
+                    self.send_locateHome(True, 'Found Home')
+                    self.state = State.GO_HOME
+                else:
+                    self.send_locateHome(False, 'Find Home')
+
+                return
 
             case State.GO_HOME:
-                if self.status != 'Home':
-                    if len(self.items.data) > 0:
-                        self.previous_state = self.state
-                        self.state = State.ASSESS_AND_COLLECT_ITEM
-
-                        goHome_trigger = GoHome()
-                        header = Header()
-                        header.stamp = self.get_clock().now().to_msg()
-                        header.frame_id = "Stop homing"
-                        goHome_trigger.header = header
-                        goHome_trigger.go_home_trigger = False
-
-                        self.state_goHome_publisher.publish(goHome_trigger)
-                        self.trigger_sent == False #Cancelled
-
-                    else:
-                        if self.trigger_sent == False:
-                            goHome_trigger = GoHome()
-                            header = Header()
-                            header.stamp = self.get_clock().now().to_msg()
-                            header.frame_id = "Start homing"
-                            goHome_trigger.header = header
-                            goHome_trigger.go_home_Trigger = True
-
-                            self.state_goHome_publisher.publish(goHome_trigger)
-                            self.trigger_sent == True
-                    return
-                else:
-                    goHome_trigger = GoHome()
-                    header = Header()
-                    header.stamp = self.get_clock().now().to_msg()
-                    header.frame_id = "Homing Completed"
-                    goHome_trigger.header = header
-                    goHome_trigger.go_home_Trigger = False
-
-                    self.state_goHome_publisher.publish(goHome_trigger)
+                if len(self.items.data) > 0:
                     self.previous_state = self.state
-                    self.state = State.IDLE
+                    self.state = State.ASSESS
+                    self.goal_pose_timer = 0
 
             case _:
                 pass
@@ -259,42 +256,66 @@ class State_Manager(Node):
     ################
 
     def assess_items(self, value_to_compare, goal_distance_threshold = 1, item_distance_threshold = 1.5):
-        best_item = None
+        better_item_found = False
         distance_to_item = 0
 
-        self.get_logger().info(f"DEBUG: {self.items}")
-        self.get_logger().info(f"DEBUG: {self.items.data}")
-
+        item = Item()
         for item in self.items.data:
             distance_to_item = math.sqrt((self.pose.position.x - item.x) ** 2 + (self.pose.position.y - item.y) ** 2)
 
-            if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
-                # Assess if the item is better and closer
-                if item.value > value_to_compare:
-                    best_item = item
+            if self.best_item != None:
+                if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
+                    # Assess if the item is better and closer
+                    if item.value > value_to_compare:
+                        self.prev_goal = self.goal_item
+                        self.goal_item = item
+                        self.goal_value = item.value
+                        self.goal_distance = distance_to_item
+                        better_item_found = True
+                
+            else:
+                self.prev_goal = self.goal_item
+                self.goal_item = item
+                self.goal_value = item.value
+                self.goal_distance = distance_to_item
+                better_item_found = True
 
-        return best_item, distance_to_item
+        return better_item_found
 
-    def is_robot_home(self):
-        if self.status == 'Home' or self.robot_spawned == True:
-            return True
-        else:
-            return False
+    def send_pose(self, goal_type):
+        if goal_type == 'Search':
+            poseStamped = self.randomize_position()
+            
+        elif goal_type == 'Collect':
+            header = Header()
+            header.stamp = self.get_clock().now().to_msg()
+            header.frame_id = goal_type
 
-    def is_robot_carrying(self):
-        return False
+            poseStamped = PoseStamped()
+            poseStamped.header = header
+            poseStamped.pose = self.goal_pose
 
-    def send_goal_pose(self, str_frame_id):
-        header = Header()
-        header.stamp = self.get_clock().now().to_msg()
-        header.frame_id = str_frame_id
+        elif goal_type == 'Home':
 
-        msg = PoseStamped()
-        msg.header = header
-        msg.pose = self.goal_pose
-        
+
+        msg = GoalPosition()
+        msg.poseStamped = poseStamped
+        msg.goalType = goal_type
+
         # Publish the goal_pose to /goal_pose for the robot controller
         self.goal_pose_publisher.publish(msg)
+        return
+
+    def send_locateHome(self, locateHomeBool, frame_id):
+        header = Header()
+        header.stamp = self.get_clock().now().to_msg()
+        header.frame_id = frame_id
+
+        locateHomeMsg = LocateHome()
+        locateHomeMsg.header = header
+        locateHomeMsg.locateHome = locateHomeBool
+
+        self.locate_home_publisher.publish(locateHomeMsg)
 
     def randomize_position(self):
         # Extracting the initial position values
@@ -325,6 +346,7 @@ class State_Manager(Node):
 
         return msg       
     
+
     ##############
     ## Shutdown ##
     ##############

@@ -1,0 +1,2 @@
+PoseStamped poseStamped 
+String goalType

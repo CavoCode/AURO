@@ -11,12 +11,11 @@ from rclpy.executors import ExternalShutdownException
 from rclpy.qos import QoSPresetProfiles
 
 #IMPORT MSG SPECIFICS
-from geometry_msgs.msg import Twist, Pose, PoseStamped
+from geometry_msgs.msg import Twist, Pose
 from std_msgs.msg import Header
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
-from assessment_interfaces.msg import HomeZone
-from solution_interfaces.msg import GoalStatus, GoHome, StringWithPose
+from solution_interfaces.msg import GoalStatus, StringWithPose, GoalPosition, LocateHome
 
 #Math
 from tf_transformations import euler_from_quaternion, transforms3d
@@ -49,9 +48,8 @@ SCAN_RIGHT = 3
 class State(Enum):
     IDLE = 0
     MOVING_TO_GOAL = 1
-    RETURNING_HOME = 3
-    LOCATE_HOME = 4
-    TURNING_TO_AVOID_OBSTACLE = 5
+    LOCATE_HOME = 2
+    TURNING_TO_AVOID_OBSTACLE = 3
 
 ##########
 ## Node ##
@@ -71,6 +69,8 @@ class RobotController(Node):
         ##########################
 
         self.state = State.IDLE
+        self.previous_state = self.state
+
         self.pose = Pose() #Current pose (position and orientation), relative to the odom reference frame
         self.previous_pose = Pose() #Store a snapshot of the pose for comparision against future poses
         self.yaw = 0.0
@@ -78,30 +78,27 @@ class RobotController(Node):
         self.turn_angle = 0.0
         self.turn_direction = TURN_LEFT
         self.scan_triggered = [False] * 4
-        self.goHome_trigger = False
+
+        self.goal_pose = Pose()
         self.goal_pose_updated = False
-        self.is_robot_home = False
+        self.current_goal_type = 'Search'
+
+        self.homeZone_visible = False
 
         ################################
         ## Initialise ROS Subscribers ##
         ################################
 
         self.goal_subscriber = self.create_subscription(
-            PoseStamped,
+            GoalPosition,
             '/goal_pose',
             self.goal_pose_callback,
             10)
         
-        self.goHome_subscriber = self.create_subscription(
-            GoHome,
-            '/goHome_trigger',
-            self.goHome_callback,
-            10)
-        
-        self.homeZone_subscriber = self.create_subscription(
-            HomeZone,
-            '/HomeZone',
-            self.homeZone_callback,
+        self.locateHome_subscriber = self.create_subscription(
+            LocateHome,
+            '/locate_home',
+            self.locate_home_callback,
             10)
 
         self.odom_subscriber = self.create_subscription(
@@ -144,15 +141,15 @@ class RobotController(Node):
         # Get the current clock time
         current_time = self.get_clock().now().to_msg()
 
-        if abs((msg.header.stamp - current_time).to_sec()) < time_window:
-            self.goal_pose = msg.pose
+        if abs((msg.poseStamped.header.stamp - current_time).to_sec()) < time_window:
+            self.goal_pose = msg.poseStamped.pose
+            self.current_goal_type = msg.goalType
             self.get_logger().info(f"Updated the goal position with latest from /goal_pose")
-            self.goal_publisher.publish('Processing')
             self.goal_pose_updated = True
         else:
             self.goal_pose_updated = False
 
-    def goHome_callback(self, msg):
+    def locate_home_callback(self, msg):
         # Define a small time window (in seconds) for matching timestamps
         time_window = 0.005  # Adjust as needed (5 milliseconds in this example)
 
@@ -160,25 +157,12 @@ class RobotController(Node):
         current_time = self.get_clock().now().to_msg()
 
         if abs((msg.header.stamp - current_time).to_sec()) < time_window:
-            self.goHome_trigger = msg.go_home_trigger 
-
-            if self.goHome_trigger == True:
-                self.state = State.RETURNING_HOME
+            if msg.locateHome == False:
+                self.get_logger().info(f"State Manager cannot locate home - Moving Accordingly")
+                self.state = State.LOCATE_HOME
+                
             else:
-                self.previous_state = self.state
                 self.state = State.IDLE
-
-    def homeZone_callback(self, msg):
-        self.homeZone_visible = msg.visible
-
-        if self.homeZone_visible == True:
-            self.home_goal_pose = Pose()
-            self.home_goal_pose.position.x = msg.x
-            self.home_goal_pose.position.y = msg.y
-            self.home_goal_size = msg.size
-
-    def item_callback(self, msg):
-        self.items = msg
 
     def odom_callback(self, msg):
         self.pose = msg.pose.pose # Store the pose in a class variable
@@ -225,19 +209,21 @@ class RobotController(Node):
         match self.state:
             case State.IDLE:
                 self.stop_robot()
+                self.goal_message('IDLE', 'None')
 
-                if self.goHome_trigger == True and self.is_robot_home != True:
-                    self.state = State.RETURNING_HOME
-                elif self.goal_pose_updated == True:
+                if self.goal_pose_updated == True:
+                    self.previous_state = self.state
                     self.state = State.MOVING_TO_GOAL
-                    self.is_robot_home = False
-                elif self.is_robot_home == True:
-                    self.goal_publisher.publish('Home')
+                    self.goal_pose_updated = False
                 else:
                     return
 
             case State.MOVING_TO_GOAL:
+                self.goal_message('Processing')
+
                 if self.check_collision():
+                    self.get_logger().info(f"Collision Detected - Acting accordingly")
+                    self.goal_message('Collison Detected')
                     return
                 
                 distance_to_goal = math.sqrt((self.pose.position.x - self.goal_pose.position.x)**2 + (self.pose.position.y - self.goal_pose.position.y)**2)
@@ -247,82 +233,53 @@ class RobotController(Node):
                 cmd_vel_msg.linear.x = min(0.5, 0.1 * distance_to_goal)
                 cmd_vel_msg.angular.z = 0.1 * angle_to_goal
                 self.cmd_vel_publisher.publish(cmd_vel_msg)
-                self.goal_publisher.publish('Processing')
 
                 if distance_to_goal < 0.1:
                     self.previous_state = self.state
                     self.state = State.IDLE
-                    self.get_logger().info("Robot reached the goal pose")
-                    self.goal_publisher.publish('Completed')
+                    self.get_logger().info("Goal Reached")
+                    
+                    self.goal_message('Completed')
+
                     self.stop_robot()
-
-            case State.RETURNING_HOME:
-                if self.check_collision():
-                    return
-                
-                if self.homeZone_visible == True:
-                    distance_to_home = math.sqrt((self.pose.position.x - self.home_goal_pose.position.x)**2 + (self.pose.position.y - self.home_goal_pose.position.y)**2)
-                    angle_to_home = math.atan2(self.home_goal_pose.position.y - self.pose.position.y, self.home_goal_pose.position.x - self.pose.position.x)
-
-                    cmd_vel_msg = Twist()
-                    cmd_vel_msg.linear.x = min(0.5, 0.1 * distance_to_home)
-                    cmd_vel_msg.angular.z = 0.1 * angle_to_home
-                    self.cmd_vel_publisher.publish(cmd_vel_msg)
-
-                    if distance_to_home < 0.1:
-                        self.previous_state = self.state
-                        self.state = State.IDLE
-                        self.get_logger().info("Robot reached the closest point within the home zone")
-                        self.is_robot_home = True
-                        self.stop_robot()
-                else:
-                    self.previous_state = self.state
-                    self.state = State.LOCATE_HOME
-                    self.previous_yaw = self.yaw
-                    self.turn_angle = 360 + random.uniform(150, 170)
-                    self.turn_check_complete == False
-                    return
 
             case State.LOCATE_HOME:
-                if self.homeZone_visible == True:
-                    self.previous_state = self.state
-                    self.state = State.RETURNING_HOME
-                    self.stop_robot()
-                    self.get_logger().info(f"Located Home Zone at x:{self.home_goal_pose.position.x}, y:{self.home_goal_pose.position.y}")
+                self.get_logger().info(f"Attempting to locate Home Zone")
+                self.goal_message('Finding Home', 'Home')
+
+                if self.check_collision():
+                    self.get_logger().info(f"Collision Detected - Acting accordingly")
+                    self.goal_message('Collison Detected', 'Home')
                     return
 
-                else:
-                    if self.check_collision():
+                if self.turn_check_complete == False:
+                    msg_turn = Twist()
+                    msg_turn.angular.z = 1 * ANGULAR_VELOCITY #Turn Left
+                    self.cmd_vel_publisher.publish(msg_turn)
+
+                    yaw_difference = angles.normalize_angle(self.yaw - self.previous_yaw)
+
+                    if math.fabs(yaw_difference) >= math.radians(self.turn_angle):
+                        self.stop_robot()
+                        self.get_logger().info(f"Homing Turn Check - complete: No Home Zone")
+                        self.get_logger().info(f"Moving for better vantage")
+                        self.turn_check_complete == True
                         return
+                    
+                else:
+                    msg_fwd = Twist()
+                    msg_fwd.linear.x = LINEAR_VELOCITY
 
-                    if self.turn_check_complete == False:
-                        msg_turn = Twist()
-                        msg_turn.angular.z = 1 * ANGULAR_VELOCITY #Turn Left
-                        self.cmd_vel_publisher.publish(msg_turn)
-
-                        yaw_difference = angles.normalize_angle(self.yaw - self.previous_yaw)
-
-                        if math.fabs(yaw_difference) >= math.radians(self.turn_angle):
-                            self.stop_robot()
-                            self.get_logger().info(f"Turn check for home complete, no home found")
-                            self.get_logger().info(f"Moving forward for better vantage")
-                            self.turn_check_complete == True
-                            return
-                        
+                    fwd_duration = 1
+                    if fwd_duration > self.mini_timer:
+                        self.mini_timer += 0.1
                     else:
-                        msg_fwd = Twist()
-                        msg_fwd.linear.x = LINEAR_VELOCITY
- 
-                        fwd_duration = 1
-                        if fwd_duration > self.mini_timer:
-                            self.mini_timer += 0.1
-                        else:
-                            self.stop_robot()
-                            self.get_logger().info(f"Finished moving forward, completing turn check for home")
-                            self.mini_timer = 0
-                            self.turn_angle = 360 + random.uniform(150, 170)
-                            self.turn_check_complete = False
-                            return
+                        self.stop_robot()
+                        self.get_logger().info(f"Finished moving forward, completing turn check for home")
+                        self.mini_timer = 0
+                        self.turn_angle = 360 + random.uniform(150, 170)
+                        self.turn_check_complete = False
+                        return
             
             case State.TURNING_TO_AVOID_OBSTACLE:
                 msg = Twist()
@@ -334,14 +291,12 @@ class RobotController(Node):
                 if math.fabs(yaw_difference) >= math.radians(self.turn_angle):
                     self.stop_robot()
                     self.get_logger().info(f"Finished turning to avoid obstacle, resuming previous state")
+                    self.goal_publisher.publish('Collision Avoided')
 
                     # Transition back to the previous state
                     if self.previous_state == State.MOVING_TO_GOAL:
                         self.previous_state = self.state
                         self.state == State.MOVING_TO_GOAL
-                    elif self.previous_state == State.RETURNING_HOME:
-                        self.previous_state = self.state
-                        self.state == State.RETURNING_HOME
                     elif self.previous_state == State.LOCATE_HOME:
                         self.previous_state = self.state
                         self.state == State.LOCATE_HOME
@@ -352,6 +307,17 @@ class RobotController(Node):
     ################
     ## Procedures ##
     ################
+
+    def goal_message(self, status, goal_type):
+        goal_status = GoalStatus()
+        goal_status.status = status
+
+        if goal_type != None:
+            goal_status.goal_type = goal_type
+        else:
+            goal_status.goal_type = self.current_goal_type
+
+        self.goal_publisher.publish(goal_status)
 
     def check_collision(self):
         # Check for obstacle detection during forward motion
