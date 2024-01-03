@@ -1,0 +1,275 @@
+[1.406s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces -- -j4 -l4
+[2.589s] [  1%] Built target assessment_interfaces__cpp
+[2.590s] [  1%] Built target ament_cmake_python_copy_assessment_interfaces
+[2.592s] [ 12%] Built target assessment_interfaces__rosidl_generator_c
+[2.592s] [ 24%] Built target assessment_interfaces__rosidl_typesupport_cpp
+[2.592s] [ 35%] Built target assessment_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.593s] [ 47%] Built target assessment_interfaces__rosidl_typesupport_introspection_cpp
+[2.594s] [ 58%] Built target assessment_interfaces__rosidl_typesupport_fastrtps_c
+[2.594s] [ 70%] Built target assessment_interfaces__rosidl_typesupport_introspection_c
+[2.595s] [ 81%] Built target assessment_interfaces__rosidl_typesupport_c
+[2.595s] [ 81%] Built target assessment_interfaces
+[2.596s] [ 82%] Built target assessment_interfaces__py
+[2.597s] [ 93%] Built target assessment_interfaces__rosidl_generator_py
+[2.597s] [ 95%] Built target assessment_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.599s] [ 97%] Built target assessment_interfaces__rosidl_typesupport_c__pyext
+[2.599s] [100%] Built target assessment_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.602s] running egg_info
+[2.602s] writing assessment_interfaces.egg-info/PKG-INFO
+[2.603s] writing dependency_links to assessment_interfaces.egg-info/dependency_links.txt
+[2.603s] writing top-level names to assessment_interfaces.egg-info/top_level.txt
+[2.604s] reading manifest file 'assessment_interfaces.egg-info/SOURCES.txt'
+[2.605s] writing manifest file 'assessment_interfaces.egg-info/SOURCES.txt'
+[2.606s] [100%] Built target ament_cmake_python_build_assessment_interfaces_egg
+[2.626s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces -- -j4 -l4
+[4.098s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces
+[4.135s] -- Install configuration: ""
+[4.139s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/ament_index/resource_index/rosidl_interfaces/assessment_interfaces
+[4.142s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.146s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.149s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.153s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item.h
+[4.156s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/robot_list.h
+[4.159s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/robot.h
+[4.162s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_log.h
+[4.165s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_holder.h
+[4.168s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.189s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__functions.c
+[4.196s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__struct.h
+[4.196s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__struct.h
+[4.196s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__struct.h
+[4.197s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__type_support.h
+[4.197s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__functions.c
+[4.197s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__type_support.h
+[4.197s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__type_support.h
+[4.198s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__struct.h
+[4.198s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__type_support.h
+[4.198s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__functions.c
+[4.198s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__functions.h
+[4.198s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__struct.h
+[4.199s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__functions.h
+[4.199s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__functions.h
+[4.199s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__type_support.h
+[4.199s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__type_support.h
+[4.200s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__type_support.h
+[4.205s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__functions.c
+[4.206s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__functions.h
+[4.206s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__type_support.h
+[4.213s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__functions.c
+[4.213s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__functions.h
+[4.214s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__functions.c
+[4.214s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__struct.h
+[4.214s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__struct.h
+[4.215s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__functions.h
+[4.215s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__functions.h
+[4.217s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__functions.c
+[4.217s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__struct.h
+[4.218s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__functions.h
+[4.218s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__functions.c
+[4.218s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/home_zone.h
+[4.218s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_list.h
+[4.219s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_holders.h
+[4.219s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/library_path.sh
+[4.219s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/library_path.dsv
+[4.219s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_generator_c.so
+[4.224s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.225s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.225s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.225s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.225s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__rosidl_typesupport_fastrtps_c.h
+[4.226s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__rosidl_typesupport_fastrtps_c.h
+[4.226s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__rosidl_typesupport_fastrtps_c.h
+[4.226s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__rosidl_typesupport_fastrtps_c.h
+[4.226s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__rosidl_typesupport_fastrtps_c.h
+[4.227s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__rosidl_typesupport_fastrtps_c.h
+[4.227s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__rosidl_typesupport_fastrtps_c.h
+[4.227s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__rosidl_typesupport_fastrtps_c.h
+[4.227s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.236s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.236s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.237s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.237s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.237s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__rosidl_typesupport_introspection_c.h
+[4.237s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__type_support.c
+[4.238s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__rosidl_typesupport_introspection_c.h
+[4.238s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__type_support.c
+[4.238s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__type_support.c
+[4.238s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__rosidl_typesupport_introspection_c.h
+[4.239s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__type_support.c
+[4.239s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__rosidl_typesupport_introspection_c.h
+[4.239s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__type_support.c
+[4.239s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__rosidl_typesupport_introspection_c.h
+[4.239s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__type_support.c
+[4.252s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__rosidl_typesupport_introspection_c.h
+[4.252s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__type_support.c
+[4.252s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__rosidl_typesupport_introspection_c.h
+[4.253s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__type_support.c
+[4.253s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__rosidl_typesupport_introspection_c.h
+[4.253s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_introspection_c.so
+[4.253s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_c.so
+[4.253s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.254s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.254s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item.hpp
+[4.254s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/robot.hpp
+[4.254s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_holders.hpp
+[4.255s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_list.hpp
+[4.255s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/home_zone.hpp
+[4.255s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/robot_list.hpp
+[4.255s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.255s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__struct.hpp
+[4.256s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__traits.hpp
+[4.256s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__struct.hpp
+[4.256s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__traits.hpp
+[4.256s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__struct.hpp
+[4.257s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__struct.hpp
+[4.257s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__builder.hpp
+[4.257s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__struct.hpp
+[4.257s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__builder.hpp
+[4.257s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__traits.hpp
+[4.258s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__traits.hpp
+[4.258s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__builder.hpp
+[4.258s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__builder.hpp
+[4.258s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__builder.hpp
+[4.258s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__traits.hpp
+[4.259s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__struct.hpp
+[4.259s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__builder.hpp
+[4.259s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__struct.hpp
+[4.268s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__builder.hpp
+[4.268s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__builder.hpp
+[4.268s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__struct.hpp
+[4.269s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__traits.hpp
+[4.269s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__traits.hpp
+[4.269s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__traits.hpp
+[4.270s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_holder.hpp
+[4.270s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/item_log.hpp
+[4.270s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.270s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.271s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.271s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.271s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__rosidl_typesupport_fastrtps_cpp.hpp
+[4.271s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__rosidl_typesupport_fastrtps_cpp.hpp
+[4.271s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__rosidl_typesupport_fastrtps_cpp.hpp
+[4.272s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/dds_fastrtps
+[4.272s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__rosidl_typesupport_fastrtps_cpp.hpp
+[4.272s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__rosidl_typesupport_fastrtps_cpp.hpp
+[4.272s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__rosidl_typesupport_fastrtps_cpp.hpp
+[4.273s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__rosidl_typesupport_fastrtps_cpp.hpp
+[4.273s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__rosidl_typesupport_fastrtps_cpp.hpp
+[4.273s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.273s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces
+[4.274s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg
+[4.274s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail
+[4.274s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__rosidl_typesupport_introspection_cpp.hpp
+[4.274s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item__type_support.cpp
+[4.274s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__type_support.cpp
+[4.275s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__type_support.cpp
+[4.275s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__rosidl_typesupport_introspection_cpp.hpp
+[4.275s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_list__rosidl_typesupport_introspection_cpp.hpp
+[4.275s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__rosidl_typesupport_introspection_cpp.hpp
+[4.275s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot__type_support.cpp
+[4.276s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/home_zone__rosidl_typesupport_introspection_cpp.hpp
+[4.276s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__rosidl_typesupport_introspection_cpp.hpp
+[4.276s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__rosidl_typesupport_introspection_cpp.hpp
+[4.276s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_log__type_support.cpp
+[4.277s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__rosidl_typesupport_introspection_cpp.hpp
+[4.277s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holder__type_support.cpp
+[4.277s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/robot_list__type_support.cpp
+[4.277s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/include/assessment_interfaces/assessment_interfaces/msg/detail/item_holders__type_support.cpp
+[4.277s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.278s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_cpp.so
+[4.278s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/pythonpath.sh
+[4.278s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/pythonpath.dsv
+[4.278s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces-0.0.0-py3.10.egg-info
+[4.279s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.284s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.284s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.285s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.285s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces
+[4.285s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/_assessment_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.286s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.286s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.286s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/_assessment_interfaces_s.ep.rosidl_typesupport_c.c
+[4.286s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.286s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/_assessment_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.287s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/libassessment_interfaces__rosidl_generator_py.so
+[4.287s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/__init__.py
+[4.287s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg
+[4.287s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_holder_s.c
+[4.288s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_robot.py
+[4.288s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_list_s.c
+[4.288s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_log_s.c
+[4.288s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_robot_s.c
+[4.288s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_robot_list_s.c
+[4.289s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item.py
+[4.289s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_holders_s.c
+[4.289s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_home_zone.py
+[4.289s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_s.c
+[4.290s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_holders.py
+[4.290s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/__init__.py
+[4.290s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_holder.py
+[4.290s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_log.py
+[4.290s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_item_list.py
+[4.291s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_robot_list.py
+[4.291s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg/_home_zone_s.c
+[4.445s] Listing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces'...
+[4.445s] Listing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/msg'...
+[4.462s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.463s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.464s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages/assessment_interfaces/assessment_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.465s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_generator_py.so
+[4.466s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
+[4.466s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
+[4.467s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
+[4.467s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
+[4.467s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
+[4.468s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
+[4.468s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
+[4.469s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
+[4.469s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.msg
+[4.470s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.msg
+[4.470s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.msg
+[4.470s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/Item.msg
+[4.471s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.msg
+[4.471s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.msg
+[4.472s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.msg
+[4.472s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.msg
+[4.473s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/ament_index/resource_index/package_run_dependencies/assessment_interfaces
+[4.473s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/ament_index/resource_index/parent_prefix_path/assessment_interfaces
+[4.473s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/ament_prefix_path.sh
+[4.474s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/ament_prefix_path.dsv
+[4.474s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/path.sh
+[4.475s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/environment/path.dsv
+[4.475s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/local_setup.bash
+[4.476s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/local_setup.sh
+[4.476s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/local_setup.zsh
+[4.476s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/local_setup.dsv
+[4.477s] -- Installing: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.dsv
+[4.477s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/ament_index/resource_index/packages/assessment_interfaces
+[4.477s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_generator_cExport.cmake
+[4.477s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.479s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.480s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.480s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.480s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.492s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_cExport.cmake
+[4.492s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.492s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_generator_cppExport.cmake
+[4.493s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.493s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.493s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.494s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.494s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_cppExport.cmake
+[4.494s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.494s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_generator_pyExport.cmake
+[4.495s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/export_assessment_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.495s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.495s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.495s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.496s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.496s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.496s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.496s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.497s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfacesConfig.cmake
+[4.497s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/cmake/assessment_interfacesConfig-version.cmake
+[4.497s] -- Up-to-date: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.xml
+[4.498s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces

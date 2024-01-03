@@ -19,6 +19,7 @@ from assessment_interfaces.msg import HomeZone
 from solution_interfaces.msg import GoalStatus, GoHome, StringWithPose
 
 #Math
+from tf_transformations import euler_from_quaternion, transforms3d
 import angles
 from enum import Enum
 import random
@@ -77,6 +78,9 @@ class RobotController(Node):
         self.turn_angle = 0.0
         self.turn_direction = TURN_LEFT
         self.scan_triggered = [False] * 4
+        self.goHome_trigger = False
+        self.goal_pose_updated = False
+        self.is_robot_home = False
 
         ################################
         ## Initialise ROS Subscribers ##
@@ -304,6 +308,7 @@ class RobotController(Node):
                             self.get_logger().info(f"Moving forward for better vantage")
                             self.turn_check_complete == True
                             return
+                        
                     else:
                         msg_fwd = Twist()
                         msg_fwd.linear.x = LINEAR_VELOCITY

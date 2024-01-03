@@ -49,7 +49,11 @@ class State_Manager(Node):
 
         self.state = State.IDLE
         self.goal_value = 0
+        self.goal_pose_timer = 0
+        self.status = "Goal Request"
         self.robot_spawned = True
+        self.items = ItemList()
+        self.pose = Pose()
 
         ################################
         ## Initialise ROS Subscribers ##
@@ -96,7 +100,7 @@ class State_Manager(Node):
         self.pose = msg
 
     def goal_callback(self, msg):
-        self.goal_status = msg
+        self.status = msg.result
     
     def item_callback(self, msg):
         self.items = msg
@@ -105,7 +109,7 @@ class State_Manager(Node):
     ## Control Loop ##
     ##################
 
-    def contol_loop(self):
+    def control_loop(self):
 
         self.get_logger().info(f"State: {self.state}")
 
@@ -114,40 +118,54 @@ class State_Manager(Node):
                 if self.is_robot_carrying():
                     self.previous_state = self.state
                     self.state = State.GO_HOME
+
                 else:
-                    if self.is_robot_home(): 
+                    if self.robot_spawned: 
                         self.robot_spawned = False
                         self.previous_state = self.state
                         self.state = State.SEARCH
-                        return
+                    
+                    elif self.is_robot_home():
+                        self.previous_state = self.state
+                        self.state = State.SEARCH
+                    
                     else:
                         self.state = self.previous_state
                         self.previous_state = State.IDLE
+                
+                return
 
             case State.SEARCH:
-                if self.items is not None:
+                if len(self.items.data) > 0:
                     self.previous_state = self.state
                     self.state = State.ASSESS_AND_COLLECT_ITEM
                     self.goal_pose_timer = 0
 
                 else:
-                    if self.goal_status == 'Completed':
+                    if self.status == 'Completed':
                         goal_poseStamped = self.randomize_position()
                         self.goal_pose_publisher.publish(goal_poseStamped)
                         self.goal_pose_timer = 0
 
-                    elif self.goal_status == 'Processing' and self.goal_pose_timer > 5:
+                    elif self.status == 'Processing' and self.goal_pose_timer > 5:
+                        goal_poseStamped = self.randomize_position()
+                        self.goal_pose_publisher.publish(goal_poseStamped)
+                        self.goal_pose_timer = 0
+
+                    elif self.status == 'Goal Request':
                         goal_poseStamped = self.randomize_position()
                         self.goal_pose_publisher.publish(goal_poseStamped)
                         self.goal_pose_timer = 0
 
                     else:
                         self.goal_pose_time += 0.1
+                
+                return
 
             case State.ASSESS_AND_COLLECT_ITEM:
                 # Check if the robot is carrying items
-                if self.goal_status != 'Completed':
-                    if self.robot_is_carrying():
+                if self.status != 'Completed':
+                    if self.is_robot_carrying():
                         if self.goal_value <= self.holding_value:
                             best_item, distance_to_item = self.assess_items(self.holding_value, 0.5, 1)
                             
@@ -170,7 +188,9 @@ class State_Manager(Node):
 
                     else:
                         best_item, distance_to_item = self.assess_items(self.goal_value)
-                            
+                        
+                        self.get_logger().info(f"ITEM: {best_item}")
+
                         if best_item is not None:
                             # Set goal to the new item coordinates
                             self.prev_goal = self.goal_pose
@@ -183,15 +203,17 @@ class State_Manager(Node):
                             return
 
                         else:
+                            self.get_logger().info(f"no best item found - potential infinite loop detected")
                             return
+                
                 else:
                     self.previous_state = self.state
                     self.state = State.IDLE
                     return
 
             case State.GO_HOME:
-                if self.goal_status != 'Home':
-                    if self.items is not None:
+                if self.status != 'Home':
+                    if len(self.items.data) > 0:
                         self.previous_state = self.state
                         self.state = State.ASSESS_AND_COLLECT_ITEM
 
@@ -240,8 +262,10 @@ class State_Manager(Node):
         best_item = None
         distance_to_item = 0
 
-        item = Item()
-        for item in self.items:
+        self.get_logger().info(f"DEBUG: {self.items}")
+        self.get_logger().info(f"DEBUG: {self.items.data}")
+
+        for item in self.items.data:
             distance_to_item = math.sqrt((self.pose.position.x - item.x) ** 2 + (self.pose.position.y - item.y) ** 2)
 
             if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
@@ -252,10 +276,13 @@ class State_Manager(Node):
         return best_item, distance_to_item
 
     def is_robot_home(self):
-        if self.goal_status == 'Home' or self.robot_spawned == True:
+        if self.status == 'Home' or self.robot_spawned == True:
             return True
         else:
             return False
+
+    def is_robot_carrying(self):
+        return False
 
     def send_goal_pose(self, str_frame_id):
         header = Header()
