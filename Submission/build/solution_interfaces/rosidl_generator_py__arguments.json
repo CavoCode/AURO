@@ -5,7 +5,8 @@
   "idl_tuples": [
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/Example.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/GoalStatus.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/GoHome.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/GoalPosition.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/LocateHome.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/StringWithPose.idl"
   ],
   "ros_interface_dependencies": [
@@ -87,7 +88,8 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/Example.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/GoalStatus.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/GoHome.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/GoalPosition.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/LocateHome.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/StringWithPose.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",

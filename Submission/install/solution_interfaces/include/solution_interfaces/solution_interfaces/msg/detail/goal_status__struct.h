@@ -18,13 +18,15 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'result'
+// Member 'status'
+// Member 'goal_type'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/GoalStatus in the package solution_interfaces.
 typedef struct solution_interfaces__msg__GoalStatus
 {
-  rosidl_runtime_c__String result;
+  rosidl_runtime_c__String status;
+  rosidl_runtime_c__String goal_type;
 } solution_interfaces__msg__GoalStatus;
 
 // Struct for a sequence of solution_interfaces__msg__GoalStatus.

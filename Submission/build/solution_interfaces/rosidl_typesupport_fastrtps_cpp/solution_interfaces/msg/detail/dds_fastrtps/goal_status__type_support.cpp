@@ -32,8 +32,10 @@ cdr_serialize(
   const solution_interfaces::msg::GoalStatus & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: result
-  cdr << ros_message.result;
+  // Member: status
+  cdr << ros_message.status;
+  // Member: goal_type
+  cdr << ros_message.goal_type;
   return true;
 }
 
@@ -43,8 +45,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   solution_interfaces::msg::GoalStatus & ros_message)
 {
-  // Member: result
-  cdr >> ros_message.result;
+  // Member: status
+  cdr >> ros_message.status;
+
+  // Member: goal_type
+  cdr >> ros_message.goal_type;
 
   return true;
 }
@@ -62,10 +67,14 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: result
+  // Member: status
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.result.size() + 1);
+    (ros_message.status.size() + 1);
+  // Member: goal_type
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.goal_type.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -90,7 +99,20 @@ max_serialized_size_GoalStatus(
   is_plain = true;
 
 
-  // Member: result
+  // Member: status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: goal_type
   {
     size_t array_size = 1;
 
@@ -111,7 +133,7 @@ max_serialized_size_GoalStatus(
     using DataType = solution_interfaces::msg::GoalStatus;
     is_plain =
       (
-      offsetof(DataType, result) +
+      offsetof(DataType, goal_type) +
       last_member_size
       ) == ret_val;
   }

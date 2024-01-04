@@ -1,17 +1,20 @@
 file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/example__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/example__type_support.cpp.o.d"
-  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/go_home__type_support.cpp.o"
-  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/go_home__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/goal_position__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/goal_position__type_support.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/goal_status__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/goal_status__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/locate_home__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/locate_home__type_support.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.cpp.o.d"
   "libsolution_interfaces__rosidl_typesupport_c.pdb"
   "libsolution_interfaces__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/solution_interfaces/msg/example__type_support.cpp"
-  "rosidl_typesupport_c/solution_interfaces/msg/go_home__type_support.cpp"
+  "rosidl_typesupport_c/solution_interfaces/msg/goal_position__type_support.cpp"
   "rosidl_typesupport_c/solution_interfaces/msg/goal_status__type_support.cpp"
+  "rosidl_typesupport_c/solution_interfaces/msg/locate_home__type_support.cpp"
   "rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.cpp"
 )
 

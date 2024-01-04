@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
-class Init_GoalStatus_result
+class Init_GoalStatus_goal_type
 {
 public:
-  Init_GoalStatus_result()
+  explicit Init_GoalStatus_goal_type(::solution_interfaces::msg::GoalStatus & msg)
+  : msg_(msg)
+  {}
+  ::solution_interfaces::msg::GoalStatus goal_type(::solution_interfaces::msg::GoalStatus::_goal_type_type arg)
+  {
+    msg_.goal_type = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::solution_interfaces::msg::GoalStatus msg_;
+};
+
+class Init_GoalStatus_status
+{
+public:
+  Init_GoalStatus_status()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::solution_interfaces::msg::GoalStatus result(::solution_interfaces::msg::GoalStatus::_result_type arg)
+  Init_GoalStatus_goal_type status(::solution_interfaces::msg::GoalStatus::_status_type arg)
   {
-    msg_.result = std::move(arg);
-    return std::move(msg_);
+    msg_.status = std::move(arg);
+    return Init_GoalStatus_goal_type(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::solution_interfaces::msg::GoalStatus>()
 {
-  return solution_interfaces::msg::builder::Init_GoalStatus_result();
+  return solution_interfaces::msg::builder::Init_GoalStatus_status();
 }
 
 }  // namespace solution_interfaces

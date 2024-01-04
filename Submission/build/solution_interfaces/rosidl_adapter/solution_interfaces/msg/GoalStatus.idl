@@ -6,7 +6,9 @@
 module solution_interfaces {
   module msg {
     struct GoalStatus {
-      string result;
+      string status;
+
+      string goal_type;
     };
   };
 };

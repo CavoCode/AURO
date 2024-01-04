@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // result
-#include "rosidl_runtime_c/string_functions.h"  // result
+#include "rosidl_runtime_c/string.h"  // goal_type, status
+#include "rosidl_runtime_c/string_functions.h"  // goal_type, status
 
 // forward declare type support functions
 
@@ -51,9 +51,23 @@ static bool _GoalStatus__cdr_serialize(
     return false;
   }
   const _GoalStatus__ros_msg_type * ros_message = static_cast<const _GoalStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: result
+  // Field name: status
   {
-    const rosidl_runtime_c__String * str = &ros_message->result;
+    const rosidl_runtime_c__String * str = &ros_message->status;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: goal_type
+  {
+    const rosidl_runtime_c__String * str = &ros_message->goal_type;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -77,18 +91,34 @@ static bool _GoalStatus__cdr_deserialize(
     return false;
   }
   _GoalStatus__ros_msg_type * ros_message = static_cast<_GoalStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: result
+  // Field name: status
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->result.data) {
-      rosidl_runtime_c__String__init(&ros_message->result);
+    if (!ros_message->status.data) {
+      rosidl_runtime_c__String__init(&ros_message->status);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->result,
+      &ros_message->status,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'result'\n");
+      fprintf(stderr, "failed to assign string into field 'status'\n");
+      return false;
+    }
+  }
+
+  // Field name: goal_type
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->goal_type.data) {
+      rosidl_runtime_c__String__init(&ros_message->goal_type);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->goal_type,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'goal_type'\n");
       return false;
     }
   }
@@ -110,10 +140,14 @@ size_t get_serialized_size_solution_interfaces__msg__GoalStatus(
   (void)padding;
   (void)wchar_size;
 
-  // field.name result
+  // field.name status
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->result.size + 1);
+    (ros_message->status.size + 1);
+  // field.name goal_type
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->goal_type.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -143,7 +177,19 @@ size_t max_serialized_size_solution_interfaces__msg__GoalStatus(
   full_bounded = true;
   is_plain = true;
 
-  // member: result
+  // member: status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: goal_type
   {
     size_t array_size = 1;
 
@@ -164,7 +210,7 @@ size_t max_serialized_size_solution_interfaces__msg__GoalStatus(
     using DataType = solution_interfaces__msg__GoalStatus;
     is_plain =
       (
-      offsetof(DataType, result) +
+      offsetof(DataType, goal_type) +
       last_member_size
       ) == ret_val;
   }

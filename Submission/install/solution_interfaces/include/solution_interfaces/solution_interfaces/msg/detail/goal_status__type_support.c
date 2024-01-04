@@ -13,7 +13,8 @@
 
 
 // Include directives for member types
-// Member `result`
+// Member `status`
+// Member `goal_type`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -35,16 +36,33 @@ void solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__G
   solution_interfaces__msg__GoalStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__GoalStatus_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__GoalStatus_message_member_array[2] = {
   {
-    "result",  // name
+    "status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(solution_interfaces__msg__GoalStatus, result),  // bytes offset in struct
+    offsetof(solution_interfaces__msg__GoalStatus, status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "goal_type",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(solution_interfaces__msg__GoalStatus, goal_type),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -58,7 +76,7 @@ static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__ms
 static const rosidl_typesupport_introspection_c__MessageMembers solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__GoalStatus_message_members = {
   "solution_interfaces__msg",  // message namespace
   "GoalStatus",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(solution_interfaces__msg__GoalStatus),
   solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__GoalStatus_message_member_array,  // message members
   solution_interfaces__msg__GoalStatus__rosidl_typesupport_introspection_c__GoalStatus_init_function,  // function to initialize message memory (memory has to be allocated)

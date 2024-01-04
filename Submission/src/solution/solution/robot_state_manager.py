@@ -112,7 +112,7 @@ class State_Manager(Node):
 
     def goal_callback(self, msg):
         self.status = msg.status
-        self.goal_type = msg.goalType
+        self.goal_type = msg.goal_type
 
     def homeZone_callback(self, msg):
         self.homeZone_visible = msg.visible
@@ -142,7 +142,7 @@ class State_Manager(Node):
 
                 locateHomeMsg = LocateHome()
                 locateHomeMsg.header = header
-                locateHomeMsg.locateHome = True
+                locateHomeMsg.locate_home = True
 
                 self.locate_home_publisher.publish(locateHomeMsg)
                 self.state = State.SEARCH
@@ -155,23 +155,23 @@ class State_Manager(Node):
 
                 else:
                     if self.status == 'IDLE':
-                        self.send_pose('Search')
+                        self.send_pose("Search")
                         self.goal_timer = 0
 
                     elif self.status == 'Completed' and self.goal_type == 'Home':
-                        self.send_pose('Search')
+                        self.send_pose("Search")
                         self.goal_timer = 0
 
                     elif self.status == 'Completed' and self.goal_type == 'Search':
-                        self.send_pose('Search')
+                        self.send_pose("Search")
                         self.goal_timer = 0
 
                     elif self.status == 'Processing' and self.goal_type == 'Search' and self.goal_timer >= 5:
-                        self.send_pose('Search')
+                        self.send_pose("Search")
                         self.goal_timer = 0
 
                     elif self.status == 'Processing' and self.goal_timer >= 10:
-                        self.send_pose('Search')
+                        self.send_pose("Search")
                         self.goal_timer = 0
 
                     else:
@@ -296,7 +296,13 @@ class State_Manager(Node):
             poseStamped.pose = self.goal_pose
 
         elif goal_type == 'Home':
+            header = Header()
+            header.stamp = self.get_clock().now().to_msg()
+            header.frame_id = goal_type
 
+            poseStamped = PoseStamped()
+            poseStamped.header = header
+            poseStamped.pose = self.
 
         msg = GoalPosition()
         msg.poseStamped = poseStamped
@@ -313,7 +319,7 @@ class State_Manager(Node):
 
         locateHomeMsg = LocateHome()
         locateHomeMsg.header = header
-        locateHomeMsg.locateHome = locateHomeBool
+        locateHomeMsg.locate_home = locateHomeBool
 
         self.locate_home_publisher.publish(locateHomeMsg)
 

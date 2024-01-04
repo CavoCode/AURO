@@ -68,7 +68,8 @@ include CMakeFiles/solution_interfaces.dir/progress.make
 
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/Example.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/GoalStatus.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/GoHome.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/GoalPosition.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/LocateHome.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/StringWithPose.msg
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl

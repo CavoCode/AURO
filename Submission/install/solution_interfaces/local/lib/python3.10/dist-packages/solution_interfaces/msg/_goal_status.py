@@ -55,14 +55,17 @@ class GoalStatus(metaclass=Metaclass_GoalStatus):
     """Message class 'GoalStatus'."""
 
     __slots__ = [
-        '_result',
+        '_status',
+        '_goal_type',
     ]
 
     _fields_and_field_types = {
-        'result': 'string',
+        'status': 'string',
+        'goal_type': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
@@ -70,7 +73,8 @@ class GoalStatus(metaclass=Metaclass_GoalStatus):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.result = kwargs.get('result', str())
+        self.status = kwargs.get('status', str())
+        self.goal_type = kwargs.get('goal_type', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,7 +105,9 @@ class GoalStatus(metaclass=Metaclass_GoalStatus):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.result != other.result:
+        if self.status != other.status:
+            return False
+        if self.goal_type != other.goal_type:
             return False
         return True
 
@@ -111,14 +117,27 @@ class GoalStatus(metaclass=Metaclass_GoalStatus):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def result(self):
-        """Message field 'result'."""
-        return self._result
+    def status(self):
+        """Message field 'status'."""
+        return self._status
 
-    @result.setter
-    def result(self, value):
+    @status.setter
+    def status(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'result' field must be of type 'str'"
-        self._result = value
+                "The 'status' field must be of type 'str'"
+        self._status = value
+
+    @builtins.property
+    def goal_type(self):
+        """Message field 'goal_type'."""
+        return self._goal_type
+
+    @goal_type.setter
+    def goal_type(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'goal_type' field must be of type 'str'"
+        self._goal_type = value

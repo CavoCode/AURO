@@ -1,0 +1,53 @@
+[2.282s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces -DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces
+[2.344s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.918s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.015s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.026s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.056s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.106s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.175s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.936s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[5.024s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[5.025s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[5.025s]   solution_interfaces --arguments-file
+[5.025s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter__arguments__solution_interfaces.json
+[5.025s]   --output-dir
+[5.026s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces
+[5.026s]   --output-file
+[5.026s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces.idls)
+[5.031s]   returned error code 1:
+[5.032s] 
+[5.032s]   Error processing 'string goalType' of 'solution_interfaces/GoalStatus':
+[5.032s]   ''goalType' is an invalid field name.  It should have the pattern
+[5.032s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[5.033s] 
+[5.033s]   Traceback (most recent call last):
+[5.033s] 
+[5.033s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[5.033s]       return _run_code(code, main_globals, None,
+[5.034s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[5.034s]       exec(code, run_globals)
+[5.034s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[5.034s]       sys.exit(main())
+[5.035s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[5.035s]       abs_idl_file = convert_to_idl(
+[5.035s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[5.037s]       return convert_msg_to_idl(
+[5.037s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[5.038s]       msg = parse_message_string(package_name, input_file.stem, content)
+[5.038s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[5.038s]       fields.append(Field(
+[5.038s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[5.039s]       raise NameError(
+[5.039s] 
+[5.044s]   NameError: 'goalType' is an invalid field name.  It should have the pattern
+[5.044s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[5.044s] 
+[5.045s] Call Stack (most recent call first):
+[5.045s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[5.045s]   CMakeLists.txt:18 (rosidl_generate_interfaces)
+[5.045s] 
+[5.046s] [0m
+[5.046s] -- Configuring incomplete, errors occurred!
+[5.046s] See also "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/CMakeOutput.log".
+[5.068s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces -DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces

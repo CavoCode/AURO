@@ -3,7 +3,8 @@
   "non_idl_tuples": [
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/Example.msg",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/GoalStatus.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/GoHome.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/GoalPosition.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/LocateHome.msg",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/StringWithPose.msg"
   ]
 }

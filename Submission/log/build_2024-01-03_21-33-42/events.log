@@ -1,0 +1,380 @@
+[0.000000] (-) TimerEvent: {}
+[0.001479] (assessment) JobQueued: {'identifier': 'assessment', 'dependencies': OrderedDict()}
+[0.001835] (assessment_interfaces) JobQueued: {'identifier': 'assessment_interfaces', 'dependencies': OrderedDict()}
+[0.001943] (solution) JobQueued: {'identifier': 'solution', 'dependencies': OrderedDict()}
+[0.002024] (solution_interfaces) JobQueued: {'identifier': 'solution_interfaces', 'dependencies': OrderedDict()}
+[0.002096] (tf_relay) JobQueued: {'identifier': 'tf_relay', 'dependencies': OrderedDict()}
+[0.002165] (assessment) JobStarted: {'identifier': 'assessment'}
+[0.098909] (-) TimerEvent: {}
+[0.199486] (-) TimerEvent: {}
+[0.300622] (-) TimerEvent: {}
+[0.403891] (assessment_interfaces) JobStarted: {'identifier': 'assessment_interfaces'}
+[0.404153] (-) TimerEvent: {}
+[0.504516] (-) TimerEvent: {}
+[0.605211] (-) TimerEvent: {}
+[0.706009] (-) TimerEvent: {}
+[0.727330] (solution) JobStarted: {'identifier': 'solution'}
+[0.806269] (-) TimerEvent: {}
+[0.907713] (-) TimerEvent: {}
+[1.008583] (-) TimerEvent: {}
+[1.019912] (solution_interfaces) JobStarted: {'identifier': 'solution_interfaces'}
+[1.108778] (-) TimerEvent: {}
+[1.209395] (-) TimerEvent: {}
+[1.309928] (-) TimerEvent: {}
+[1.410449] (-) TimerEvent: {}
+[1.510996] (-) TimerEvent: {}
+[1.611523] (-) TimerEvent: {}
+[1.712046] (-) TimerEvent: {}
+[1.812526] (-) TimerEvent: {}
+[1.913006] (-) TimerEvent: {}
+[2.013506] (-) TimerEvent: {}
+[2.114039] (-) TimerEvent: {}
+[2.214562] (-) TimerEvent: {}
+[2.315170] (-) TimerEvent: {}
+[2.416397] (-) TimerEvent: {}
+[2.466475] (assessment_interfaces) JobProgress: {'identifier': 'assessment_interfaces', 'progress': 'cmake'}
+[2.467128] (assessment_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces'], 'cwd': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'mc2148'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mc2148'), ('OLDPWD', '/home/mc2148'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1553'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install:/home/mc2148/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mc2148'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mc2148'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/mc2148/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dual-Laptop:@/tmp/.ICE-unix/1527,unix/Dual-Laptop:/tmp/.ICE-unix/1527'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6490a868_ce81_4ee8_a707_9797bc860108'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.975XG2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mc2148/turtlebot3_ws/build/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble')]), 'shell': False}
+[2.517739] (-) TimerEvent: {}
+[2.618322] (-) TimerEvent: {}
+[2.718886] (-) TimerEvent: {}
+[2.819735] (-) TimerEvent: {}
+[2.920246] (-) TimerEvent: {}
+[3.020797] (-) TimerEvent: {}
+[3.121265] (-) TimerEvent: {}
+[3.221716] (-) TimerEvent: {}
+[3.322177] (-) TimerEvent: {}
+[3.422815] (-) TimerEvent: {}
+[3.523671] (-) TimerEvent: {}
+[3.589576] (assessment_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[3.592257] (solution_interfaces) JobProgress: {'identifier': 'solution_interfaces', 'progress': 'cmake'}
+[3.593152] (solution_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces'], 'cwd': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'mc2148'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mc2148'), ('OLDPWD', '/home/mc2148'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1553'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install:/home/mc2148/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mc2148'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mc2148'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/mc2148/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dual-Laptop:@/tmp/.ICE-unix/1527,unix/Dual-Laptop:/tmp/.ICE-unix/1527'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6490a868_ce81_4ee8_a707_9797bc860108'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.975XG2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mc2148/turtlebot3_ws/build/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble')]), 'shell': False}
+[3.623788] (-) TimerEvent: {}
+[3.731995] (-) TimerEvent: {}
+[3.799001] (solution_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[3.832120] (-) TimerEvent: {}
+[3.935737] (-) TimerEvent: {}
+[4.036251] (-) TimerEvent: {}
+[4.136776] (-) TimerEvent: {}
+[4.237306] (-) TimerEvent: {}
+[4.337840] (-) TimerEvent: {}
+[4.439749] (-) TimerEvent: {}
+[4.461410] (solution_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.492231] (assessment_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.539884] (-) TimerEvent: {}
+[4.580536] (solution_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.593671] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.643099] (-) TimerEvent: {}
+[4.743740] (-) TimerEvent: {}
+[4.847741] (-) TimerEvent: {}
+[4.951746] (-) TimerEvent: {}
+[5.048773] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.059580] (-) TimerEvent: {}
+[5.091845] (solution_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.097208] (assessment_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.100729] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.119221] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.136609] (solution_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.137350] (solution_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.138686] (solution_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.153017] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.159707] (-) TimerEvent: {}
+[5.169888] (solution_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.259854] (-) TimerEvent: {}
+[5.298505] (solution) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/solution', 'build', '--build-base', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build', 'install', '--record', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log', '--single-version-externally-managed'], 'cwd': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'mc2148', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/mc2148', 'OLDPWD': '/home/mc2148', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1553', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble/', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install:/home/mc2148/turtlebot3_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mc2148', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mc2148', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/home/mc2148/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Dual-Laptop:@/tmp/.ICE-unix/1527,unix/Dual-Laptop:/tmp/.ICE-unix/1527', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6490a868_ce81_4ee8_a707_9797bc860108', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.975XG2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.100', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution', 'TURTLEBOT3_MODEL': 'waffle_pi', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces'}, 'shell': False}
+[5.361805] (-) TimerEvent: {}
+[5.437152] (assessment) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/assessment', 'build', '--build-base', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build', 'install', '--record', '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log', '--single-version-externally-managed'], 'cwd': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'mc2148', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/mc2148', 'OLDPWD': '/home/mc2148', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1553', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble/', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install:/home/mc2148/turtlebot3_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mc2148', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mc2148', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/home/mc2148/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Dual-Laptop:@/tmp/.ICE-unix/1527,unix/Dual-Laptop:/tmp/.ICE-unix/1527', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6490a868_ce81_4ee8_a707_9797bc860108', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.975XG2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.100', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment', 'TURTLEBOT3_MODEL': 'waffle_pi', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/build/turtlebot3_example:/home/mc2148/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/local/lib/python3.10/dist-packages:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/mc2148/turtlebot3_ws/install/turtlebot3:/home/mc2148/turtlebot3_ws/install/turtlebot3_simulations:/home/mc2148/turtlebot3_ws/install/turtlebot3_bringup:/home/mc2148/turtlebot3_ws/install/turtlebot3_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_navigation2:/home/mc2148/turtlebot3_ws/install/turtlebot3_fake_node:/home/mc2148/turtlebot3_ws/install/turtlebot3_msgs:/home/mc2148/turtlebot3_ws/install/turtlebot3_gazebo:/home/mc2148/turtlebot3_ws/install/turtlebot3_description:/home/mc2148/turtlebot3_ws/install/turtlebot3_cartographer:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_examples:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/mc2148/turtlebot3_ws/install/dynamixel_sdk:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces'}, 'shell': False}
+[5.463694] (-) TimerEvent: {}
+[5.564397] (-) TimerEvent: {}
+[5.643544] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.667737] (-) TimerEvent: {}
+[5.703149] (assessment_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.716122] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.717804] (assessment_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.748934] (solution_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.771771] (-) TimerEvent: {}
+[5.798507] (solution_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.799537] (solution_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.801615] (solution_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.872172] (-) TimerEvent: {}
+[5.917691] (solution_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.935863] (assessment_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.972298] (-) TimerEvent: {}
+[6.072987] (-) TimerEvent: {}
+[6.174220] (-) TimerEvent: {}
+[6.274934] (-) TimerEvent: {}
+[6.375659] (-) TimerEvent: {}
+[6.472899] (solution) StdoutLine: {'line': b'running egg_info\n'}
+[6.479984] (-) TimerEvent: {}
+[6.480324] (solution) StdoutLine: {'line': b'creating ../../build/solution/solution.egg-info\n'}
+[6.480628] (solution) StdoutLine: {'line': b'writing ../../build/solution/solution.egg-info/PKG-INFO\n'}
+[6.481021] (solution) StdoutLine: {'line': b'writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt\n'}
+[6.481275] (solution) StdoutLine: {'line': b'writing entry points to ../../build/solution/solution.egg-info/entry_points.txt\n'}
+[6.481518] (solution) StdoutLine: {'line': b'writing requirements to ../../build/solution/solution.egg-info/requires.txt\n'}
+[6.481748] (solution) StdoutLine: {'line': b'writing top-level names to ../../build/solution/solution.egg-info/top_level.txt\n'}
+[6.481976] (solution) StdoutLine: {'line': b"writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'\n"}
+[6.482217] (solution) StdoutLine: {'line': b"reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'\n"}
+[6.483424] (solution) StdoutLine: {'line': b"writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'\n"}
+[6.484306] (solution) StdoutLine: {'line': b'running build\n'}
+[6.484591] (solution) StdoutLine: {'line': b'running build_py\n'}
+[6.488555] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build\n'}
+[6.489486] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib\n'}
+[6.489833] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution\n'}
+[6.490160] (solution) StdoutLine: {'line': b'copying solution/robot_state_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution\n'}
+[6.491801] (solution) StdoutLine: {'line': b'copying solution/robot_controller.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution\n'}
+[6.492273] (solution) StdoutLine: {'line': b'copying solution/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution\n'}
+[6.492546] (solution) StdoutLine: {'line': b'copying solution/data_logger.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution\n'}
+[6.492805] (solution) StdoutLine: {'line': b'running install\n'}
+[6.493067] (solution) StdoutLine: {'line': b'running install_lib\n'}
+[6.496560] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution\n'}
+[6.496942] (solution) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/robot_state_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution\n'}
+[6.497202] (solution) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/robot_controller.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution\n'}
+[6.497457] (solution) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution\n'}
+[6.497705] (solution) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build/lib/solution/data_logger.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution\n'}
+[6.510365] (solution) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_state_manager.py to robot_state_manager.cpython-310.pyc\n'}
+[6.516241] (solution) StderrLine: {'line': b"Sorry: IndentationError: expected an indented block after 'elif' statement on line 298 (robot_state_manager.py, line 301)\n"}
+[6.516802] (solution) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_controller.py to robot_controller.cpython-310.pyc\n'}
+[6.530220] (solution) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__init__.py to __init__.cpython-310.pyc\n'}
+[6.530620] (solution) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/data_logger.py to data_logger.cpython-310.pyc\n'}
+[6.531012] (solution) StdoutLine: {'line': b'running install_data\n'}
+[6.532362] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index\n'}
+[6.532914] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index\n'}
+[6.533278] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index/packages\n'}
+[6.533538] (solution) StdoutLine: {'line': b'copying resource/solution -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/ament_index/resource_index/packages\n'}
+[6.533889] (solution) StdoutLine: {'line': b'copying package.xml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution\n'}
+[6.534432] (solution) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch\n'}
+[6.534816] (solution) StdoutLine: {'line': b'copying launch/solution_nav2_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch/\n'}
+[6.535266] (solution) StdoutLine: {'line': b'copying launch/solution_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/launch/\n'}
+[6.535718] (solution) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.541719] (solution) StdoutLine: {'line': b'Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info\n'}
+[6.544687] (solution) StdoutLine: {'line': b'running install_scripts\n'}
+[6.580126] (-) TimerEvent: {}
+[6.629209] (solution) StdoutLine: {'line': b'Installing data_logger script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution\n'}
+[6.631744] (solution) StdoutLine: {'line': b'Installing robot_controller script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution\n'}
+[6.633889] (solution) StdoutLine: {'line': b'Installing robot_state_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution\n'}
+[6.636768] (solution) StdoutLine: {'line': b"writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log'\n"}
+[6.680676] (-) TimerEvent: {}
+[6.738804] (solution) CommandEnded: {'returncode': 0}
+[6.780884] (-) TimerEvent: {}
+[6.874347] (assessment) StdoutLine: {'line': b'running egg_info\n'}
+[6.881108] (assessment) StdoutLine: {'line': b'creating ../../build/assessment/assessment.egg-info\n'}
+[6.881507] (-) TimerEvent: {}
+[6.882047] (assessment) StdoutLine: {'line': b'writing ../../build/assessment/assessment.egg-info/PKG-INFO\n'}
+[6.882525] (assessment) StdoutLine: {'line': b'writing dependency_links to ../../build/assessment/assessment.egg-info/dependency_links.txt\n'}
+[6.882845] (assessment) StdoutLine: {'line': b'writing entry points to ../../build/assessment/assessment.egg-info/entry_points.txt\n'}
+[6.883147] (assessment) StdoutLine: {'line': b'writing requirements to ../../build/assessment/assessment.egg-info/requires.txt\n'}
+[6.883422] (assessment) StdoutLine: {'line': b'writing top-level names to ../../build/assessment/assessment.egg-info/top_level.txt\n'}
+[6.883729] (assessment) StdoutLine: {'line': b"writing manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'\n"}
+[6.884807] (assessment) StdoutLine: {'line': b"reading manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'\n"}
+[6.889260] (assessment) StdoutLine: {'line': b"writing manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'\n"}
+[6.889671] (assessment) StdoutLine: {'line': b'running build\n'}
+[6.890006] (assessment) StdoutLine: {'line': b'running build_py\n'}
+[6.890324] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build\n'}
+[6.890597] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib\n'}
+[6.890910] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.891165] (assessment) StdoutLine: {'line': b'copying assessment/home_zone_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.891624] (assessment) StdoutLine: {'line': b'copying assessment/robot_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.891987] (assessment) StdoutLine: {'line': b'copying assessment/item_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.892302] (assessment) StdoutLine: {'line': b'copying assessment/item_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.893888] (assessment) StdoutLine: {'line': b'copying assessment/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment\n'}
+[6.894172] (assessment) StdoutLine: {'line': b'running install\n'}
+[6.894548] (assessment) StdoutLine: {'line': b'running install_lib\n'}
+[6.894993] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.895443] (assessment) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/home_zone_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.895873] (assessment) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/robot_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.896296] (assessment) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/item_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.896686] (assessment) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/item_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.896940] (assessment) StdoutLine: {'line': b'copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment\n'}
+[6.898627] (assessment) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/home_zone_sensor.py to home_zone_sensor.cpython-310.pyc\n'}
+[6.901413] (assessment) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/robot_sensor.py to robot_sensor.cpython-310.pyc\n'}
+[6.904430] (assessment) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/item_sensor.py to item_sensor.cpython-310.pyc\n'}
+[6.908537] (assessment) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/item_manager.py to item_manager.cpython-310.pyc\n'}
+[6.917472] (assessment) StdoutLine: {'line': b'byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/__init__.py to __init__.cpython-310.pyc\n'}
+[6.917976] (assessment) StdoutLine: {'line': b'running install_data\n'}
+[6.919832] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index\n'}
+[6.920273] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index\n'}
+[6.920590] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index/packages\n'}
+[6.920849] (assessment) StdoutLine: {'line': b'copying resource/assessment -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index/packages\n'}
+[6.921361] (assessment) StdoutLine: {'line': b'copying package.xml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment\n'}
+[6.921688] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models\n'}
+[6.922002] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media\n'}
+[6.922497] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials\n'}
+[6.923148] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts\n'}
+[6.924018] (assessment) StdoutLine: {'line': b'copying models/media/materials/scripts/outline_vertex_shader.glsl -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts\n'}
+[6.983593] (-) TimerEvent: {}
+[6.991796] (solution) JobEnded: {'identifier': 'solution', 'rc': 0}
+[6.994385] (tf_relay) JobStarted: {'identifier': 'tf_relay'}
+[6.994617] (assessment_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[7.019924] (assessment) StdoutLine: {'line': b'copying models/media/materials/scripts/assessment_materials.material -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts\n'}
+[7.027473] (assessment) StdoutLine: {'line': b'copying models/media/materials/scripts/outline_fragment_shader.glsl -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts\n'}
+[7.028964] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item\n'}
+[7.029257] (assessment) StdoutLine: {'line': b'copying models/item/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item\n'}
+[7.031969] (assessment) StdoutLine: {'line': b'copying models/item/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item\n'}
+[7.032346] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world\n'}
+[7.032610] (assessment) StdoutLine: {'line': b'copying models/assessment_world/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world\n'}
+[7.032857] (assessment) StdoutLine: {'line': b'copying models/assessment_world/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world\n'}
+[7.033096] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi\n'}
+[7.033350] (assessment) StdoutLine: {'line': b'copying models/waffle_pi/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi\n'}
+[7.033595] (assessment) StdoutLine: {'line': b'copying models/waffle_pi/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi\n'}
+[7.033842] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common\n'}
+[7.034093] (assessment) StdoutLine: {'line': b'copying models/waffle_pi_common/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common\n'}
+[7.034564] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes\n'}
+[7.035120] (assessment) StdoutLine: {'line': b'copying models/waffle_pi_common/meshes/lds_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes\n'}
+[7.035426] (assessment) StdoutLine: {'line': b'copying models/waffle_pi_common/meshes/tire_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes\n'}
+[7.035792] (assessment) StdoutLine: {'line': b'copying models/waffle_pi_common/meshes/waffle_pi_base_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes\n'}
+[7.036200] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch\n'}
+[7.036485] (assessment) StdoutLine: {'line': b'copying launch/rviz_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/\n'}
+[7.037168] (assessment) StdoutLine: {'line': b'copying launch/bringup_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/\n'}
+[7.037459] (assessment) StdoutLine: {'line': b'copying launch/assessment_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/\n'}
+[7.037813] (assessment) StdoutLine: {'line': b'copying launch/spawn_robot_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/\n'}
+[7.038446] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/worlds\n'}
+[7.038983] (assessment) StdoutLine: {'line': b'copying worlds/assessment_world.world -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/worlds/\n'}
+[7.044315] (solution_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[7.072270] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz\n'}
+[7.072823] (assessment) StdoutLine: {'line': b'copying rviz/namespaced_nav2.rviz -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz/\n'}
+[7.082723] (assessment) StdoutLine: {'line': b'copying rviz/namespaced.rviz -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz/\n'}
+[7.083286] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/params\n'}
+[7.084087] (-) TimerEvent: {}
+[7.084492] (assessment) StdoutLine: {'line': b'copying params/nav2_params_namespaced.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/params/\n'}
+[7.084960] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps\n'}
+[7.085882] (assessment) StdoutLine: {'line': b'copying maps/assessment_world.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps/\n'}
+[7.086437] (assessment) StdoutLine: {'line': b'copying maps/assessment_world.pgm -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps/\n'}
+[7.086726] (assessment) StdoutLine: {'line': b'creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config\n'}
+[7.087134] (assessment) StdoutLine: {'line': b'copying config/initial_poses.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config/\n'}
+[7.087850] (assessment) StdoutLine: {'line': b'copying config/rviz_windows.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config/\n'}
+[7.088297] (assessment) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.091810] (assessment) StdoutLine: {'line': b'Copying ../../build/assessment/assessment.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment-0.0.0-py3.10.egg-info\n'}
+[7.094618] (assessment) StdoutLine: {'line': b'running install_scripts\n'}
+[7.163873] (assessment) StdoutLine: {'line': b'Installing home_zone_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment\n'}
+[7.168334] (assessment) StdoutLine: {'line': b'Installing item_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment\n'}
+[7.168624] (assessment) StdoutLine: {'line': b'Installing item_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment\n'}
+[7.168870] (assessment) StdoutLine: {'line': b'Installing robot_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment\n'}
+[7.169105] (assessment) StdoutLine: {'line': b"writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log'\n"}
+[7.184487] (-) TimerEvent: {}
+[7.285164] (-) TimerEvent: {}
+[7.380860] (assessment) CommandEnded: {'returncode': 0}
+[7.385565] (-) TimerEvent: {}
+[7.486086] (-) TimerEvent: {}
+[7.540806] (assessment) JobEnded: {'identifier': 'assessment', 'rc': 0}
+[7.586227] (-) TimerEvent: {}
+[7.636183] (assessment_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[7.638166] (solution_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[7.686348] (-) TimerEvent: {}
+[7.693393] (assessment_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.784723] (assessment_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[7.786456] (-) TimerEvent: {}
+[7.886830] (-) TimerEvent: {}
+[7.987238] (-) TimerEvent: {}
+[8.012818] (solution_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[8.043556] (solution_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[8.072921] (assessment_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.086856] (solution_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[8.087327] (-) TimerEvent: {}
+[8.187958] (-) TimerEvent: {}
+[8.194464] (solution_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.265188] (solution_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.288097] (-) TimerEvent: {}
+[8.389030] (-) TimerEvent: {}
+[8.490057] (-) TimerEvent: {}
+[8.590888] (-) TimerEvent: {}
+[8.691608] (-) TimerEvent: {}
+[8.761713] (solution_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[8.791745] (-) TimerEvent: {}
+[8.892269] (-) TimerEvent: {}
+[8.992813] (-) TimerEvent: {}
+[9.093576] (-) TimerEvent: {}
+[9.194312] (-) TimerEvent: {}
+[9.295070] (-) TimerEvent: {}
+[9.350960] (solution_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):\n'}
+[9.351761] (solution_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name\n'}
+[9.352074] (solution_interfaces) StderrLine: {'line': b'  solution_interfaces --arguments-file\n'}
+[9.352340] (solution_interfaces) StderrLine: {'line': b'  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter__arguments__solution_interfaces.json\n'}
+[9.352596] (solution_interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[9.352973] (solution_interfaces) StderrLine: {'line': b'  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces\n'}
+[9.353331] (solution_interfaces) StderrLine: {'line': b'  --output-file\n'}
+[9.353605] (solution_interfaces) StderrLine: {'line': b'  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces.idls)\n'}
+[9.353852] (solution_interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[9.354097] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.354337] (solution_interfaces) StderrLine: {'line': b"  Error processing 'PoseStamped poseStamped' of\n"}
+[9.354577] (solution_interfaces) StderrLine: {'line': b"  'solution_interfaces/GoalPosition': ''poseStamped' is an invalid field\n"}
+[9.354823] (solution_interfaces) StderrLine: {'line': b"  name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''\n"}
+[9.355067] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.355306] (solution_interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[9.355545] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.355843] (solution_interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\n'}
+[9.356096] (solution_interfaces) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[9.356344] (solution_interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\n'}
+[9.356581] (solution_interfaces) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[9.356826] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[9.357076] (solution_interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[9.357325] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[9.357571] (solution_interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[9.357810] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[9.358047] (solution_interfaces) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[9.358283] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl\n'}
+[9.358521] (solution_interfaces) StderrLine: {'line': b'      msg = parse_message_string(package_name, input_file.stem, content)\n'}
+[9.358779] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string\n'}
+[9.359024] (solution_interfaces) StderrLine: {'line': b'      fields.append(Field(\n'}
+[9.359264] (solution_interfaces) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__\n'}
+[9.359497] (solution_interfaces) StderrLine: {'line': b'      raise NameError(\n'}
+[9.359750] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.359990] (solution_interfaces) StderrLine: {'line': b"  NameError: 'poseStamped' is an invalid field name.  It should have the\n"}
+[9.360230] (solution_interfaces) StderrLine: {'line': b"  pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'\n"}
+[9.360447] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.360649] (solution_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[9.360850] (solution_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[9.361050] (solution_interfaces) StderrLine: {'line': b'  CMakeLists.txt:18 (rosidl_generate_interfaces)\n'}
+[9.361272] (solution_interfaces) StderrLine: {'line': b'\n'}
+[9.361512] (solution_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[9.361749] (solution_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[9.361989] (solution_interfaces) StdoutLine: {'line': b'See also "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[9.378848] (solution_interfaces) CommandEnded: {'returncode': 1}
+[9.395768] (-) TimerEvent: {}
+[9.466290] (assessment_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[9.496024] (-) TimerEvent: {}
+[9.536932] (solution_interfaces) JobEnded: {'identifier': 'solution_interfaces', 'rc': 1}
+[9.538409] (tf_relay) JobEnded: {'identifier': 'tf_relay', 'rc': 'SIGINT'}
+[9.596166] (-) TimerEvent: {}
+[9.696542] (-) TimerEvent: {}
+[9.796997] (-) TimerEvent: {}
+[9.897383] (-) TimerEvent: {}
+[9.975284] (assessment_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.997573] (-) TimerEvent: {}
+[10.097957] (-) TimerEvent: {}
+[10.198327] (-) TimerEvent: {}
+[10.298673] (-) TimerEvent: {}
+[10.399045] (-) TimerEvent: {}
+[10.499493] (-) TimerEvent: {}
+[10.554999] (assessment_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.599608] (-) TimerEvent: {}
+[10.646719] (assessment_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[10.674576] (assessment_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[10.699745] (-) TimerEvent: {}
+[10.800103] (-) TimerEvent: {}
+[10.900510] (-) TimerEvent: {}
+[11.001025] (-) TimerEvent: {}
+[11.101407] (-) TimerEvent: {}
+[11.201829] (-) TimerEvent: {}
+[11.247906] (assessment_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[11.248556] (assessment_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[11.248883] (assessment_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[11.249172] (assessment_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[11.301969] (-) TimerEvent: {}
+[11.318938] (assessment_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[11.402102] (-) TimerEvent: {}
+[11.502529] (-) TimerEvent: {}
+[11.602939] (-) TimerEvent: {}
+[11.703366] (-) TimerEvent: {}
+[11.803877] (-) TimerEvent: {}
+[11.862521] (assessment_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[11.904007] (-) TimerEvent: {}
+[12.004379] (-) TimerEvent: {}
+[12.104769] (-) TimerEvent: {}
+[12.195477] (assessment_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[12.200055] (assessment_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[12.204908] (-) TimerEvent: {}
+[12.217396] (assessment_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.305062] (-) TimerEvent: {}
+[12.342717] (assessment_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[12.349955] (assessment_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces\n'}
+[12.367553] (assessment_interfaces) JobEnded: {'identifier': 'assessment_interfaces', 'rc': 'SIGINT'}
+[12.379018] (-) EventReactorShutdown: {}

@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from solution_interfaces/msg/GoalPosition.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module solution_interfaces {
+  module msg {
+    struct GoalPosition {
+      geometry_msgs::msg::PoseStamped pose_stamped;
+
+      string goal_type;
+    };
+  };
+};

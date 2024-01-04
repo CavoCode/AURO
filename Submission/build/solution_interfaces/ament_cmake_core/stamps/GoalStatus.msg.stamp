@@ -1,1 +1,2 @@
-string result
+string status
+string goal_type

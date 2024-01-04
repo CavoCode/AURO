@@ -313,9 +313,9 @@ class RobotController(Node):
         goal_status.status = status
 
         if goal_type != None:
-            goal_status.goalType = goal_type
+            goal_status.goal_Type = goal_type
         else:
-            goal_status.goalType = self.current_goal_type
+            goal_status.goal_Type = self.current_goal_type
 
         self.goal_publisher.publish(goal_status)
 

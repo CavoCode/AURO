@@ -1,0 +1,66 @@
+[2.575s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces -DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces
+[2.779s] -- The C compiler identification is GNU 11.4.0
+[3.442s] -- The CXX compiler identification is GNU 11.4.0
+[3.561s] -- Detecting C compiler ABI info
+[4.072s] -- Detecting C compiler ABI info - done
+[4.117s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.118s] -- Detecting C compile features
+[4.119s] -- Detecting C compile features - done
+[4.150s] -- Detecting CXX compiler ABI info
+[4.729s] -- Detecting CXX compiler ABI info - done
+[4.779s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.780s] -- Detecting CXX compile features
+[4.782s] -- Detecting CXX compile features - done
+[4.898s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[6.025s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[6.618s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[6.993s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[7.024s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[7.067s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[7.175s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.245s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.742s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[8.332s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[8.332s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[8.332s]   solution_interfaces --arguments-file
+[8.333s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter__arguments__solution_interfaces.json
+[8.333s]   --output-dir
+[8.333s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces
+[8.334s]   --output-file
+[8.334s]   /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces.idls)
+[8.334s]   returned error code 1:
+[8.334s] 
+[8.335s]   Error processing 'PoseStamped poseStamped' of
+[8.335s]   'solution_interfaces/GoalPosition': ''poseStamped' is an invalid field
+[8.335s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[8.335s] 
+[8.335s]   Traceback (most recent call last):
+[8.336s] 
+[8.336s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[8.336s]       return _run_code(code, main_globals, None,
+[8.337s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[8.337s]       exec(code, run_globals)
+[8.337s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[8.337s]       sys.exit(main())
+[8.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[8.338s]       abs_idl_file = convert_to_idl(
+[8.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[8.338s]       return convert_msg_to_idl(
+[8.338s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[8.339s]       msg = parse_message_string(package_name, input_file.stem, content)
+[8.339s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[8.339s]       fields.append(Field(
+[8.339s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[8.340s]       raise NameError(
+[8.340s] 
+[8.340s]   NameError: 'poseStamped' is an invalid field name.  It should have the
+[8.340s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[8.341s] 
+[8.341s] Call Stack (most recent call first):
+[8.341s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[8.341s]   CMakeLists.txt:18 (rosidl_generate_interfaces)
+[8.341s] 
+[8.342s] [0m
+[8.342s] -- Configuring incomplete, errors occurred!
+[8.342s] See also "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/CMakeOutput.log".
+[8.359s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces -DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces

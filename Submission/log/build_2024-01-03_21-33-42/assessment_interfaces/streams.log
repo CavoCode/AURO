@@ -1,0 +1,35 @@
+[2.069s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces -DCMAKE_INSTALL_PREFIX=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces
+[3.188s] -- The C compiler identification is GNU 11.4.0
+[4.089s] -- The CXX compiler identification is GNU 11.4.0
+[4.190s] -- Detecting C compiler ABI info
+[4.645s] -- Detecting C compiler ABI info - done
+[4.693s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.697s] -- Detecting C compile features
+[4.716s] -- Detecting C compile features - done
+[4.749s] -- Detecting CXX compiler ABI info
+[5.240s] -- Detecting CXX compiler ABI info - done
+[5.299s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.312s] -- Detecting CXX compile features
+[5.314s] -- Detecting CXX compile features - done
+[5.532s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[6.591s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[7.232s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[7.290s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.381s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[7.669s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.063s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[9.572s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.151s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.243s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[10.271s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[10.844s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[10.845s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[10.845s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[10.845s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[10.915s] -- Found PythonExtra: .so  
+[11.459s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[11.792s] -- Added test 'lint_cmake' to check CMake code style
+[11.796s] -- Added test 'xmllint' to check XML markup files
+[11.814s] -- Configuring done
+[11.939s] -- Generating done
+[11.946s] -- Build files have been written to: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces

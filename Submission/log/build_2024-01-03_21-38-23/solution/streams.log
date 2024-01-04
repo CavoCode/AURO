@@ -1,0 +1,24 @@
+[4.279s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[5.325s] running egg_info
+[5.326s] writing ../../build/solution/solution.egg-info/PKG-INFO
+[5.327s] writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt
+[5.327s] writing entry points to ../../build/solution/solution.egg-info/entry_points.txt
+[5.328s] writing requirements to ../../build/solution/solution.egg-info/requires.txt
+[5.328s] writing top-level names to ../../build/solution/solution.egg-info/top_level.txt
+[5.332s] reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[5.335s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[5.335s] running build
+[5.335s] running build_py
+[5.336s] running install
+[5.337s] running install_lib
+[5.340s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_state_manager.py to robot_state_manager.cpython-310.pyc
+[5.344s] Sorry: IndentationError: expected an indented block after 'elif' statement on line 298 (robot_state_manager.py, line 301)
+[5.345s] running install_data
+[5.346s] running install_egg_info
+[5.351s] removing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info' (and everything under it)
+[5.354s] Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info
+[5.355s] running install_scripts
+[5.403s] Installing data_logger script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[5.403s] Installing robot_controller script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[5.404s] Installing robot_state_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+[5.404s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log'

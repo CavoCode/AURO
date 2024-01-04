@@ -12,7 +12,8 @@
 
 
 // Include directives for member types
-// Member `result`
+// Member `status`
+// Member `goal_type`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -21,8 +22,13 @@ solution_interfaces__msg__GoalStatus__init(solution_interfaces__msg__GoalStatus 
   if (!msg) {
     return false;
   }
-  // result
-  if (!rosidl_runtime_c__String__init(&msg->result)) {
+  // status
+  if (!rosidl_runtime_c__String__init(&msg->status)) {
+    solution_interfaces__msg__GoalStatus__fini(msg);
+    return false;
+  }
+  // goal_type
+  if (!rosidl_runtime_c__String__init(&msg->goal_type)) {
     solution_interfaces__msg__GoalStatus__fini(msg);
     return false;
   }
@@ -35,8 +41,10 @@ solution_interfaces__msg__GoalStatus__fini(solution_interfaces__msg__GoalStatus 
   if (!msg) {
     return;
   }
-  // result
-  rosidl_runtime_c__String__fini(&msg->result);
+  // status
+  rosidl_runtime_c__String__fini(&msg->status);
+  // goal_type
+  rosidl_runtime_c__String__fini(&msg->goal_type);
 }
 
 bool
@@ -45,9 +53,15 @@ solution_interfaces__msg__GoalStatus__are_equal(const solution_interfaces__msg__
   if (!lhs || !rhs) {
     return false;
   }
-  // result
+  // status
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->result), &(rhs->result)))
+      &(lhs->status), &(rhs->status)))
+  {
+    return false;
+  }
+  // goal_type
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->goal_type), &(rhs->goal_type)))
   {
     return false;
   }
@@ -62,9 +76,15 @@ solution_interfaces__msg__GoalStatus__copy(
   if (!input || !output) {
     return false;
   }
-  // result
+  // status
   if (!rosidl_runtime_c__String__copy(
-      &(input->result), &(output->result)))
+      &(input->status), &(output->status)))
+  {
+    return false;
+  }
+  // goal_type
+  if (!rosidl_runtime_c__String__copy(
+      &(input->goal_type), &(output->goal_type)))
   {
     return false;
   }

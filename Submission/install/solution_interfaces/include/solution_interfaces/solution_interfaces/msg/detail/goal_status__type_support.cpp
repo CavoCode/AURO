@@ -37,16 +37,33 @@ void GoalStatus_fini_function(void * message_memory)
   typed_message->~GoalStatus();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalStatus_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalStatus_message_member_array[2] = {
   {
-    "result",  // name
+    "status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(solution_interfaces::msg::GoalStatus, result),  // bytes offset in struct
+    offsetof(solution_interfaces::msg::GoalStatus, status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "goal_type",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(solution_interfaces::msg::GoalStatus, goal_type),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -60,7 +77,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalStatus_me
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers GoalStatus_message_members = {
   "solution_interfaces::msg",  // message namespace
   "GoalStatus",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(solution_interfaces::msg::GoalStatus),
   GoalStatus_message_member_array,  // message members
   GoalStatus_init_function,  // function to initialize message memory (memory has to be allocated)
