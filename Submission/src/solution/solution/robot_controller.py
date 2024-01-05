@@ -1,168 +1,161 @@
-#############
-## Imports ##
-#############
+# Based on: https://github.com/ros-planning/navigation2/blob/humble/nav2_simple_commander/nav2_simple_commander/example_nav_to_pose.py
 
 import sys
+import argparse
+import math
+import random
 
 import rclpy
 from rclpy.node import Node
-from rclpy.signals import SignalHandlerOptions
 from rclpy.executors import ExternalShutdownException
-from rclpy.qos import QoSPresetProfiles
+from rclpy.duration import Duration
 
-#IMPORT MSG SPECIFICS
-from geometry_msgs.msg import Twist, Pose
-from std_msgs.msg import Header
+from geometry_msgs.msg import PoseStamped, Point, Twist, Pose
+from assessment_interfaces.msg import ItemHolders, ItemHolder, Item, ItemList
 from nav_msgs.msg import Odometry
-from sensor_msgs.msg import LaserScan
-from solution_interfaces.msg import GoalStatus, StringWithPose, GoalPosition, LocateHome
+from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 
-#Math
-from tf_transformations import euler_from_quaternion, transforms3d
+from tf2_ros import TransformException
+from tf2_ros.buffer import Buffer
+from tf2_ros.transform_listener import TransformListener
+
+from tf_transformations import euler_from_quaternion, quaternion_from_euler
 import angles
+
 from enum import Enum
-import random
-import math
-
-######################
-## Global Variables ##
-######################
-
-LINEAR_VELOCITY  = 0.3 # Metres per second
-ANGULAR_VELOCITY = 0.5 # Radians per second
-
-TURN_LEFT = 1 # Postive angular velocity turns left
-TURN_RIGHT = -1 # Negative angular velocity turns right
-
-SCAN_THRESHOLD = 0.5 # Metres per second
- # Array indexes for sensor sectors
-SCAN_FRONT = 0
-SCAN_LEFT = 1
-SCAN_BACK = 2
-SCAN_RIGHT = 3
-
-############
-## States ##
-############
 
 class State(Enum):
-    IDLE = 0
-    MOVING_TO_GOAL = 1
-    LOCATE_HOME = 2
-    TURNING_TO_AVOID_OBSTACLE = 3
-
-##########
-## Node ##
-##########
+    SET_GOAL = 0
+    NAVIGATING = 1
+    SPINNING = 2
+    BACKUP = 3
+    HOMING = 4
 
 class RobotController(Node):
 
-    ####################
-    ## Initialisation ##
-    ####################
-
     def __init__(self):
         super().__init__('robot_controller')
+
+        ####################################
+        ## Initialise Parameter Arguments ##
+        ####################################
+
+        self.declare_parameter('initial_pose', rclpy.Parameter.Type.DOUBLE_ARRAY)
+        self.declare_parameter('robot_name', rclpy.Parameter.Type.STRING)
+
+        self.args_initial_pose = self.get_parameter('initial_pose').value
+        self.robot_name = self.get_parameter('robot_name').value
+
 
         ##########################
         ## Initialise variables ##
         ##########################
 
-        self.state = State.IDLE
-        self.previous_state = self.state
+        self.state = State.SET_GOAL
+        self.robot_holding = False
 
-        self.pose = Pose() #Current pose (position and orientation), relative to the odom reference frame
-        self.previous_pose = Pose() #Store a snapshot of the pose for comparision against future poses
-        self.yaw = 0.0
-        self.previous_yaw = 0.0
-        self.turn_angle = 0.0
-        self.turn_direction = TURN_LEFT
-        self.scan_triggered = [False] * 4
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        self.goal_pose = Pose()
-        self.goal_pose_updated = False
+        self.pose = Pose()
+        self.x = 0
+        self.y = 0
+        self.distance = 0
+        self.angle = 0.0
+        
+        self.items = ItemList()
+
+        self.current_goal = Point()
         self.current_goal_type = 'Search'
+        self.goal_item = Item()
+        self.goal_distance = 0
+        self.goal_value = 0
+        self.holding_value = 0
 
-        self.homeZone_visible = False
+        #############################
+        ## Initialise Initial Pose ##
+        #############################
+
+        initial_pose = PoseStamped()
+        initial_pose.header.frame_id = 'map'
+        initial_pose.header.stamp = self.get_clock().now().to_msg()
+        initial_pose.pose.position.x = self.args_initial_pose[0]
+        initial_pose.pose.position.y = self.args_initial_pose[1]
+
+        (initial_pose.pose.orientation.x,
+         initial_pose.pose.orientation.y,
+         initial_pose.pose.orientation.z,
+         initial_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(0), axes='sxyz')
+
+        self.home_pose = Pose()
+        self.home_pose = initial_pose.pose
+
+        self.get_logger().info(f"Robot name: {self.robot_name}")
+        self.get_logger().info(f"Initial Pose: {self.args_initial_pose}")
+
+
+        ###############################
+        ## Initialise NAV2 Navigator ##
+        ###############################
+
+        self.navigator = BasicNavigator()
+        self.navigator.setInitialPose(initial_pose)
+        self.navigator.waitUntilNav2Active()
 
         ################################
         ## Initialise ROS Subscribers ##
         ################################
 
-        self.goal_subscriber = self.create_subscription(
-            GoalPosition,
-            '/goal_pose',
-            self.goal_pose_callback,
-            10)
-        
-        self.locateHome_subscriber = self.create_subscription(
-            LocateHome,
-            '/locate_home',
-            self.locate_home_callback,
-            10)
+        self.item_holder_subscriber = self.create_subscription(
+            ItemHolders,
+            '/item_holders',
+            self.item_holder_callback,
+            10
+        )
 
         self.odom_subscriber = self.create_subscription(
             Odometry,
             '/odom',
             self.odom_callback,
-            10)
-        
-        self.scan_subscriber = self.create_subscription(
-            LaserScan,
-            '/scan',
-            self.scan_callback,
-            QoSPresetProfiles.SENSOR_DATA.value)
+            10
+        )
+
+        self.item_subscriber = self.create_subscription(
+            msg_type=ItemList,
+            topic='/items',
+            callback=self.item_callback,
+            qos_profile=10,
+            callback_group=None)
 
         ###############################
         ## Initialise ROS Publishers ##
         ###############################
 
-        self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.marker_publisher = self.create_publisher(StringWithPose, '/marker_input', 10)
-        self.pose_publisher = self.create_publisher(Pose, '/current_pose', 10)
-        self.goal_publisher = self.create_publisher(GoalStatus, '/goal_status', 10)
-
+        self.cmd_vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        
         ######################
         ## Initialise Timer ##
         ######################
 
-        self.timer_period = 0.1
+        self.timer_period = 0.1 # 100 milliseconds = 10 Hz
         self.timer = self.create_timer(self.timer_period, self.control_loop)
-        self.mini_timer = 0
+
+        self.previous_time = self.get_clock().now()
 
     ############################
     ## Subscription Callbacks ##
     ############################
+        
+    def item_holder_callback(self, msg):
+        itemHolders = ItemHolders()
+        itemHolders = msg
 
-    def goal_pose_callback(self, msg):
-        # Define a small time window (in seconds) for matching timestamps
-        time_window = 0.005  # Adjust as needed (5 milliseconds in this example)
-
-        # Get the current clock time
-        current_time = self.get_clock().now().to_msg()
-
-        if abs((msg.poseStamped.header.stamp - current_time).to_sec()) < time_window:
-            self.goal_pose = msg.poseStamped.pose
-            self.current_goal_type = msg.goalType
-            self.get_logger().info(f"Updated the goal position with latest from /goal_pose")
-            self.goal_pose_updated = True
-        else:
-            self.goal_pose_updated = False
-
-    def locate_home_callback(self, msg):
-        # Define a small time window (in seconds) for matching timestamps
-        time_window = 0.005  # Adjust as needed (5 milliseconds in this example)
-
-        # Get the current clock time
-        current_time = self.get_clock().now().to_msg()
-
-        if abs((msg.header.stamp - current_time).to_sec()) < time_window:
-            if msg.locateHome == False:
-                self.get_logger().info(f"State Manager cannot locate home - Moving Accordingly")
-                self.state = State.LOCATE_HOME
-
-            else:
-                self.state = State.IDLE
+        itemHolder = ItemHolder()
+        for itemHolder in itemHolders.data:
+            if itemHolder.robot_id == self.robot_name and itemHolder.holding_item == True:
+                self.robot_holding = True
+                self.holding_value = itemHolder.item_value
+                return
 
     def odom_callback(self, msg):
         self.pose = msg.pose.pose # Store the pose in a class variable
@@ -174,20 +167,8 @@ class RobotController(Node):
         
         self.yaw = yaw # Store the yaw in a class variable
 
-    def scan_callback(self, msg):
-        # Group scan ranges into 4 segments
-        # Front, left, and right segments are each 60 degrees
-        # Back segment is 180 degrees
-        front_ranges = msg.ranges[331:359] + msg.ranges[0:30] # 30 to 331 degrees (30 to -30 degrees)
-        left_ranges  = msg.ranges[31:90] # 31 to 90 degrees (31 to 90 degrees)
-        back_ranges  = msg.ranges[91:270] # 91 to 270 degrees (91 to -90 degrees)
-        right_ranges = msg.ranges[271:330] # 271 to 330 degrees (-30 to -91 degrees)
-
-        # Store True/False values for each sensor segment, based on whether the nearest detected obstacle is closer than SCAN_THRESHOLD
-        self.scan_triggered[SCAN_FRONT] = min(front_ranges) < SCAN_THRESHOLD 
-        self.scan_triggered[SCAN_LEFT]  = min(left_ranges)  < SCAN_THRESHOLD
-        self.scan_triggered[SCAN_BACK]  = min(back_ranges)  < SCAN_THRESHOLD
-        self.scan_triggered[SCAN_RIGHT] = min(right_ranges) < SCAN_THRESHOLD
+    def item_callback(self, msg):
+        self.items = msg
 
     ##################
     ## Control Loop ##
@@ -195,186 +176,260 @@ class RobotController(Node):
 
     def control_loop(self):
 
-        #Update /current_pose
-        self.pose_publisher.publish(self.pose)
+        '''if self.robot_holding:
+            better_item_found = self.assess_items(self.holding_value)
+        else:
+            better_item_found = self.assess_items(self.goal_value)
 
-        # Send message to rviz_text_marker node
-        marker_input = StringWithPose()
-        marker_input.text = str(self.state) # Visualise robot movement state as an RViz marker
-        marker_input.pose = self.pose # Set the pose of the RViz marker to track the robot's pose
-        self.marker_publisher.publish(marker_input)
+        self.get_logger().info(f"Has robot found item: {better_item_found}")
+
+        if better_item_found:
+            self.navigator.cancelTask()
+            self.get_logger().info(f"Higher valued Item found - Moving...")
+            self.current_goal_type = 'Collect'
+
+            self.angle = self.goal_item.x / 320.0
+            goalPoint = Point()
+            goalPoint.x = self.pose.position.x + self.goal_distance * math.cos(self.angle)
+            goalPoint.y = self.pose.position.y + self.goal_distance * math.sin(self.angle)
+            
+            self.current_goal = goalPoint
+            self.state = State.SET_GOAL'''
+
+        time_difference = self.get_clock().now() - self.previous_time
+
+        if time_difference > Duration(seconds = 30):
+            self.navigator.cancelTask()
+            self.previous_time = self.get_clock().now()
+            self.get_logger().info(f"Homing...")
+            self.current_goal_type = 'Home'
+            self.state = State.HOMING
 
         self.get_logger().info(f"State: {self.state}")
 
         match self.state:
-            case State.IDLE:
-                self.stop_robot()
-                self.goal_message('IDLE', 'None')
 
-                if self.goal_pose_updated == True:
-                    self.previous_state = self.state
-                    self.state = State.MOVING_TO_GOAL
-                    self.goal_pose_updated = False
+            case State.SET_GOAL:
+
+                if self.current_goal_type == 'Search':
+                    self.current_goal, self.angle = self.randomise_pose()
+                
+                goal_pose = PoseStamped()
+                goal_pose.header.frame_id = 'map'
+                goal_pose.header.stamp = self.get_clock().now().to_msg()                
+                goal_pose.pose.position = self.current_goal
+
+                (goal_pose.pose.orientation.x,
+                 goal_pose.pose.orientation.y,
+                 goal_pose.pose.orientation.z,
+                 goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(self.angle), axes='sxyz')
+                                
+                self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.angle:.2f} degrees")
+
+                self.navigator.goToPose(goal_pose)
+                self.state = State.NAVIGATING
+
+            case State.NAVIGATING:
+
+                if not self.navigator.isTaskComplete():
+
+                    feedback = self.navigator.getFeedback()
+                    self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
+
+                    if Duration.from_msg(feedback.navigation_time) > Duration(seconds = 30):
+                        self.get_logger().info(f"Navigation took too long... cancelling")
+                        self.navigator.cancelTask()
+
                 else:
-                    return
+                    result = self.navigator.getResult()
 
-            case State.MOVING_TO_GOAL:
-                self.goal_message('Processing')
+                    match result:
 
-                if self.check_collision():
-                    self.get_logger().info(f"Collision Detected - Acting accordingly")
-                    self.goal_message('Collison Detected')
+                        case TaskResult.SUCCEEDED:
+                            self.get_logger().info(f"Goal succeeded!")
+
+                            self.get_logger().info(f"Spinning")
+
+                            self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                            self.state = State.SPINNING
+
+                        case TaskResult.CANCELED:
+                            self.get_logger().info(f"Goal was canceled!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.FAILED:
+                            self.get_logger().info(f"Goal failed!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case _:
+                            self.get_logger().info(f"Goal has an invalid return status!")
+
+            case State.SPINNING:
+
+                if not self.navigator.isTaskComplete():
+
+                    feedback = self.navigator.getFeedback()
+                    self.get_logger().info(f"Turned: {math.degrees(feedback.angular_distance_traveled):.2f} degrees")
+
+                else:
+
+                    result = self.navigator.getResult()
+
+                    match result:
+
+                        case TaskResult.SUCCEEDED:
+                            self.get_logger().info(f"Goal succeeded!")
+
+                            self.get_logger().info(f"Backing up")
+
+                            self.navigator.backup(backup_dist=0.15, backup_speed=0.025, time_allowance=10)
+                            self.state = State.BACKUP
+
+                        case TaskResult.CANCELED:
+                            self.get_logger().info(f"Goal was canceled!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.FAILED:
+                            self.get_logger().info(f"Goal failed!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case _:
+                            self.get_logger().info(f"Goal has an invalid return status!")
+
+            case State.BACKUP:
+
+                if not self.navigator.isTaskComplete():
+
+                    feedback = self.navigator.getFeedback()
+                    self.get_logger().info(f"Distance travelled: {feedback.distance_traveled:.2f} metres")
+
+                else:
+
+                    result = self.navigator.getResult()
+
+                    match result:
+
+                        case TaskResult.SUCCEEDED:
+                            self.get_logger().info(f"Goal succeeded!")
+                            if self.current_goal_type == 'Collect':
+                                self.state = State.HOMING
+                                self.current_goal_type = 'Home'
+                            else:
+                                self.state = State.SET_GOAL
+
+                        case TaskResult.CANCELED:
+                            self.get_logger().info(f"Goal was canceled!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.FAILED:
+                            self.get_logger().info(f"Goal failed!")
+                            self.current_goal_type = 'Search'
+                            self.state = State.SET_GOAL
+
+                        case _:
+                            self.get_logger().info(f"Goal has an invalid return status!")
+
+            case State.HOMING:
+
+                #Change self.distance to be distance home or smth. 
+                if self.distance < 0.1:
+                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                    self.previous_time = self.get_clock().now()
+                    self.get_logger().info(f"Made it home!")
+                    self.current_goal_type = 'Search'
+                    self.state = State.SPINNING
                     return
                 
-                distance_to_goal = math.sqrt((self.pose.position.x - self.goal_pose.position.x)**2 + (self.pose.position.y - self.goal_pose.position.y)**2)
-                angle_to_goal = math.atan2(self.goal_pose.position.y - self.pose.position.y, self.goal_pose.position.x - self.pose.position.x)
+                try:
+                    x = self.pose.position.x - self.home_pose.position.x
+                    y = self.pose.position.y - self.home_pose.position.y
 
-                cmd_vel_msg = Twist()
-                cmd_vel_msg.linear.x = min(0.5, 0.1 * distance_to_goal)
-                cmd_vel_msg.angular.z = 0.1 * angle_to_goal
-                self.cmd_vel_publisher.publish(cmd_vel_msg)
+                    distance = math.sqrt(x ** 2 + y ** 2)
+                    angle = math.atan2(y, x)
 
-                if distance_to_goal < 0.1:
-                    self.previous_state = self.state
-                    self.state = State.IDLE
-                    self.get_logger().info("Goal Reached")
-                    
-                    self.goal_message('Completed')
+                    self.get_logger().info(f"x: {x:.2f}")
+                    self.get_logger().info(f"y: {y:.2f}")
+                    self.get_logger().info(f"distance: {distance:.2f}")
+                    self.get_logger().info(f"angle (degrees): {math.degrees(angle):.2f}")
 
-                    self.stop_robot()
+                    msg = Twist()
 
-            case State.LOCATE_HOME:
-                self.get_logger().info(f"Attempting to locate Home Zone")
-                self.goal_message('Finding Home', 'Home')
-
-                if self.check_collision():
-                    self.get_logger().info(f"Collision Detected - Acting accordingly")
-                    self.goal_message('Collison Detected', 'Home')
-                    return
-
-                if self.turn_check_complete == False:
-                    msg_turn = Twist()
-                    msg_turn.angular.z = 1 * ANGULAR_VELOCITY #Turn Left
-                    self.cmd_vel_publisher.publish(msg_turn)
-
-                    yaw_difference = angles.normalize_angle(self.yaw - self.previous_yaw)
-
-                    if math.fabs(yaw_difference) >= math.radians(self.turn_angle):
-                        self.stop_robot()
-                        self.get_logger().info(f"Homing Turn Check - complete: No Home Zone")
-                        self.get_logger().info(f"Moving for better vantage")
-                        self.turn_check_complete == True
-                        return
-                    
-                else:
-                    msg_fwd = Twist()
-                    msg_fwd.linear.x = LINEAR_VELOCITY
-
-                    fwd_duration = 1
-                    if fwd_duration > self.mini_timer:
-                        self.mini_timer += 0.1
+                    if math.fabs(angle) > math.radians(15):
+                        msg.linear.x = 0.0
                     else:
-                        self.stop_robot()
-                        self.get_logger().info(f"Finished moving forward, completing turn check for home")
-                        self.mini_timer = 0
-                        self.turn_angle = 360 + random.uniform(150, 170)
-                        self.turn_check_complete = False
-                        return
-            
-            case State.TURNING_TO_AVOID_OBSTACLE:
-                msg = Twist()
-                msg.angular.z = self.turn_direction * ANGULAR_VELOCITY
-                self.cmd_vel_publisher.publish(msg)
+                        msg.linear.x = 0.3 * distance
+                        
+                    msg.angular.z = 0.5 * angle
 
-                yaw_difference = angles.normalize_angle(self.yaw - self.previous_yaw)
+                    self.cmd_vel_publisher.publish(msg)
 
-                if math.fabs(yaw_difference) >= math.radians(self.turn_angle):
-                    self.stop_robot()
-                    self.get_logger().info(f"Finished turning to avoid obstacle, resuming previous state")
-                    self.goal_publisher.publish('Collision Avoided')
+                except TransformException as e:
+                    self.get_logger().info(f"{e}")
 
-                    # Transition back to the previous state
-                    if self.previous_state == State.MOVING_TO_GOAL:
-                        self.previous_state = self.state
-                        self.state == State.MOVING_TO_GOAL
-                    elif self.previous_state == State.LOCATE_HOME:
-                        self.previous_state = self.state
-                        self.state == State.LOCATE_HOME
-                    else:
-                        self.previous_state = self.state
-                        self.state = State.IDLE
+            case _:
+                pass
 
-    ################
-    ## Procedures ##
-    ################
+    def randomise_pose(self):
+        # Extracting the initial position values
+        x = self.pose.position.x
+        y = self.pose.position.y
 
-    def goal_message(self, status, goal_type):
-        goal_status = GoalStatus()
-        goal_status.status = status
+        # Generating a random angle in radians
+        random_angle = random.uniform(0, 2 * 3.14159)
+        random_distance = random.uniform(0.5, 1.0)
 
-        if goal_type != None:
-            goal_status.goal_Type = goal_type
-        else:
-            goal_status.goal_Type = self.current_goal_type
+        # Calculating the new position on the robot's radius of between 0.5 and 1.0
+        new_x = x + random_distance * math.cos(random_angle)
+        new_y = y + random_distance * math.sin(random_angle)
 
-        self.goal_publisher.publish(goal_status)
+        # Creating a new Pose message with the randomized position
+        randomised_point = Point()
+        randomised_point.x = new_x
+        randomised_point.y = new_y
 
-    def check_collision(self):
-        # Check for obstacle detection during forward motion
-        if self.scan_triggered[SCAN_FRONT]:
-            self.get_logger().info("Detected obstacle in front, stopping and entering turning state")
-            self.previous_yaw = self.yaw
-            self.previous_state = self.state
-            self.state = 'TURNING_TO_AVOID_OBSTACLE'
-            self.turn_angle = random.uniform(150, 170)
-            self.turn_direction = random.choice(['LEFT', 'RIGHT'])
-            self.stop_robot()
-            return True
+        return randomised_point, random_angle
 
-        # Check for obstacle detection on the left or right side
-        if self.scan_triggered[SCAN_LEFT] or self.scan_triggered[SCAN_RIGHT]:
-            self.get_logger().info("Detected obstacle on the side, stopping and entering turning state")
-            self.previous_yaw = self.yaw
-            self.previous_state = self.state
-            self.state = 'TURNING_TO_AVOID_OBSTACLE'
-            self.turn_angle = random.uniform(45, 90)
+    def assess_items(self, value_to_compare, goal_distance_threshold = 1, item_distance_threshold = 1.5):
+        better_item_found = False
+        distance_to_item = 0
 
-            if self.scan_triggered[SCAN_LEFT] and self.scan_triggered[SCAN_RIGHT]:
-                self.turn_direction = random.choice(['LEFT', 'RIGHT'])
-                self.get_logger().info("Detected obstacle on both sides, turning " + ("left" if self.turn_direction == 'LEFT' else 'right') + f" by {self.turn_angle:.2f} degrees")
-            elif self.scan_triggered[SCAN_LEFT]:
-                self.turn_direction = 'RIGHT'
-                self.get_logger().info(f"Detected obstacle on the left, turning right by {self.turn_angle} degrees")
-            else:  # self.scan_triggered[SCAN_RIGHT]
-                self.turn_direction = 'LEFT'
-                self.get_logger().info(f"Detected obstacle on the right, turning left by {self.turn_angle} degrees")
-            self.stop_robot()
-            return True
+        item = Item()
+        self.get_logger().info(f"Empty list? {self.items.data}")
+        for item in self.items.data:
+            distance_to_item = 69.0 * float(item.diameter) ** -0.89
 
-        return False
+            if self.best_item != None:
+                if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
+                    # Assess if the item is better and closer
+                    if item.value > value_to_compare:
+                        self.goal_item = item
+                        self.goal_value = item.value
+                        self.goal_distance = distance_to_item
+                        better_item_found = True
+                
+            else:
+                self.goal_item = item
+                self.goal_value = item.value
+                self.goal_distance = distance_to_item
+                better_item_found = True
 
-    def stop_robot(self):
-        cmd_vel_msg = Twist()
-        self.cmd_vel_publisher.publish(cmd_vel_msg)
-
-    ##############
-    ## Shutdown ##
-    ##############
+        return better_item_found
 
     def destroy_node(self):
-        msg = Twist()
-        self.cmd_vel_publisher.publish(msg)
-        self.get_logger().info(f"Stopping: {msg}")
+        self.get_logger().info(f"Shutting down")
+        self.navigator.lifecycleShutdown()
+        self.navigator.destroyNode()
         super().destroy_node()
-
-##########
-## Main ##
-##########
+        
 
 def main(args=None):
 
-    rclpy.init(args = args, signal_handler_options = SignalHandlerOptions.NO)
-
+    rclpy.init(args = args)
     node = RobotController()
 
     try:
@@ -386,6 +441,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.try_shutdown()
+
 
 if __name__ == '__main__':
     main()

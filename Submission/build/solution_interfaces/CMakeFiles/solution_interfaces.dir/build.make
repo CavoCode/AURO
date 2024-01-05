@@ -67,9 +67,6 @@ include CMakeFiles/solution_interfaces.dir/compiler_depend.make
 include CMakeFiles/solution_interfaces.dir/progress.make
 
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/Example.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/GoalStatus.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/GoalPosition.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/LocateHome.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/StringWithPose.msg
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
@@ -100,36 +97,6 @@ CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3.
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Byte.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Char.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Empty.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Float32.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Float64.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Header.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int16.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int32.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int64.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int8.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/String.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
-CMakeFiles/solution_interfaces: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 
 solution_interfaces: CMakeFiles/solution_interfaces
 solution_interfaces: CMakeFiles/solution_interfaces.dir/build.make

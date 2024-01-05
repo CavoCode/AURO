@@ -245,14 +245,14 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_types
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/message_type_support_decl.hpp \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp
 
-CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp \
+CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp \
   /usr/include/stdc-predef.h \
-  rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_fastrtps_cpp.hpp \
+  rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_cpp.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h \
-  rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp \
+  rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -440,6 +440,9 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_types
   /usr/include/c++/11/stdexcept \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
   /opt/ros/humble/include/fastcdr/fastcdr/config.h \
@@ -489,8 +492,6 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_types
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp
 
 
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp:
-
 /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/message_type_support.h:
 
 /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/visibility_control.h:
@@ -508,6 +509,8 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp:
 /usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
+
+rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
@@ -595,6 +598,8 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp:
 
 /usr/include/c++/11/bits/localefwd.h:
 
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp:
+
 /usr/include/c++/11/cstdint:
 
 /usr/include/asm-generic/errno-base.h:
@@ -643,8 +648,6 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal_status__type_support.cpp:
-
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -664,6 +667,8 @@ rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/goal
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:
 
 /usr/include/c++/11/vector:
 
@@ -783,8 +788,6 @@ rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/example__rosidl_t
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/goal_status__rosidl_typesupport_fastrtps_cpp.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/11/bits/shared_ptr.h:
@@ -825,6 +828,8 @@ rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/goal_status__rosi
 
 /usr/include/c++/11/type_traits:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/streambuf:
@@ -836,6 +841,8 @@ rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/goal_status__rosi
 /usr/include/c++/11/iosfwd:
 
 /usr/include/c++/11/debug/debug.h:
+
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_cpp.hpp:
 
 /usr/include/c++/11/initializer_list:
 

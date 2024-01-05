@@ -79,9 +79,9 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/soluti
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h
 
-CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.c.o: rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.c \
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o: rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c \
   /usr/include/stdc-predef.h \
-  rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -128,13 +128,16 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/soluti
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/solution_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/solution_interfaces/msg/detail/goal_status__struct.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   /usr/include/assert.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
@@ -155,18 +158,26 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/soluti
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__functions.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h
 
 
-rosidl_generator_c/solution_interfaces/msg/detail/goal_status__struct.h:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__functions.h:
 
-rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.h:
+rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h:
 
@@ -224,6 +235,8 @@ rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.h:
 
 /usr/include/stdint.h:
 
+rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h:
+
 /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h:
 
 /usr/include/stdlib.h:
@@ -241,8 +254,6 @@ rosidl_generator_c/solution_interfaces/msg/detail/example__struct.h:
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/features-time64.h:
-
-rosidl_generator_c/solution_interfaces/msg/detail/goal_status__functions.c:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 

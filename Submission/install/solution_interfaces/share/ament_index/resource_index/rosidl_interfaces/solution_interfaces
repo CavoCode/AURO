@@ -1,10 +1,4 @@
 msg/Example.idl
 msg/Example.msg
-msg/GoalPosition.idl
-msg/GoalPosition.msg
-msg/GoalStatus.idl
-msg/GoalStatus.msg
-msg/LocateHome.idl
-msg/LocateHome.msg
 msg/StringWithPose.idl
 msg/StringWithPose.msg

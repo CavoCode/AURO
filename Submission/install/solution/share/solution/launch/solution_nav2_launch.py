@@ -26,6 +26,7 @@ def robot_controller_actions(context : LaunchContext):
     for robot_number in range(1, num_robots + 1):
 
         robot_name = 'robot' + str(robot_number)
+        initial_pose = [initial_poses[robot_name]['x'], initial_poses[robot_name]['y'], initial_poses[robot_name]['yaw']]
 
         group = GroupAction([
 
@@ -43,7 +44,8 @@ def robot_controller_actions(context : LaunchContext):
                 # prefix=['wt.exe --window 0 new-tab wsl.exe -e bash -ic'], # Opens in new tab
                 # prefix=['wt.exe wsl.exe -e bash -ic'], # Opens in new window
                 output='screen',
-                parameters=[initial_poses[robot_name]]),
+                parameters=[{'initial_pose': initial_pose,
+                            'robot_name': robot_name}]),
 
             # Node(
             #     package='turtlebot3_gazebo',
@@ -121,7 +123,7 @@ def generate_launch_description():
                           'params_file': params,
                           'headless': 'false',
                           'limit_real_time_factor': 'true',
-                          'wait_for_items': 'false',
+                          'wait_for_items': 'true',
                           # 'extra_gazebo_args': '--verbose',
                           }.items()
     )

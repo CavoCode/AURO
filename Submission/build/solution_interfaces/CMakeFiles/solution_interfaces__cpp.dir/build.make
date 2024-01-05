@@ -70,18 +70,6 @@ CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/ms
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/goal_status.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__builder.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__traits.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/goal_position.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__builder.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__struct.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__traits.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/locate_home.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__builder.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__struct.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__traits.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp
@@ -103,9 +91,6 @@ rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/Example.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/GoalStatus.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/GoalPosition.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/LocateHome.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
@@ -166,8 +151,6 @@ rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -179,42 +162,6 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp: rosidl_
 
 rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/goal_status.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/goal_status.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__builder.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__traits.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/goal_position.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/goal_position.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__builder.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__struct.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__traits.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/locate_home.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/locate_home.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__builder.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__struct.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__traits.hpp
 
 rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
@@ -232,22 +179,10 @@ solution_interfaces__cpp: CMakeFiles/solution_interfaces__cpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__builder.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__struct.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_position__traits.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__builder.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__struct.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/goal_status__traits.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__builder.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__struct.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/locate_home__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/goal_position.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/goal_status.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/locate_home.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
 solution_interfaces__cpp: CMakeFiles/solution_interfaces__cpp.dir/build.make
 .PHONY : solution_interfaces__cpp

@@ -1,5 +1,4 @@
 [console_scripts]
 data_logger = solution.data_logger:main
 robot_controller = solution.robot_controller:main
-robot_state_manager = solution.robot_state_manager:main
 

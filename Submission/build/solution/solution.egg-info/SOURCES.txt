@@ -14,7 +14,6 @@ resource/solution
 solution/__init__.py
 solution/data_logger.py
 solution/robot_controller.py
-solution/robot_state_manager.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
