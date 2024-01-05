@@ -1,0 +1,21 @@
+[2.358s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed
+[2.940s] running egg_info
+[2.941s] writing ../../build/tf_relay/tf_relay.egg-info/PKG-INFO
+[2.941s] writing dependency_links to ../../build/tf_relay/tf_relay.egg-info/dependency_links.txt
+[2.942s] writing entry points to ../../build/tf_relay/tf_relay.egg-info/entry_points.txt
+[2.942s] writing requirements to ../../build/tf_relay/tf_relay.egg-info/requires.txt
+[2.942s] writing top-level names to ../../build/tf_relay/tf_relay.egg-info/top_level.txt
+[2.946s] reading manifest file '../../build/tf_relay/tf_relay.egg-info/SOURCES.txt'
+[2.947s] writing manifest file '../../build/tf_relay/tf_relay.egg-info/SOURCES.txt'
+[2.948s] running build
+[2.948s] running build_py
+[2.948s] running install
+[2.949s] running install_lib
+[2.952s] running install_data
+[2.953s] running install_egg_info
+[2.957s] removing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay-0.0.0-py3.10.egg-info' (and everything under it)
+[2.958s] Copying ../../build/tf_relay/tf_relay.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay-0.0.0-py3.10.egg-info
+[2.960s] running install_scripts
+[3.001s] Installing relay script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/tf_relay
+[3.002s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log'
+[3.056s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed

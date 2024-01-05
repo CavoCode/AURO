@@ -1,0 +1,89 @@
+[11.125s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
+[11.925s] running egg_info
+[11.926s] creating ../../build/assessment/assessment.egg-info
+[11.927s] writing ../../build/assessment/assessment.egg-info/PKG-INFO
+[11.927s] writing dependency_links to ../../build/assessment/assessment.egg-info/dependency_links.txt
+[11.928s] writing entry points to ../../build/assessment/assessment.egg-info/entry_points.txt
+[11.928s] writing requirements to ../../build/assessment/assessment.egg-info/requires.txt
+[11.928s] writing top-level names to ../../build/assessment/assessment.egg-info/top_level.txt
+[11.929s] writing manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'
+[11.932s] reading manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'
+[11.933s] writing manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'
+[11.934s] running build
+[11.934s] running build_py
+[11.935s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build
+[11.935s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib
+[11.935s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.936s] copying assessment/home_zone_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.936s] copying assessment/robot_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.936s] copying assessment/item_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.936s] copying assessment/item_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.937s] copying assessment/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment
+[11.937s] running install
+[11.937s] running install_lib
+[11.938s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.938s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/home_zone_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.939s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/robot_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.939s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/item_sensor.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.939s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/item_manager.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.940s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build/lib/assessment/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment
+[11.940s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/home_zone_sensor.py to home_zone_sensor.cpython-310.pyc
+[11.942s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/robot_sensor.py to robot_sensor.cpython-310.pyc
+[11.944s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/item_sensor.py to item_sensor.cpython-310.pyc
+[11.946s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/item_manager.py to item_manager.cpython-310.pyc
+[11.953s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment/__init__.py to __init__.cpython-310.pyc
+[11.953s] running install_data
+[11.955s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index
+[11.955s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index
+[11.956s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index/packages
+[11.956s] copying resource/assessment -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/ament_index/resource_index/packages
+[11.957s] copying package.xml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment
+[11.957s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models
+[11.957s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media
+[11.957s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials
+[11.958s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts
+[11.958s] copying models/media/materials/scripts/outline_vertex_shader.glsl -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts
+[11.975s] copying models/media/materials/scripts/assessment_materials.material -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts
+[12.008s] copying models/media/materials/scripts/outline_fragment_shader.glsl -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/media/materials/scripts
+[12.009s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item
+[12.009s] copying models/item/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item
+[12.041s] copying models/item/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/item
+[12.042s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world
+[12.042s] copying models/assessment_world/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world
+[12.074s] copying models/assessment_world/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/assessment_world
+[12.075s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi
+[12.076s] copying models/waffle_pi/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi
+[12.076s] copying models/waffle_pi/model.sdf -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi
+[12.108s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common
+[12.108s] copying models/waffle_pi_common/model.config -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common
+[12.142s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes
+[12.142s] copying models/waffle_pi_common/meshes/lds_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes
+[12.175s] copying models/waffle_pi_common/meshes/tire_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes
+[12.208s] copying models/waffle_pi_common/meshes/waffle_pi_base_smooth.dae -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/models/waffle_pi_common/meshes
+[12.209s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch
+[12.209s] copying launch/rviz_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/
+[12.209s] copying launch/bringup_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/
+[12.210s] copying launch/assessment_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/
+[12.210s] copying launch/spawn_robot_launch.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/launch/
+[12.210s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/worlds
+[12.211s] copying worlds/assessment_world.world -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/worlds/
+[12.255s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz
+[12.255s] copying rviz/namespaced_nav2.rviz -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz/
+[12.309s] copying rviz/namespaced.rviz -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/rviz/
+[12.365s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/params
+[12.366s] copying params/nav2_params_namespaced.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/params/
+[12.397s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps
+[12.398s] copying maps/assessment_world.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps/
+[12.398s] copying maps/assessment_world.pgm -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/maps/
+[12.429s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config
+[12.430s] copying config/initial_poses.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config/
+[12.461s] copying config/rviz_windows.yaml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/config/
+[12.461s] running install_egg_info
+[12.465s] Copying ../../build/assessment/assessment.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment-0.0.0-py3.10.egg-info
+[12.466s] running install_scripts
+[12.507s] Installing home_zone_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[12.507s] Installing item_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[12.507s] Installing item_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[12.508s] Installing robot_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[12.508s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log'
+[12.858s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
