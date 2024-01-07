@@ -1,4 +1,0 @@
-[console_scripts]
-data_logger = solution.data_logger:main
-robot_controller = solution.robot_controller:main
-

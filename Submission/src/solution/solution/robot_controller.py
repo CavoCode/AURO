@@ -122,10 +122,10 @@ class RobotController(Node):
 
         self.item_subscriber = self.create_subscription(
             msg_type=ItemList,
-            topic='/items',
+            topic='items',
             callback=self.item_callback,
             qos_profile=10,
-            callback_group=None)
+            )
 
         ###############################
         ## Initialise ROS Publishers ##
@@ -176,7 +176,7 @@ class RobotController(Node):
 
     def control_loop(self):
 
-        '''if self.robot_holding:
+        if self.robot_holding:
             better_item_found = self.assess_items(self.holding_value)
         else:
             better_item_found = self.assess_items(self.goal_value)
@@ -194,7 +194,7 @@ class RobotController(Node):
             goalPoint.y = self.pose.position.y + self.goal_distance * math.sin(self.angle)
             
             self.current_goal = goalPoint
-            self.state = State.SET_GOAL'''
+            self.state = State.SET_GOAL
 
         time_difference = self.get_clock().now() - self.previous_time
 
@@ -398,12 +398,15 @@ class RobotController(Node):
         better_item_found = False
         distance_to_item = 0
 
-        item = Item()
         self.get_logger().info(f"Empty list? {self.items.data}")
+        item_test = Item()
+        item_test = self.items.data[0].item
+        self.get_logger().info(f"First item: {item_test}")
+
         for item in self.items.data:
             distance_to_item = 69.0 * float(item.diameter) ** -0.89
 
-            if self.best_item != None:
+            if self.goal_item.item != None:
                 if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
                     # Assess if the item is better and closer
                     if item.value > value_to_compare:
