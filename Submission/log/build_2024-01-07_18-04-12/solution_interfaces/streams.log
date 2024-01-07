@@ -1,0 +1,42 @@
+[2.406s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[2.627s] [ 10%] Built target solution_interfaces__rosidl_generator_c
+[2.643s] [ 10%] Built target ament_cmake_python_copy_solution_interfaces
+[2.667s] [ 12%] Built target solution_interfaces__cpp
+[2.773s] [ 23%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c
+[2.775s] [ 34%] Built target solution_interfaces__rosidl_typesupport_introspection_c
+[2.823s] [ 45%] Built target solution_interfaces__rosidl_typesupport_c
+[2.884s] [ 56%] Built target solution_interfaces__rosidl_typesupport_cpp
+[2.932s] [ 67%] Built target solution_interfaces__rosidl_typesupport_introspection_cpp
+[2.944s] [ 78%] Built target solution_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.955s] Traceback (most recent call last):
+[2.955s]   File "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/ament_cmake_python/solution_interfaces/setup.py", line 1, in <module>
+[2.955s] gmake[1]: *** [CMakeFiles/Makefile2:186: CMakeFiles/solution_interfaces.dir/all] Interrupt
+[2.955s]     from setuptools import find_packages
+[2.956s]   File "/home/mc2148/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 10, in <module>
+[2.956s]     import distutils.core
+[2.956s]   File "/usr/lib/python3.10/distutils/core.py", line 16, in <module>
+[2.985s]     from distutils.dist import Distribution
+[2.985s]   File "/usr/lib/python3.10/distutils/dist.py", line 19, in <module>
+[3.007s]     from distutils.util import check_environ, strtobool, rfc822_escape
+[3.008s]   File "/usr/lib/python3.10/distutils/util.py", line 15, in <module>
+[3.034s]     from distutils.spawn import spawn
+[3.034s]   File "/usr/lib/python3.10/distutils/spawn.py", line 11, in <module>
+[3.078s]     import subprocess
+[3.078s]   File "/usr/lib/python3.10/subprocess.py", line 48, in <module>
+[3.120s]     import signal
+[3.120s]   File "/usr/lib/python3.10/signal.py", line 19, in <module>
+[3.155s]     _IntEnum._convert_(
+[3.156s]   File "/usr/lib/python3.10/enum.py", line 563, in _convert_
+[3.156s]     cls = cls(name, members, module=module)
+[3.156s]   File "/usr/lib/python3.10/enum.py", line 387, in __call__
+[3.156s]     return cls._create_(
+[3.156s]   File "/usr/lib/python3.10/enum.py", line 518, in _create_
+[3.157s]     enum_class = metacls.__new__(metacls, class_name, bases, classdict)
+[3.157s]   File "/usr/lib/python3.10/enum.py", line 222, in __new__
+[3.157s]     dynamic_attributes = {
+[3.157s]   File "/usr/lib/python3.10/enum.py", line 225, in <setcomp>
+[3.157s]     if isinstance(v, DynamicClassAttribute)
+[3.157s] KeyboardInterrupt
+[3.165s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_solution_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_solution_interfaces_egg] Interrupt
+[3.165s] gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_solution_interfaces_egg.dir/all] Interrupt
+[3.165s] gmake: *** [Makefile:146: all] Interrupt

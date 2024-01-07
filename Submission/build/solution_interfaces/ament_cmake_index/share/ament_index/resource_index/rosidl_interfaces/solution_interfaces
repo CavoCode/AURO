@@ -1,0 +1,10 @@
+msg/Example.idl
+msg/Example.msg
+msg/ItemAssessment.idl
+msg/ItemAssessment.msg
+msg/StringWithPose.idl
+msg/StringWithPose.msg
+srv/RandomGoal.idl
+srv/RandomGoal.srv
+srv/RandomGoal_Request.msg
+srv/RandomGoal_Response.msg

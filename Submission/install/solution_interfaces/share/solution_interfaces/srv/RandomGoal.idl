@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from solution_interfaces/srv/RandomGoal.srv
+// generated code does not contain a copyright notice
+
+
+module solution_interfaces {
+  module srv {
+    struct RandomGoal_Request {
+      float x;
+
+      float y;
+    };
+    struct RandomGoal_Response {
+      float new_x;
+
+      float new_y;
+
+      float angle;
+    };
+  };
+};

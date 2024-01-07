@@ -1,0 +1,2 @@
+geometry_msgs/PointStamped goal_point_stamped
+string goal_type

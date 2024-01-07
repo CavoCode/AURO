@@ -1,0 +1,13 @@
+{
+  "package_name": "assessment_interfaces",
+  "non_idl_tuples": [
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/ItemLog.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/ItemHolder.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/ItemHolders.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/Item.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/ItemList.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/HomeZone.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/Robot.msg",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces:msg/RobotList.msg"
+  ]
+}
