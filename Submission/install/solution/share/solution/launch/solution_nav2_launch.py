@@ -39,7 +39,7 @@ def robot_controller_actions(context : LaunchContext):
                 executable='robot_controller',
                 # prefix=['xfce4-terminal --tab --execute'], # Opens in new tab
                 # prefix=['xfce4-terminal --execute'], # Opens in new window
-                # prefix=['gnome-terminal --tab --execute'], # Opens in new tab
+                prefix=['gnome-terminal --tab --execute'], # Opens in new tab
                 # prefix=['gnome-terminal --window --execute'], # Opens in new window
                 # prefix=['wt.exe --window 0 new-tab wsl.exe -e bash -ic'], # Opens in new tab
                 # prefix=['wt.exe wsl.exe -e bash -ic'], # Opens in new window
@@ -50,12 +50,14 @@ def robot_controller_actions(context : LaunchContext):
             Node(
                 package='solution',
                 executable='item_assessor',
+                prefix=['gnome-terminal --tab --execute'],
                 output='screen',
                 parameters=[{'robot_name': robot_name}]),
 
             Node(
                 package='solution',
                 executable='randomised_goal_service',
+                prefix=['gnome-terminal --tab --execute'],
                 output='screen'),
 
             # Node(
@@ -134,7 +136,7 @@ def generate_launch_description():
                           'params_file': params,
                           'headless': 'false',
                           'limit_real_time_factor': 'true',
-                          'wait_for_items': 'true',
+                          'wait_for_items': 'false',
                           # 'extra_gazebo_args': '--verbose',
                           }.items()
     )

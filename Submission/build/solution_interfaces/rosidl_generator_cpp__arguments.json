@@ -5,6 +5,7 @@
   "idl_tuples": [
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/Example.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/ItemAssessment.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/RobotStart.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/StringWithPose.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:srv/RandomGoal.idl"
   ],
@@ -87,6 +88,7 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/Example.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl",
+    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/RobotStart.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/StringWithPose.idl",
     "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/srv/RandomGoal.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",

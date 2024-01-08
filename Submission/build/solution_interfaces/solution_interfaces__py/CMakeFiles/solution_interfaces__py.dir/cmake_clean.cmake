@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/solution_interfaces/msg/_example_s.c"
   "../rosidl_generator_py/solution_interfaces/msg/_item_assessment.py"
   "../rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c"
+  "../rosidl_generator_py/solution_interfaces/msg/_robot_start.py"
+  "../rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c"
   "../rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py"
   "../rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c"
   "../rosidl_generator_py/solution_interfaces/srv/__init__.py"

@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.executors import ExternalShutdownException
 
+import sys
 import random
 import math
 
@@ -22,7 +24,7 @@ class RandomisedGoalService(Node):
 
         # Generating a random angle in radians
         random_angle = random.uniform(0, 2 * 3.14159)
-        random_distance = random.uniform(0.5, 1.0)
+        random_distance = random.uniform(0.25, 0.5)
 
         # Calculating the new position on the robot's radius of between 0.5 and 1.0
         response.new_x = x + random_distance * math.cos(random_angle)
@@ -37,8 +39,15 @@ def main():
     rclpy.init()
 
     node = RandomisedGoalService()
-    rclpy.spin(node)
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    except ExternalShutdownException:
+        sys.exit(1)
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':

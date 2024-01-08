@@ -8,7 +8,7 @@ from rclpy.duration import Duration
 
 from geometry_msgs.msg import Point, Pose, PointStamped
 from assessment_interfaces.msg import ItemHolders, ItemHolder, Item, ItemList
-from solution_interfaces.msg import ItemAssessment
+from solution_interfaces.msg import ItemAssessment, RobotStart
 from nav_msgs.msg import Odometry
 
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
@@ -32,6 +32,7 @@ class ItemAssessor(Node):
         self.pose = Pose()
         self.yaw = 0.0
 
+        self.start_control_loop = False
         self.robot_holding = False
         self.items = ItemList()
         self.goal_item = Item()
@@ -59,8 +60,15 @@ class ItemAssessor(Node):
         
         self.odom_subscriber = self.create_subscription(
             Odometry,
-            '/odom',
+            'odom',
             self.odom_callback,
+            10
+        )
+
+        self.robot_controller_subscriber = self.create_subscription(
+            RobotStart,
+            'robot_start_trigger',
+            self.robot_start_callback,
             10
         )
         
@@ -68,7 +76,7 @@ class ItemAssessor(Node):
         ## Initialise ROS Publishers ##
         ###############################
 
-        self.item_assessor_publisher = self.create_publisher(ItemAssessment, '/item_assessor', 10)
+        self.item_assessor_publisher = self.create_publisher(ItemAssessment, 'item_assessor', 10)
         
         ######################
         ## Initialise Timer ##
@@ -103,45 +111,53 @@ class ItemAssessor(Node):
                                                     self.pose.orientation.z,
                                                     self.pose.orientation.w])
         
-        self.yaw = yaw # Store the yaw in a class variable    
+        self.yaw = yaw # Store the yaw in a class variable   
+
+    def robot_start_callback(self, msg):
+        self.start_control_loop = msg.start_assessment
+
 
     ##################
     ## Control Loop ##
     ##################
 
     def control_loop(self):
-        
-        self.get_logger().info(f"Assessing Items...")
+        if self.start_control_loop == True:
+            self.get_logger().info(f"Assessing Items...")
 
-        if self.robot_holding:
-            self.get_logger().info(f"Holding Value: {self.holding_value}")
-            better_item_found = self.assess_items(self.holding_value)
+            if self.robot_holding:
+                self.get_logger().info(f"Holding Value: {self.holding_value}")
+                better_item_found = self.assess_items(self.holding_value)
+            else:
+                self.get_logger().info(f"Goal Value: {self.goal_value}")
+                better_item_found = self.assess_items(self.goal_value)
+
+            if better_item_found:
+
+                self.get_logger().info(f"Better Item found...")
+
+                angle = self.goal_item.x / 320.0
+                goal_point = Point()
+                goal_point.x = self.pose.position.x + self.goal_distance * math.cos(angle)
+                goal_point.y = self.pose.position.y + self.goal_distance * math.sin(angle)
+                
+                self.get_logger().info(f"Found at: X({goal_point.x}), Y({goal_point.y})")
+                self.get_logger().info(f"Robot at: X({self.pose.position.x}), Y({self.pose.position.y})")
+                self.get_logger().info(f"Distance to New Item: {self.goal_distance}")
+
+                item_goal_point = PointStamped()
+                item_goal_point.header.frame_id = 'new_item'
+                item_goal_point.header.stamp = self.get_clock().now().to_msg()   
+                item_goal_point.point = goal_point
+
+                item_assessment = ItemAssessment()
+                item_assessment.goal_point_stamped = item_goal_point
+                item_assessment.goal_type = 'Collect'
+
+                self.get_logger().info(f"Publishing to /item_assessor...")
+                self.item_assessor_publisher.publish(item_assessment)
         else:
-            self.get_logger().info(f"Goal Value: {self.goal_value}")
-            better_item_found = self.assess_items(self.goal_value)
-
-        if better_item_found:
-
-            self.get_logger().info(f"Better Item found...")
-
-            angle = self.goal_item.x / 320.0
-            goal_point = Point()
-            goal_point.x = self.pose.position.x + self.goal_distance * math.cos(angle)
-            goal_point.y = self.pose.position.y + self.goal_distance * math.sin(angle)
-            
-            self.get_logger().info(f"Found at: X({goal_point.x}), Y({goal_point.y})")
-
-            item_goal_point = PointStamped()
-            item_goal_point.header.frame_id = 'new_item'
-            item_goal_point.header.stamp = self.get_clock().now().to_msg()   
-            item_goal_point.point = goal_point
-
-            item_assessment = ItemAssessment()
-            item_assessment.goal_point_stamped = item_goal_point
-            item_assessment.goal_type = 'Collect'
-
-            self.get_logger().info(f"Publishing to /item_assessor...")
-            self.item_assessor_publisher.publish(item_assessment)
+            self.get_logger().info(f"Waiting for robot controller to be ready...")
 
     def assess_items(self, value_to_compare, goal_distance_threshold = 0.5, item_distance_threshold = 1):
         better_item_found = False
@@ -150,12 +166,9 @@ class ItemAssessor(Node):
         for i in range(0, len(self.items.data)):
             item = self.items.data[i]
 
-            self.get_logger().info(f"Assessing Item: {item}")
-            self.get_logger().info(f"Assessing Item Diameter: {item.diameter}")
+            distance_to_item = 0.25 * (69.0 * (float(item.diameter) ** -0.89))
 
-            distance_to_item = 69.0 * float(item.diameter) ** -0.89
-
-            if self.goal_item != None:
+            if self.goal_item.value != 0:
                 if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
                     # Assess if the item is better and closer
                     if item.value > value_to_compare:

@@ -1,9 +1,0 @@
-[ 10%] Built target solution_interfaces__rosidl_generator_c
-[ 10%] Built target ament_cmake_python_copy_solution_interfaces
-[ 12%] Built target solution_interfaces__cpp
-[ 23%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c
-[ 34%] Built target solution_interfaces__rosidl_typesupport_introspection_c
-[ 45%] Built target solution_interfaces__rosidl_typesupport_c
-[ 56%] Built target solution_interfaces__rosidl_typesupport_cpp
-[ 67%] Built target solution_interfaces__rosidl_typesupport_introspection_cpp
-[ 78%] Built target solution_interfaces__rosidl_typesupport_fastrtps_cpp

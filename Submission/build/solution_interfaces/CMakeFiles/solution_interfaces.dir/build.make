@@ -68,6 +68,7 @@ include CMakeFiles/solution_interfaces.dir/progress.make
 
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/Example.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/ItemAssessment.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/RobotStart.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/StringWithPose.msg
 CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/srv/RandomGoal.srv
 CMakeFiles/solution_interfaces: rosidl_cmake/srv/RandomGoal_Request.msg

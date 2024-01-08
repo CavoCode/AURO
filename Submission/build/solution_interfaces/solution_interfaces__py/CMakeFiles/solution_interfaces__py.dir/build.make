@@ -71,12 +71,14 @@ solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_c.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
+solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/__init__.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/__init__.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
+solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
 
@@ -95,6 +97,7 @@ rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesup
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/Example.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/RobotStart.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/srv/RandomGoal.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
@@ -171,6 +174,9 @@ rosidl_generator_py/solution_interfaces/msg/_example.py: rosidl_generator_py/sol
 rosidl_generator_py/solution_interfaces/msg/_item_assessment.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
 
+rosidl_generator_py/solution_interfaces/msg/_robot_start.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_start.py
+
 rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 
@@ -189,6 +195,9 @@ rosidl_generator_py/solution_interfaces/msg/_example_s.c: rosidl_generator_py/so
 rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
 
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
+
 rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 
@@ -203,6 +212,8 @@ solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
+solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start.py
+solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/__init__.py

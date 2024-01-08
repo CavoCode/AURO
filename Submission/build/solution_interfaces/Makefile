@@ -453,6 +453,30 @@ rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c.s
 .PHONY : rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c.s
 
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.o: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.o
+
+# target to build an object file
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.i: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.i
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.i
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.i
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.s: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s
+.PHONY : rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s
+
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.o: rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o
 .PHONY : rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.o
 
@@ -621,6 +645,30 @@ rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s
 .PHONY : rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s
 
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.o: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.o
+
+# target to build an object file
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o
+
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.i: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i
+
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.s: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s
+.PHONY : rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s
+
 rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.o: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o
 .PHONY : rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.o
 
@@ -716,6 +764,30 @@ rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.s: ro
 rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.cpp.s
+
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.o: rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.o
+
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.i: rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.i
+
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.s: rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.cpp.s
 
 rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.o: rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.o
@@ -813,6 +885,30 @@ rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp.s
 
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.o: rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o
+
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.i: rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.i
+
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.s: rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.s
+
 rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.o: rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.o
 
@@ -908,6 +1004,30 @@ rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__ty
 rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.o: rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.i: rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.s: rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.o: rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.o
@@ -1005,6 +1125,30 @@ rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item_assessment__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item_assessment__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.o: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.i: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.s: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.o: rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.o
 
@@ -1100,6 +1244,30 @@ rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessmen
 rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.c.s
+
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.o: rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.o
+
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.i: rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.i
+
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.s: rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.c.s
 
 rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.o: rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.o
@@ -1197,6 +1365,30 @@ rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessm
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessment__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessment__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.o: rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.i: rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.s: rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.o: rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.o
 
@@ -1282,6 +1474,9 @@ help:
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.o"
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.i"
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.s"
+	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.o"
+	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.i"
+	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.s"
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.o"
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.i"
 	@echo "... rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.s"
@@ -1303,6 +1498,9 @@ help:
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.o"
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.i"
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.s"
+	@echo "... rosidl_generator_py/solution_interfaces/msg/_robot_start_s.o"
+	@echo "... rosidl_generator_py/solution_interfaces/msg/_robot_start_s.i"
+	@echo "... rosidl_generator_py/solution_interfaces/msg/_robot_start_s.s"
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.o"
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.i"
 	@echo "... rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.s"
@@ -1315,6 +1513,9 @@ help:
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.o"
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.i"
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/item_assessment__type_support.s"
+	@echo "... rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.o"
+	@echo "... rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.i"
+	@echo "... rosidl_typesupport_c/solution_interfaces/msg/robot_start__type_support.s"
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.o"
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.i"
 	@echo "... rosidl_typesupport_c/solution_interfaces/msg/string_with_pose__type_support.s"
@@ -1327,6 +1528,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.o"
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.i"
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.s"
+	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.o"
+	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.i"
+	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.s"
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.o"
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.i"
 	@echo "... rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.s"
@@ -1339,6 +1543,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_start__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/string_with_pose__type_support_c.s"
@@ -1351,6 +1558,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item_assessment__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item_assessment__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/item_assessment__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/robot_start__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/solution_interfaces/msg/detail/dds_fastrtps/string_with_pose__type_support.s"
@@ -1363,6 +1573,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/item_assessment__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/robot_start__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/solution_interfaces/msg/detail/string_with_pose__type_support.s"
@@ -1375,6 +1588,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessment__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessment__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/item_assessment__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/robot_start__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/solution_interfaces/msg/detail/string_with_pose__type_support.s"

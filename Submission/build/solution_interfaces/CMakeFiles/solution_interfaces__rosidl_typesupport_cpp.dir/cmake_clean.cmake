@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/example__type_support.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/solution_interfaces/srv/random_goal__type_support.cpp.o"
@@ -11,6 +13,7 @@ file(REMOVE_RECURSE
   "libsolution_interfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/solution_interfaces/msg/example__type_support.cpp"
   "rosidl_typesupport_cpp/solution_interfaces/msg/item_assessment__type_support.cpp"
+  "rosidl_typesupport_cpp/solution_interfaces/msg/robot_start__type_support.cpp"
   "rosidl_typesupport_cpp/solution_interfaces/msg/string_with_pose__type_support.cpp"
   "rosidl_typesupport_cpp/solution_interfaces/srv/random_goal__type_support.cpp"
 )

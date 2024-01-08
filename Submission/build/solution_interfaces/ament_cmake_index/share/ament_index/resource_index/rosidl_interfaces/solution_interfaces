@@ -2,6 +2,8 @@ msg/Example.idl
 msg/Example.msg
 msg/ItemAssessment.idl
 msg/ItemAssessment.msg
+msg/RobotStart.idl
+msg/RobotStart.msg
 msg/StringWithPose.idl
 msg/StringWithPose.msg
 srv/RandomGoal.idl

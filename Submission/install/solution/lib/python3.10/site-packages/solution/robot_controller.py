@@ -4,10 +4,12 @@ import math
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.duration import Duration
 
 from geometry_msgs.msg import PoseStamped, Point, Twist, Pose
-from solution_interfaces.msg import ItemAssessment
+from assessment_interfaces.msg import ItemHolders, ItemHolder
+from solution_interfaces.msg import ItemAssessment, RobotStart
 from solution_interfaces.srv import RandomGoal
 from nav_msgs.msg import Odometry
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
@@ -43,8 +45,13 @@ class RobotController(Node):
         ## Initialise variables ##
         ##########################
 
+        self.robot_started = RobotStart()
+        self.robot_started.start_assessment = False
+
         self.state = State.SET_GOAL
+        self.item_assessment = ItemAssessment()
         self.item_updated = False
+        self.robot_holding = False
 
         self.pose = Pose()
         self.yaw = 0.0
@@ -78,12 +85,16 @@ class RobotController(Node):
         self.get_logger().info(f"Robot name: {self.robot_name}")
         self.get_logger().info(f"Initial Pose: {self.args_initial_pose}")
 
-
         ###############################
         ## Initialise NAV2 Navigator ##
         ###############################
 
         self.navigator = BasicNavigator()
+
+        ###########################
+        ## Update Nav2 Navigator ##
+        ###########################
+
         self.navigator.setInitialPose(initial_pose)
         self.navigator.waitUntilNav2Active()
 
@@ -93,15 +104,15 @@ class RobotController(Node):
 
         self.item_assessor_subscriber = self.create_subscription(
             ItemAssessment,
-            '/item_assessor',
+            'item_assessor',
             self.item_assessor_callback,
             10
         )
 
-        self.odom_subscriber = self.create_subscription(
-            Odometry,
-            '/odom',
-            self.odom_callback,
+        self.item_holder_subscriber = self.create_subscription(
+            ItemHolders,
+            '/item_holders',
+            self.item_holder_callback,
             10
         )
 
@@ -110,15 +121,24 @@ class RobotController(Node):
         ###############################
 
         self.cmd_vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.robot_start_publisher = self.create_publisher(RobotStart, 'robot_start_trigger', 10)
 
-        ###############################
+        ##############################
         ## Initialise ROS Services ##
-        ###############################
+        ##############################
 
-        self.random_goal_client = self.create_client(RandomGoal, 'randomised_goal_service')
+        random_client_callback_group = MutuallyExclusiveCallbackGroup()
+        self.random_goal_client = self.create_client(RandomGoal, 'random_goal', callback_group=random_client_callback_group)
         while not self.random_goal_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
         self.random_goal_request = RandomGoal.Request()
+
+        ###########################
+        ## Update Nav2 Navigator ##
+        ###########################
+
+        self.navigator.setInitialPose(initial_pose)
+        self.navigator.waitUntilNav2Active()
 
         ######################
         ## Initialise Timer ##
@@ -133,16 +153,26 @@ class RobotController(Node):
     ## Subscription Callbacks ##
     ############################
         
-    def item_assessor_callback(self, msg):
-        self.item_assessment = msg
+    def item_holder_callback(self, msg):
+        itemHolders = ItemHolders()
+        itemHolders = msg
 
+        itemHolder = ItemHolder()
+        for itemHolder in itemHolders.data:
+            if itemHolder.robot_id == self.robot_name and itemHolder.holding_item == True:
+                self.robot_holding = True
+                return
+            
+        self.robot_holding = False
+
+    def item_assessor_callback(self, msg):
         # Define a small time window (in seconds) for matching timestamps
         time_window = 0.005  # Adjust as needed (5 milliseconds in this example)
 
         # Get the current clock time
         current_time = self.get_clock().now().to_msg()
 
-        if abs((msg.goal_point_stamped.header.stamp - current_time).to_sec()) < time_window:
+        if msg.goal_point_stamped.header.stamp == current_time:
             self.item_assessment = msg
             self.get_logger().info(f"Updated with new item position from /item_assessor")
             self.current_goal = self.item_assessment.goal_point_stamped.point
@@ -151,23 +181,15 @@ class RobotController(Node):
 
         else:
             self.item_updated = False
-
-    def odom_callback(self, msg):
-        self.pose = msg.pose.pose # Store the pose in a class variable
-
-        (roll, pitch, yaw) = euler_from_quaternion([self.pose.orientation.x,
-                                                    self.pose.orientation.y,
-                                                    self.pose.orientation.z,
-                                                    self.pose.orientation.w])
-        
-        self.yaw = yaw # Store the yaw in a class variable    
-
     
     ##################
     ## Control Loop ##
     ##################
 
     def control_loop(self):
+        if self.robot_started.start_assessment == False:
+            self.robot_started.start_assessment = True
+            self.robot_start_publisher.publish(self.robot_started)
 
         time_difference = self.get_clock().now() - self.previous_time
 
@@ -182,6 +204,9 @@ class RobotController(Node):
             self.item_updated = False
             self.navigator.cancelTask()
             self.state = State.SET_GOAL
+        elif self.robot_holding and self.item_updated != True and self.state != State.NAVIGATING:
+            self.navigator.cancelTask()
+            self.state = State.HOMING
 
         if self.current_goal_type == 'Search' and self.state == State.SET_GOAL and self.new_search:
             self.random_goal_request.x = self.pose.position.x
@@ -233,6 +258,8 @@ class RobotController(Node):
 
                     feedback = self.navigator.getFeedback()
                     self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
+                    self.pose = feedback.current_pose.pose
+                    self.get_logger().info(f"Estimated current pose: {self.pose}")
 
                     if Duration.from_msg(feedback.navigation_time) > Duration(seconds = 30):
                         self.get_logger().info(f"Navigation took too long... cancelling")
@@ -246,12 +273,10 @@ class RobotController(Node):
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
                             
-                            if self.current_goal_type == 'Collect':
-                                self.current_goal_type = 'Home'
-                                self.state = State.HOMING
-                            else:
-                                self.current_goal_type = 'Search'
-                                self.state = State.SET_GOAL
+                            self.get_logger().info(f"Spinning")
+
+                            self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                            self.state = State.SPINNING
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
@@ -266,14 +291,82 @@ class RobotController(Node):
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
 
+            case State.SPINNING:
+
+                if not self.navigator.isTaskComplete():
+
+                    feedback = self.navigator.getFeedback()
+                    self.get_logger().info(f"Turned: {math.degrees(feedback.angular_distance_traveled):.2f} degrees")
+                    self.pose = feedback.current_pose.pose
+
+                else:
+
+                    result = self.navigator.getResult()
+
+                    match result:
+
+                        case TaskResult.SUCCEEDED:
+                            self.get_logger().info(f"Goal succeeded!")
+
+                            self.get_logger().info(f"Backing up")
+
+                            self.navigator.backup(backup_dist=0.15, backup_speed=0.025, time_allowance=10)
+                            self.state = State.BACKUP
+
+                        case TaskResult.CANCELED:
+                            self.get_logger().info(f"Goal was canceled!")
+
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.FAILED:
+                            self.get_logger().info(f"Goal failed!")
+
+                            self.state = State.SET_GOAL
+
+                        case _:
+                            self.get_logger().info(f"Goal has an invalid return status!")
+
+            case State.BACKUP:
+
+                if not self.navigator.isTaskComplete():
+
+                    feedback = self.navigator.getFeedback()
+                    self.get_logger().info(f"Distance travelled: {feedback.distance_traveled:.2f} metres")
+                    self.pose = feedback.current_pose.pose
+
+                else:
+
+                    result = self.navigator.getResult()
+
+                    match result:
+
+                        case TaskResult.SUCCEEDED:
+                            self.get_logger().info(f"Goal succeeded!")
+
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.CANCELED:
+                            self.get_logger().info(f"Goal was canceled!")
+
+                            self.state = State.SET_GOAL
+
+                        case TaskResult.FAILED:
+                            self.get_logger().info(f"Goal failed!")
+
+                            self.state = State.SET_GOAL
+
+                        case _:
+                            self.get_logger().info(f"Goal has an invalid return status!")
+
             case State.HOMING:
 
                 #Change self.distance to be distance home or smth. 
                 if self.home_distance < 0.1:
+                    self.current_goal_type = 'Search'
+                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
                     self.previous_time = self.get_clock().now()
                     self.get_logger().info(f"Made it home!")
-                    self.current_goal_type = 'Search'
-                    self.state = State.SET_GOAL
+                    self.state = State.SPINNING
                     return
                 
                 else:
