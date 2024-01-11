@@ -157,30 +157,25 @@ class ItemAssessor(Node):
             self.get_logger().info(f"Waiting for robot controller to be ready...")
 
     def assess_items(self, value_to_compare):
-        better_item_found = False
-        distance_to_item = 0
-
         for i in range(0, len(self.items.data)):
             item = self.items.data[i]
-
             distance_to_item = (69.0 * (float(item.diameter) ** (-0.89))) - 0.2
 
             if self.goal_item.value != 0:
-                if distance_to_item < self.goal_distance:
-                    # Assess if the item is better and closer
-                    if item.value > value_to_compare:
-                        self.goal_item = item
-                        self.goal_value = item.value
-                        self.goal_distance = distance_to_item
-                        better_item_found = True
-                
+                # Assess if the item is better and closer
+                if item.value > value_to_compare and distance_to_item < self.goal_distance:
+                    self.goal_item = item
+                    self.goal_value = item.value
+                    self.goal_distance = distance_to_item
+                    return True
+                 
             else:
                 self.goal_item = item
                 self.goal_value = item.value
                 self.goal_distance = distance_to_item
-                better_item_found = True
+                return True
             
-        return better_item_found
+        return False
     
     def destroy_node(self):
         self.get_logger().info(f"Shutting down")

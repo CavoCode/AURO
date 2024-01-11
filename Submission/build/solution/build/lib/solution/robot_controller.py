@@ -22,11 +22,12 @@ from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from enum import Enum
 
 class State(Enum):
-    SET_GOAL = 0
-    NAVIGATING = 1
-    SPINNING = 2
-    SET_HOME_GOAL = 3
-    HOMING = 4
+    SET_SEARCH = 0
+    SET_COLLECT = 1
+    NAVIGATING = 2
+    SPINNING = 3
+    SET_HOME_GOAL = 4
+    HOMING = 5
 
 class RobotController(Node):
 
@@ -43,6 +44,9 @@ class RobotController(Node):
         init_pose = self.get_parameter('initial_pose').value
         self.robot_name = self.get_parameter('robot_name').value
 
+        self.get_logger().info(f"Robot name: {self.robot_name}")
+        self.get_logger().info(f"Initial Pose: {init_pose}")
+
         ##########################
         ## Initialise variables ##
         ##########################
@@ -52,19 +56,15 @@ class RobotController(Node):
 
         self.robot_started = RobotStart()
         self.robot_started.start_assessment = False
-
-        self.state = State.SET_GOAL
         self.item_assessment = ItemAssessment()
         self.item_updated = False
+
+        self.state = State.SET_SEARCH
         self.robot_holding = False
 
         self.pose = Pose()
         self.pose.position.x = init_pose[0]
         self.pose.position.y = init_pose[1]
-        self.home_pose = Pose()
-
-        self.home_distance = 0
-        self.home_angle = 0.0
 
         self.current_goal = Point()
         self.current_goal_type = 'Search'
@@ -85,9 +85,6 @@ class RobotController(Node):
          initial_pose.pose.orientation.y,
          initial_pose.pose.orientation.z,
          initial_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(0), axes='sxyz')
-
-        self.get_logger().info(f"Robot name: {self.robot_name}")
-        self.get_logger().info(f"Initial Pose: {init_pose}")
 
         ###############################
         ## Initialise NAV2 Navigator ##
@@ -206,44 +203,40 @@ class RobotController(Node):
             self.get_logger().info(f"Homing...")
             self.current_goal_type = 'Home'
             self.state = State.SET_HOME_GOAL
-            return
-
-        if self.current_goal_type == 'Collect' and self.item_updated:
-            self.item_updated = False
+        
+        if self.item_updated and self.current_goal_type != 'Home':
             self.navigator.cancelTask()
-            self.state = State.SET_GOAL
-            return
-
-        if self.current_goal_type == 'Search' and self.state == State.SET_GOAL and self.new_search:
-            self.random_goal_request.x = self.pose.position.x
-            self.random_goal_request.y = self.pose.position.y
-
-            self.random_goal_response = self.random_goal_client.call_async(self.random_goal_request)
-            self.new_search = False
-            return
+            self.state = State.SET_COLLECT
+            self.current_goal_type = 'Collect'
+            self.item_updated = False
 
         self.get_logger().info(f"State: {self.state}")
 
         match self.state:
 
-            case State.SET_GOAL:
+            case State.SET_SEARCH:
+                if self.new_search:
+                    self.random_goal_request.x = self.pose.position.x
+                    self.random_goal_request.y = self.pose.position.y
 
-                if self.current_goal_type == 'Search':
-                    if self.random_goal_response.done():
-                        try:
-                            # Process the response
-                            response = self.random_goal_response.result()
-                            self.get_logger().info('Response recieved from Random Goal Service')
-                            self.current_goal.x = response.new_x
-                            self.current_goal.y = response.new_y
-                            self.current_goal_angle = response.angle
-                            self.new_search = True
+                    self.random_goal_response = self.random_goal_client.call_async(self.random_goal_request)
+                    self.new_search = False
+                            
+                if self.random_goal_response.done():
+                    try:
+                        # Process the response
+                        response = self.random_goal_response.result()
+                        self.get_logger().info('Response recieved from Random Goal Service')
+                        self.current_goal.x = response.new_x
+                        self.current_goal.y = response.new_y
+                        self.current_goal_angle = response.angle
+                        self.new_search = True
 
-                        except Exception as e:
-                            self.get_logger().info('Service call failed %r' % (e,))
+                    except Exception as e:
+                        self.get_logger().info('Service call failed %r' % (e,))
 
-                    else:
-                        return
+                else:
+                    return
 
                 goal_pose = PoseStamped()
                 goal_pose.header.frame_id = 'map'
@@ -253,7 +246,23 @@ class RobotController(Node):
                 (goal_pose.pose.orientation.x,
                 goal_pose.pose.orientation.y,
                 goal_pose.pose.orientation.z,
-                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(self.current_goal_angle), axes='sxyz')
+                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.current_goal_angle, axes='sxyz')
+                                
+                self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.current_goal_angle:.2f} degrees")
+
+                self.navigator.goToPose(goal_pose)
+                self.state = State.NAVIGATING
+
+            case State.SET_COLLECT:
+                goal_pose = PoseStamped()
+                goal_pose.header.frame_id = 'map'
+                goal_pose.header.stamp = self.get_clock().now().to_msg()                
+                goal_pose.pose.position = self.current_goal
+
+                (goal_pose.pose.orientation.x,
+                goal_pose.pose.orientation.y,
+                goal_pose.pose.orientation.z,
+                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.current_goal_angle, axes='sxyz')
                                 
                 self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.current_goal_angle:.2f} degrees")
 
@@ -263,7 +272,7 @@ class RobotController(Node):
             case State.NAVIGATING:
 
                 if not self.navigator.isTaskComplete():
-
+                    
                     feedback = self.navigator.getFeedback()
                     self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
 
@@ -278,27 +287,35 @@ class RobotController(Node):
 
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
-                            
-                            self.get_logger().info(f"Spinning")
+                                
+                            match self.current_goal_type:
+                                case 'Search':
+                                    self.get_logger().info(f"Spinning")
+                                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                                    self.state = State.SPINNING
 
-                            self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                            self.state = State.SPINNING
+                                case 'Collect':
+                                    if self.robot_holding:
+                                        self.state = State.SET_HOME_GOAL
+                                        self.current_goal_type = 'Home'
+                                    else:
+                                        self.state = State.SET_SEARCH
+                                        self.current_goal_type = 'Search'
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
                             self.current_goal_type = 'Search'
-                            self.state = State.SET_GOAL
+                            self.state = State.SET_SEARCH
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
                             self.current_goal_type = 'Search'
-                            self.state = State.SET_GOAL
+                            self.state = State.SET_SEARCH
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
 
             case State.SPINNING:
-
                 if not self.navigator.isTaskComplete():
 
                     feedback = self.navigator.getFeedback()
@@ -312,24 +329,17 @@ class RobotController(Node):
 
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
-
-                            if self.current_goal_type == 'Collect' and self.robot_holding:
-                                self.state = State.SET_HOME_GOAL
-                                self.current_goal_type = 'Home'
-
-                            else:
-                                self.current_goal_type = 'Search'
-                                self.state = State.SET_GOAL
+                            self.state = State.SET_SEARCH
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
-                            self.current_goal_type = 'Search'
-                            self.state = State.SET_GOAL
+
+                            self.state = State.SET_SEARCH
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
-                            self.current_goal_type = 'Search'
-                            self.state = State.SET_GOAL
+
+                            self.state = State.SET_SEARCH
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
@@ -348,8 +358,7 @@ class RobotController(Node):
                                                                 t.transform.rotation.y,
                                                                 t.transform.rotation.z,
                                                                 t.transform.rotation.w])
-
-                    distance = math.sqrt(x ** 2 + y ** 2)
+                    
                     angle = math.atan2(y, x)
 
                     home_point = Point()
@@ -379,8 +388,7 @@ class RobotController(Node):
                 if not self.navigator.isTaskComplete():
 
                     feedback = self.navigator.getFeedback()
-                    self.get_logger().info(f"Distance travelled: {feedback.distance_traveled:.2f} metres")
-                    self.pose = feedback.current_pose.pose
+                    self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
 
                 else:
 
@@ -394,16 +402,14 @@ class RobotController(Node):
                             self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
                             self.previous_time = self.get_clock().now()
                             self.get_logger().info(f"Made it home!")
-                            self.state = State.SPINNING
+                            self.state = State.SET_SEARCH
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
-
-                            self.state = State.SET_GOAL
+                            self.state = State.SET_SEARCH
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
-
                             self.state = State.SET_HOME_GOAL
 
                         case _:

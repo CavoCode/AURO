@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/solution/solution.egg-info/PKG-INFO
+writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt
+writing entry points to ../../build/solution/solution.egg-info/entry_points.txt
+writing requirements to ../../build/solution/solution.egg-info/requires.txt
+writing top-level names to ../../build/solution/solution.egg-info/top_level.txt
+reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info
+running install_scripts
+Installing data_logger script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+Installing item_assessor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+Installing randomised_goal_service script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+Installing robot_controller script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+Installing robot_position script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution
+writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log'
