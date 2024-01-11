@@ -16,6 +16,7 @@ solution/data_logger.py
 solution/item_assessor.py
 solution/randomised_goal_service.py
 solution/robot_controller.py
+solution/robot_position_publisher.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

@@ -1,8 +1,10 @@
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_position_publisher.py
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/randomised_goal_service.py
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_controller.py
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/item_assessor.py
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__init__.py
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/data_logger.py
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__pycache__/robot_position_publisher.cpython-310.pyc
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__pycache__/randomised_goal_service.cpython-310.pyc
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__pycache__/robot_controller.cpython-310.pyc
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__pycache__/item_assessor.cpython-310.pyc
@@ -23,3 +25,4 @@
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution/item_assessor
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution/randomised_goal_service
 /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution/robot_controller
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/solution/robot_position

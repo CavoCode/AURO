@@ -28,6 +28,7 @@ typedef struct solution_interfaces__msg__ItemAssessment
 {
   geometry_msgs__msg__PointStamped goal_point_stamped;
   rosidl_runtime_c__String goal_type;
+  float goal_angle;
 } solution_interfaces__msg__ItemAssessment;
 
 // Struct for a sequence of solution_interfaces__msg__ItemAssessment.

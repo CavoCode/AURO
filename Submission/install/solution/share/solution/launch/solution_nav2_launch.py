@@ -52,11 +52,18 @@ def robot_controller_actions(context : LaunchContext):
                 executable='item_assessor',
                 prefix=['gnome-terminal --tab --execute'],
                 output='screen',
-                parameters=[{'robot_name': robot_name}]),
+                parameters=[{'initial_pose': initial_pose,
+                            'robot_name': robot_name}]),
 
             Node(
                 package='solution',
                 executable='randomised_goal_service',
+                prefix=['gnome-terminal --tab --execute'],
+                output='screen'),
+
+            Node(
+                package='solution',
+                executable='robot_position',
                 prefix=['gnome-terminal --tab --execute'],
                 output='screen'),
 

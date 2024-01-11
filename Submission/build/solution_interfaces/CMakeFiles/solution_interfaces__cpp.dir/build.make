@@ -78,6 +78,10 @@ CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/ms
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__traits.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp
@@ -105,6 +109,7 @@ rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/Example.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/RobotStart.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/srv/RandomGoal.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
@@ -202,6 +207,18 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp: ros
 rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
 
+rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
+
+rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
+
+rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
+
+rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__traits.hpp
+
 rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
 
@@ -233,6 +250,9 @@ solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/ex
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__traits.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
@@ -241,6 +261,7 @@ solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/st
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/item_assessment.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_start.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__builder.hpp

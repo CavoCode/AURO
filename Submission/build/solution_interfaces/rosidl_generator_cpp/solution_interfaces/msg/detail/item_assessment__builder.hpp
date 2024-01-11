@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ItemAssessment_goal_angle
+{
+public:
+  explicit Init_ItemAssessment_goal_angle(::solution_interfaces::msg::ItemAssessment & msg)
+  : msg_(msg)
+  {}
+  ::solution_interfaces::msg::ItemAssessment goal_angle(::solution_interfaces::msg::ItemAssessment::_goal_angle_type arg)
+  {
+    msg_.goal_angle = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::solution_interfaces::msg::ItemAssessment msg_;
+};
+
 class Init_ItemAssessment_goal_type
 {
 public:
   explicit Init_ItemAssessment_goal_type(::solution_interfaces::msg::ItemAssessment & msg)
   : msg_(msg)
   {}
-  ::solution_interfaces::msg::ItemAssessment goal_type(::solution_interfaces::msg::ItemAssessment::_goal_type_type arg)
+  Init_ItemAssessment_goal_angle goal_type(::solution_interfaces::msg::ItemAssessment::_goal_type_type arg)
   {
     msg_.goal_type = std::move(arg);
-    return std::move(msg_);
+    return Init_ItemAssessment_goal_angle(msg_);
   }
 
 private:

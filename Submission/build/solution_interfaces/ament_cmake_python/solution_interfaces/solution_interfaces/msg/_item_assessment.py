@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -61,16 +63,19 @@ class ItemAssessment(metaclass=Metaclass_ItemAssessment):
     __slots__ = [
         '_goal_point_stamped',
         '_goal_type',
+        '_goal_angle',
     ]
 
     _fields_and_field_types = {
         'goal_point_stamped': 'geometry_msgs/PointStamped',
         'goal_type': 'string',
+        'goal_angle': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PointStamped'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -80,6 +85,7 @@ class ItemAssessment(metaclass=Metaclass_ItemAssessment):
         from geometry_msgs.msg import PointStamped
         self.goal_point_stamped = kwargs.get('goal_point_stamped', PointStamped())
         self.goal_type = kwargs.get('goal_type', str())
+        self.goal_angle = kwargs.get('goal_angle', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -114,6 +120,8 @@ class ItemAssessment(metaclass=Metaclass_ItemAssessment):
             return False
         if self.goal_type != other.goal_type:
             return False
+        if self.goal_angle != other.goal_angle:
+            return False
         return True
 
     @classmethod
@@ -147,3 +155,18 @@ class ItemAssessment(metaclass=Metaclass_ItemAssessment):
                 isinstance(value, str), \
                 "The 'goal_type' field must be of type 'str'"
         self._goal_type = value
+
+    @builtins.property
+    def goal_angle(self):
+        """Message field 'goal_angle'."""
+        return self._goal_angle
+
+    @goal_angle.setter
+    def goal_angle(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'goal_angle' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'goal_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._goal_angle = value

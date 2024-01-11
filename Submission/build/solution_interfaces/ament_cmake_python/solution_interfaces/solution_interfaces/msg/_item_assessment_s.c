@@ -83,6 +83,15 @@ bool solution_interfaces__msg__item_assessment__convert_from_py(PyObject * _pyms
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // goal_angle
+    PyObject * field = PyObject_GetAttrString(_pymsg, "goal_angle");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->goal_angle = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -130,6 +139,17 @@ PyObject * solution_interfaces__msg__item_assessment__convert_to_py(void * raw_r
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "goal_type", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // goal_angle
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->goal_angle);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "goal_angle", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

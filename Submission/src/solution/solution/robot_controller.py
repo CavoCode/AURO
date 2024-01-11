@@ -7,12 +7,15 @@ from rclpy.executors import ExternalShutdownException
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.duration import Duration
 
-from geometry_msgs.msg import PoseStamped, Point, Twist, Pose
+from geometry_msgs.msg import PoseStamped, Point, Pose
 from assessment_interfaces.msg import ItemHolders, ItemHolder
-from solution_interfaces.msg import ItemAssessment, RobotStart
+from solution_interfaces.msg import ItemAssessment, RobotStart, RobotPubPosition
 from solution_interfaces.srv import RandomGoal
-from nav_msgs.msg import Odometry
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
+
+from tf2_ros import TransformException
+from tf2_ros.buffer import Buffer
+from tf2_ros.transform_listener import TransformListener
 
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
 
@@ -22,7 +25,7 @@ class State(Enum):
     SET_GOAL = 0
     NAVIGATING = 1
     SPINNING = 2
-    BACKUP = 3
+    SET_HOME_GOAL = 3
     HOMING = 4
 
 class RobotController(Node):
@@ -37,13 +40,15 @@ class RobotController(Node):
         self.declare_parameter('initial_pose', rclpy.Parameter.Type.DOUBLE_ARRAY)
         self.declare_parameter('robot_name', rclpy.Parameter.Type.STRING)
 
-        self.args_initial_pose = self.get_parameter('initial_pose').value
+        init_pose = self.get_parameter('initial_pose').value
         self.robot_name = self.get_parameter('robot_name').value
-
 
         ##########################
         ## Initialise variables ##
         ##########################
+
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
 
         self.robot_started = RobotStart()
         self.robot_started.start_assessment = False
@@ -54,7 +59,9 @@ class RobotController(Node):
         self.robot_holding = False
 
         self.pose = Pose()
-        self.yaw = 0.0
+        self.pose.position.x = init_pose[0]
+        self.pose.position.y = init_pose[1]
+        self.home_pose = Pose()
 
         self.home_distance = 0
         self.home_angle = 0.0
@@ -71,19 +78,16 @@ class RobotController(Node):
         initial_pose = PoseStamped()
         initial_pose.header.frame_id = 'map'
         initial_pose.header.stamp = self.get_clock().now().to_msg()
-        initial_pose.pose.position.x = self.args_initial_pose[0]
-        initial_pose.pose.position.y = self.args_initial_pose[1]
+        initial_pose.pose.position.x = init_pose[0]
+        initial_pose.pose.position.y = init_pose[1]
 
         (initial_pose.pose.orientation.x,
          initial_pose.pose.orientation.y,
          initial_pose.pose.orientation.z,
          initial_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(0), axes='sxyz')
 
-        self.home_pose = Pose()
-        self.home_pose = initial_pose.pose
-
         self.get_logger().info(f"Robot name: {self.robot_name}")
-        self.get_logger().info(f"Initial Pose: {self.args_initial_pose}")
+        self.get_logger().info(f"Initial Pose: {init_pose}")
 
         ###############################
         ## Initialise NAV2 Navigator ##
@@ -106,7 +110,7 @@ class RobotController(Node):
             ItemAssessment,
             'item_assessor',
             self.item_assessor_callback,
-            10
+            1
         )
 
         self.item_holder_subscriber = self.create_subscription(
@@ -116,11 +120,17 @@ class RobotController(Node):
             10
         )
 
+        self.robot_position_subscriber = self.create_subscription(
+            RobotPubPosition,
+            'robot_position',
+            self.robot_position_callback,
+            10
+        )
+
         ###############################
         ## Initialise ROS Publishers ##
         ###############################
 
-        self.cmd_vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
         self.robot_start_publisher = self.create_publisher(RobotStart, 'robot_start_trigger', 10)
 
         ##############################
@@ -166,21 +176,15 @@ class RobotController(Node):
         self.robot_holding = False
 
     def item_assessor_callback(self, msg):
-        # Define a small time window (in seconds) for matching timestamps
-        time_window = 0.005  # Adjust as needed (5 milliseconds in this example)
+        self.item_assessment = msg
+        self.get_logger().info(f"Updated with new item position from /item_assessor")
+        self.current_goal = self.item_assessment.goal_point_stamped.point
+        self.current_goal_type = self.item_assessment.goal_type
+        self.current_goal_angle = self.item_assessment.goal_angle
+        self.item_updated = True
 
-        # Get the current clock time
-        current_time = self.get_clock().now().to_msg()
-
-        if msg.goal_point_stamped.header.stamp == current_time:
-            self.item_assessment = msg
-            self.get_logger().info(f"Updated with new item position from /item_assessor")
-            self.current_goal = self.item_assessment.goal_point_stamped.point
-            self.current_goal_type = self.item_assessment.goal_type
-            self.item_updated = True
-
-        else:
-            self.item_updated = False
+    def robot_position_callback(self, msg):
+        self.pose = msg.pose
     
     ##################
     ## Control Loop ##
@@ -188,25 +192,27 @@ class RobotController(Node):
 
     def control_loop(self):
         if self.robot_started.start_assessment == False:
+            self.get_logger().info(f"Robot Controller Started...")
             self.robot_started.start_assessment = True
             self.robot_start_publisher.publish(self.robot_started)
-
+            return
+        
+        self.get_logger().info(f"Current Position: X({self.pose.position.x}), Y({self.pose.position.y})")
         time_difference = self.get_clock().now() - self.previous_time
 
-        if time_difference > Duration(seconds = 300):
+        if time_difference > Duration(seconds = 50):
             self.navigator.cancelTask()
             self.previous_time = self.get_clock().now()
             self.get_logger().info(f"Homing...")
             self.current_goal_type = 'Home'
-            self.state = State.HOMING
+            self.state = State.SET_HOME_GOAL
+            return
 
         if self.current_goal_type == 'Collect' and self.item_updated:
             self.item_updated = False
             self.navigator.cancelTask()
             self.state = State.SET_GOAL
-        elif self.robot_holding and self.item_updated != True and self.state != State.NAVIGATING:
-            self.navigator.cancelTask()
-            self.state = State.HOMING
+            return
 
         if self.current_goal_type == 'Search' and self.state == State.SET_GOAL and self.new_search:
             self.random_goal_request.x = self.pose.position.x
@@ -214,6 +220,7 @@ class RobotController(Node):
 
             self.random_goal_response = self.random_goal_client.call_async(self.random_goal_request)
             self.new_search = False
+            return
 
         self.get_logger().info(f"State: {self.state}")
 
@@ -234,6 +241,7 @@ class RobotController(Node):
 
                         except Exception as e:
                             self.get_logger().info('Service call failed %r' % (e,))
+
                     else:
                         return
 
@@ -243,9 +251,9 @@ class RobotController(Node):
                 goal_pose.pose.position = self.current_goal
 
                 (goal_pose.pose.orientation.x,
-                 goal_pose.pose.orientation.y,
-                 goal_pose.pose.orientation.z,
-                 goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(self.current_goal_angle), axes='sxyz')
+                goal_pose.pose.orientation.y,
+                goal_pose.pose.orientation.z,
+                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(self.current_goal_angle), axes='sxyz')
                                 
                 self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.current_goal_angle:.2f} degrees")
 
@@ -258,8 +266,6 @@ class RobotController(Node):
 
                     feedback = self.navigator.getFeedback()
                     self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
-                    self.pose = feedback.current_pose.pose
-                    self.get_logger().info(f"Estimated current pose: {self.pose}")
 
                     if Duration.from_msg(feedback.navigation_time) > Duration(seconds = 30):
                         self.get_logger().info(f"Navigation took too long... cancelling")
@@ -297,7 +303,6 @@ class RobotController(Node):
 
                     feedback = self.navigator.getFeedback()
                     self.get_logger().info(f"Turned: {math.degrees(feedback.angular_distance_traveled):.2f} degrees")
-                    self.pose = feedback.current_pose.pose
 
                 else:
 
@@ -308,31 +313,73 @@ class RobotController(Node):
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
 
-                            self.get_logger().info(f"Backing up")
+                            if self.current_goal_type == 'Collect' and self.robot_holding:
+                                self.state = State.SET_HOME_GOAL
+                                self.current_goal_type = 'Home'
 
-                            self.navigator.backup(backup_dist=0.15, backup_speed=0.025, time_allowance=10)
-                            self.state = State.BACKUP
+                            else:
+                                self.current_goal_type = 'Search'
+                                self.state = State.SET_GOAL
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
-
+                            self.current_goal_type = 'Search'
                             self.state = State.SET_GOAL
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
-
+                            self.current_goal_type = 'Search'
                             self.state = State.SET_GOAL
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
 
-            case State.BACKUP:
+            case State.SET_HOME_GOAL:
+                try:
+                    t = self.tf_buffer.lookup_transform(
+                        'map',
+                        'odom',
+                        rclpy.time.Time())
+                    
+                    x = t.transform.translation.x
+                    y = t.transform.translation.y
+                    
+                    (roll, pitch, yaw) = euler_from_quaternion([t.transform.rotation.x,
+                                                                t.transform.rotation.y,
+                                                                t.transform.rotation.z,
+                                                                t.transform.rotation.w])
 
+                    distance = math.sqrt(x ** 2 + y ** 2)
+                    angle = math.atan2(y, x)
+
+                    home_point = Point()
+                    home_point.x = x
+                    home_point.y = y
+
+                    home_pose = PoseStamped()
+                    home_pose.header.frame_id = 'map'
+                    home_pose.header.stamp = self.get_clock().now().to_msg()                
+                    home_pose.pose.position = home_point
+
+                    (home_pose.pose.orientation.x,
+                    home_pose.pose.orientation.y,
+                    home_pose.pose.orientation.z,
+                    home_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(angle), axes='sxyz')
+                                    
+                    self.get_logger().info(f"Navigating to home: ({home_pose.pose.position.x:.2f}, {home_pose.pose.position.y:.2f}), {angle:.2f} degrees")
+
+                    self.navigator.goToPose(home_pose)
+                    self.state = State.HOMING
+
+                except TransformException as e:
+                    self.get_logger().info(f"{e}")
+
+
+            case State.HOMING:
                 if not self.navigator.isTaskComplete():
 
                     feedback = self.navigator.getFeedback()
-                    self.get_logger().info(f"Distance travelled: {feedback.distance_traveled:.2f} metres")
-                    self.pose = feedback.current_pose.pose
+                    self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
 
                 else:
 
@@ -343,7 +390,10 @@ class RobotController(Node):
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
 
-                            self.state = State.SET_GOAL
+                            self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                            self.previous_time = self.get_clock().now()
+                            self.get_logger().info(f"Made it home!")
+                            self.state = State.SPINNING
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
@@ -353,44 +403,10 @@ class RobotController(Node):
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
 
-                            self.state = State.SET_GOAL
+                            self.state = State.SET_HOME_GOAL
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
-
-            case State.HOMING:
-
-                #Change self.distance to be distance home or smth. 
-                if self.home_distance < 0.1:
-                    self.current_goal_type = 'Search'
-                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                    self.previous_time = self.get_clock().now()
-                    self.get_logger().info(f"Made it home!")
-                    self.state = State.SPINNING
-                    return
-                
-                else:
-                    x = self.pose.position.x - self.home_pose.position.x
-                    y = self.pose.position.y - self.home_pose.position.y
-
-                    self.home_distance = math.sqrt(x ** 2 + y ** 2)
-                    self.home_angle = math.atan2(y, x)
-
-                    self.get_logger().info(f"x: {x:.2f}")
-                    self.get_logger().info(f"y: {y:.2f}")
-                    self.get_logger().info(f"distance: {self.home_distance:.2f}")
-                    self.get_logger().info(f"angle (degrees): {math.degrees(self.home_angle):.2f}")
-
-                    msg = Twist()
-
-                    if math.fabs(self.home_angle) > math.radians(15):
-                        msg.linear.x = 0.0
-                    else:
-                        msg.linear.x = 0.3 * self.home_distance
-                        
-                    msg.angular.z = 0.5 * self.home_angle
-
-                    self.cmd_vel_publisher.publish(msg)
 
             case _:
                 pass

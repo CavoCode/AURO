@@ -33,6 +33,7 @@ solution_interfaces__msg__ItemAssessment__init(solution_interfaces__msg__ItemAss
     solution_interfaces__msg__ItemAssessment__fini(msg);
     return false;
   }
+  // goal_angle
   return true;
 }
 
@@ -46,6 +47,7 @@ solution_interfaces__msg__ItemAssessment__fini(solution_interfaces__msg__ItemAss
   geometry_msgs__msg__PointStamped__fini(&msg->goal_point_stamped);
   // goal_type
   rosidl_runtime_c__String__fini(&msg->goal_type);
+  // goal_angle
 }
 
 bool
@@ -64,6 +66,10 @@ solution_interfaces__msg__ItemAssessment__are_equal(const solution_interfaces__m
   if (!rosidl_runtime_c__String__are_equal(
       &(lhs->goal_type), &(rhs->goal_type)))
   {
+    return false;
+  }
+  // goal_angle
+  if (lhs->goal_angle != rhs->goal_angle) {
     return false;
   }
   return true;
@@ -89,6 +95,8 @@ solution_interfaces__msg__ItemAssessment__copy(
   {
     return false;
   }
+  // goal_angle
+  output->goal_angle = input->goal_angle;
   return true;
 }
 

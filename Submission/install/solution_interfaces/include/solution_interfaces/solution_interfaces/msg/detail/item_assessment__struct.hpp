@@ -44,6 +44,7 @@ struct ItemAssessment_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->goal_type = "";
+      this->goal_angle = 0.0f;
     }
   }
 
@@ -55,6 +56,7 @@ struct ItemAssessment_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->goal_type = "";
+      this->goal_angle = 0.0f;
     }
   }
 
@@ -65,6 +67,9 @@ struct ItemAssessment_
   using _goal_type_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _goal_type_type goal_type;
+  using _goal_angle_type =
+    float;
+  _goal_angle_type goal_angle;
 
   // setters for named parameter idiom
   Type & set__goal_point_stamped(
@@ -77,6 +82,12 @@ struct ItemAssessment_
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->goal_type = _arg;
+    return *this;
+  }
+  Type & set__goal_angle(
+    const float & _arg)
+  {
+    this->goal_angle = _arg;
     return *this;
   }
 
@@ -126,6 +137,9 @@ struct ItemAssessment_
       return false;
     }
     if (this->goal_type != other.goal_type) {
+      return false;
+    }
+    if (this->goal_angle != other.goal_angle) {
       return false;
     }
     return true;

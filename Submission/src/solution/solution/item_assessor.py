@@ -4,14 +4,10 @@ import math
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
-from rclpy.duration import Duration
 
 from geometry_msgs.msg import Point, Pose, PointStamped
 from assessment_interfaces.msg import ItemHolders, ItemHolder, Item, ItemList
-from solution_interfaces.msg import ItemAssessment, RobotStart
-from nav_msgs.msg import Odometry
-
-from tf_transformations import euler_from_quaternion, quaternion_from_euler
+from solution_interfaces.msg import ItemAssessment, RobotStart, RobotPubPosition
 
 class ItemAssessor(Node):
 
@@ -22,7 +18,10 @@ class ItemAssessor(Node):
         ## Initialise Parameter Arguments ##
         ####################################
 
+        self.declare_parameter('initial_pose', rclpy.Parameter.Type.DOUBLE_ARRAY)
         self.declare_parameter('robot_name', rclpy.Parameter.Type.STRING)
+
+        init_pose = self.get_parameter('initial_pose').value
         self.robot_name = self.get_parameter('robot_name').value
 
         ##########################
@@ -30,7 +29,8 @@ class ItemAssessor(Node):
         ##########################
 
         self.pose = Pose()
-        self.yaw = 0.0
+        self.pose.position.x = init_pose[0]
+        self.pose.position.y = init_pose[1]
 
         self.start_control_loop = False
         self.robot_holding = False
@@ -58,20 +58,20 @@ class ItemAssessor(Node):
             qos_profile=10,
             )
         
-        self.odom_subscriber = self.create_subscription(
-            Odometry,
-            'odom',
-            self.odom_callback,
-            10
-        )
-
         self.robot_controller_subscriber = self.create_subscription(
             RobotStart,
             'robot_start_trigger',
             self.robot_start_callback,
             10
         )
-        
+
+        self.robot_position_subscriber = self.create_subscription(
+            RobotPubPosition,
+            'robot_position',
+            self.robot_position_callback,
+            10
+        )
+
         ###############################
         ## Initialise ROS Publishers ##
         ###############################
@@ -82,7 +82,7 @@ class ItemAssessor(Node):
         ## Initialise Timer ##
         ######################
 
-        self.timer_period = 0.1 # 100 milliseconds = 10 Hz
+        self.timer_period = 0.3 # 100 milliseconds = 10 Hz
         self.timer = self.create_timer(self.timer_period, self.control_loop)
         
     ############################
@@ -103,19 +103,11 @@ class ItemAssessor(Node):
     def item_callback(self, msg):
         self.items = msg
 
-    def odom_callback(self, msg):
-        self.pose = msg.pose.pose # Store the pose in a class variable
-
-        (roll, pitch, yaw) = euler_from_quaternion([self.pose.orientation.x,
-                                                    self.pose.orientation.y,
-                                                    self.pose.orientation.z,
-                                                    self.pose.orientation.w])
-        
-        self.yaw = yaw # Store the yaw in a class variable   
-
     def robot_start_callback(self, msg):
         self.start_control_loop = msg.start_assessment
 
+    def robot_position_callback(self, msg):
+        self.pose = msg.pose
 
     ##################
     ## Control Loop ##
@@ -123,26 +115,29 @@ class ItemAssessor(Node):
 
     def control_loop(self):
         if self.start_control_loop == True:
+            self.get_logger().info(f"Current Position: X({self.pose.position.x}), Y({self.pose.position.y})")
             self.get_logger().info(f"Assessing Items...")
 
             if self.robot_holding:
-                self.get_logger().info(f"Holding Value: {self.holding_value}")
                 better_item_found = self.assess_items(self.holding_value)
             else:
-                self.get_logger().info(f"Goal Value: {self.goal_value}")
                 better_item_found = self.assess_items(self.goal_value)
 
             if better_item_found:
+                self.get_logger().info(f"--------------------------------------------")
 
-                self.get_logger().info(f"Better Item found...")
+                if self.robot_holding:
+                    self.get_logger().info(f"Item of value {self.goal_value} found...")
+                    self.get_logger().info(f"Still holding value {self.holding_value}")
+                else:
+                    self.get_logger().info(f"Item of value {self.goal_value} found...")
 
                 angle = self.goal_item.x / 320.0
                 goal_point = Point()
-                goal_point.x = self.pose.position.x + self.goal_distance * math.cos(angle)
-                goal_point.y = self.pose.position.y + self.goal_distance * math.sin(angle)
+                goal_point.x = self.pose.position.x + (self.goal_distance * math.cos(angle))
+                goal_point.y = self.pose.position.y + (self.goal_distance * math.sin(angle))
                 
                 self.get_logger().info(f"Found at: X({goal_point.x}), Y({goal_point.y})")
-                self.get_logger().info(f"Robot at: X({self.pose.position.x}), Y({self.pose.position.y})")
                 self.get_logger().info(f"Distance to New Item: {self.goal_distance}")
 
                 item_goal_point = PointStamped()
@@ -153,23 +148,25 @@ class ItemAssessor(Node):
                 item_assessment = ItemAssessment()
                 item_assessment.goal_point_stamped = item_goal_point
                 item_assessment.goal_type = 'Collect'
+                item_assessment.goal_angle = angle
 
                 self.get_logger().info(f"Publishing to /item_assessor...")
                 self.item_assessor_publisher.publish(item_assessment)
+                self.get_logger().info(f"--------------------------------------------")
         else:
             self.get_logger().info(f"Waiting for robot controller to be ready...")
 
-    def assess_items(self, value_to_compare, goal_distance_threshold = 0.5, item_distance_threshold = 1):
+    def assess_items(self, value_to_compare):
         better_item_found = False
         distance_to_item = 0
 
         for i in range(0, len(self.items.data)):
             item = self.items.data[i]
 
-            distance_to_item = 0.25 * (69.0 * (float(item.diameter) ** -0.89))
+            distance_to_item = (69.0 * (float(item.diameter) ** (-0.89))) - 0.2
 
             if self.goal_item.value != 0:
-                if distance_to_item < self.goal_distance or (self.goal_distance > goal_distance_threshold and distance_to_item < item_distance_threshold):
+                if distance_to_item < self.goal_distance:
                     # Assess if the item is better and closer
                     if item.value > value_to_compare:
                         self.goal_item = item
@@ -182,7 +179,7 @@ class ItemAssessor(Node):
                 self.goal_value = item.value
                 self.goal_distance = distance_to_item
                 better_item_found = True
-
+            
         return better_item_found
     
     def destroy_node(self):

@@ -62,6 +62,8 @@ cdr_serialize(
     cdr);
   // Member: goal_type
   cdr << ros_message.goal_type;
+  // Member: goal_angle
+  cdr << ros_message.goal_angle;
   return true;
 }
 
@@ -77,6 +79,9 @@ cdr_deserialize(
 
   // Member: goal_type
   cdr >> ros_message.goal_type;
+
+  // Member: goal_angle
+  cdr >> ros_message.goal_angle;
 
   return true;
 }
@@ -103,6 +108,12 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.goal_type.size() + 1);
+  // Member: goal_angle
+  {
+    size_t item_size = sizeof(ros_message.goal_angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -159,6 +170,15 @@ max_serialized_size_ItemAssessment(
     }
   }
 
+  // Member: goal_angle
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -167,7 +187,7 @@ max_serialized_size_ItemAssessment(
     using DataType = solution_interfaces::msg::ItemAssessment;
     is_plain =
       (
-      offsetof(DataType, goal_type) +
+      offsetof(DataType, goal_angle) +
       last_member_size
       ) == ret_val;
   }

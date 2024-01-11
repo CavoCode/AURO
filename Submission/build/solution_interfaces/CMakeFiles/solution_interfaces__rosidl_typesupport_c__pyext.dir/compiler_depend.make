@@ -258,10 +258,13 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator
   rosidl_generator_c/solution_interfaces/msg/detail/robot_start__type_support.h \
   rosidl_generator_c/solution_interfaces/msg/detail/robot_start__struct.h \
   rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.h \
-  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
-  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
   rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h \
   rosidl_generator_c/solution_interfaces/srv/detail/random_goal__type_support.h \
   rosidl_generator_c/solution_interfaces/srv/detail/random_goal__struct.h \
@@ -272,11 +275,13 @@ rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.h:
 
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h:
 
+rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h:
+
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h:
-
-rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -476,6 +481,8 @@ rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h:
+
 /usr/include/limits.h:
 
 /usr/include/python3.10/objimpl.h:
@@ -571,6 +578,8 @@ rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesup
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 

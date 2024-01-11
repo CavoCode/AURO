@@ -40,6 +40,13 @@ inline void to_flow_style_yaml(
   {
     out << "goal_type: ";
     rosidl_generator_traits::value_to_yaml(msg.goal_type, out);
+    out << ", ";
+  }
+
+  // member: goal_angle
+  {
+    out << "goal_angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.goal_angle, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -64,6 +71,16 @@ inline void to_block_style_yaml(
     }
     out << "goal_type: ";
     rosidl_generator_traits::value_to_yaml(msg.goal_type, out);
+    out << "\n";
+  }
+
+  // member: goal_angle
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "goal_angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.goal_angle, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

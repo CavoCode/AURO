@@ -39,7 +39,7 @@ void solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_
   solution_interfaces__msg__ItemAssessment__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_c__ItemAssessment_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_c__ItemAssessment_message_member_array[3] = {
   {
     "goal_point_stamped",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -73,13 +73,30 @@ static rosidl_typesupport_introspection_c__MessageMember solution_interfaces__ms
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "goal_angle",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(solution_interfaces__msg__ItemAssessment, goal_angle),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_c__ItemAssessment_message_members = {
   "solution_interfaces__msg",  // message namespace
   "ItemAssessment",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(solution_interfaces__msg__ItemAssessment),
   solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_c__ItemAssessment_message_member_array,  // message members
   solution_interfaces__msg__ItemAssessment__rosidl_typesupport_introspection_c__ItemAssessment_init_function,  // function to initialize message memory (memory has to be allocated)

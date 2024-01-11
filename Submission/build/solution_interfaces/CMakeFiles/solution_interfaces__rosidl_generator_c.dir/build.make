@@ -85,6 +85,7 @@ rosidl_generator_c/solution_interfaces/msg/example.h: /opt/ros/humble/share/rosi
 rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/msg/Example.idl
 rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl
 rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/msg/RobotStart.idl
+rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl
 rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_c/solution_interfaces/msg/example.h: rosidl_adapter/solution_interfaces/srv/RandomGoal.idl
 rosidl_generator_c/solution_interfaces/msg/example.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
@@ -182,6 +183,18 @@ rosidl_generator_c/solution_interfaces/msg/detail/robot_start__struct.h: rosidl_
 rosidl_generator_c/solution_interfaces/msg/detail/robot_start__type_support.h: rosidl_generator_c/solution_interfaces/msg/example.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_start__type_support.h
 
+rosidl_generator_c/solution_interfaces/msg/robot_pub_position.h: rosidl_generator_c/solution_interfaces/msg/example.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/robot_pub_position.h
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h: rosidl_generator_c/solution_interfaces/msg/example.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h: rosidl_generator_c/solution_interfaces/msg/example.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h: rosidl_generator_c/solution_interfaces/msg/example.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h
+
 rosidl_generator_c/solution_interfaces/msg/string_with_pose.h: rosidl_generator_c/solution_interfaces/msg/example.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/string_with_pose.h
 
@@ -214,6 +227,9 @@ rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c: 
 
 rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c: rosidl_generator_c/solution_interfaces/msg/example.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c
+
+rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c: rosidl_generator_c/solution_interfaces/msg/example.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c
 
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c: rosidl_generator_c/solution_interfaces/msg/example.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c
@@ -263,10 +279,24 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/soluti
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c -o CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.s
 
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o: rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c
+
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c > CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.i
+
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c -o CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.s
+
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o: rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.i: cmake_force
@@ -280,7 +310,7 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/soluti
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o: rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.i: cmake_force
@@ -296,6 +326,7 @@ solution_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/example__functions.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o" \
+"CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o"
 
@@ -305,6 +336,7 @@ solution_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/example__functions.c.o
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.c.o
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c.o
+libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c.o
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.c.o
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c.o
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/build.make
@@ -314,7 +346,7 @@ libsolution_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_in
 libsolution_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsolution_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libsolution_interfaces__rosidl_generator_c.so: CMakeFiles/solution_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libsolution_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libsolution_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/solution_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -333,6 +365,10 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__functions.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__struct.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/item_assessment__type_support.h
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.c
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.c
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/robot_start__struct.h
@@ -343,6 +379,7 @@ CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/example.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/item_assessment.h
+CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/robot_pub_position.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/robot_start.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/msg/string_with_pose.h
 CMakeFiles/solution_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.c

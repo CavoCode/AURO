@@ -217,10 +217,13 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__type_support.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__struct.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_start__functions.h \
- /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
- /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__type_support.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
+ /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__type_support.h \
  /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c/solution_interfaces/srv/detail/random_goal__struct.h \
