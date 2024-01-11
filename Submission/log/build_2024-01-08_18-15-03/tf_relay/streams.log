@@ -1,0 +1,43 @@
+[3.422s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed
+[4.659s] running egg_info
+[4.661s] creating ../../build/tf_relay/tf_relay.egg-info
+[4.662s] writing ../../build/tf_relay/tf_relay.egg-info/PKG-INFO
+[4.663s] writing dependency_links to ../../build/tf_relay/tf_relay.egg-info/dependency_links.txt
+[4.663s] writing entry points to ../../build/tf_relay/tf_relay.egg-info/entry_points.txt
+[4.664s] writing requirements to ../../build/tf_relay/tf_relay.egg-info/requires.txt
+[4.665s] writing top-level names to ../../build/tf_relay/tf_relay.egg-info/top_level.txt
+[4.665s] writing manifest file '../../build/tf_relay/tf_relay.egg-info/SOURCES.txt'
+[4.671s] reading manifest file '../../build/tf_relay/tf_relay.egg-info/SOURCES.txt'
+[4.675s] writing manifest file '../../build/tf_relay/tf_relay.egg-info/SOURCES.txt'
+[4.675s] running build
+[4.675s] running build_py
+[4.676s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build
+[4.676s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib
+[4.676s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay
+[4.677s] copying tf_relay/tf_static_relay.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay
+[4.677s] copying tf_relay/tf_relay.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay
+[4.678s] copying tf_relay/main.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay
+[4.678s] copying tf_relay/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay
+[4.679s] running install
+[4.680s] running install_lib
+[4.683s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay
+[4.683s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay/tf_static_relay.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay
+[4.684s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay/tf_relay.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay
+[4.684s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay/main.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay
+[4.684s] copying /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build/lib/tf_relay/__init__.py -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay
+[4.687s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay/tf_static_relay.py to tf_static_relay.cpython-310.pyc
+[4.689s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay/tf_relay.py to tf_relay.cpython-310.pyc
+[4.690s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay/main.py to main.cpython-310.pyc
+[4.691s] byte-compiling /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay/__init__.py to __init__.cpython-310.pyc
+[4.692s] running install_data
+[4.694s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/ament_index
+[4.694s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/ament_index/resource_index
+[4.695s] creating /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/ament_index/resource_index/packages
+[4.695s] copying resource/tf_relay -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/ament_index/resource_index/packages
+[4.695s] copying package.xml -> /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay
+[4.696s] running install_egg_info
+[4.702s] Copying ../../build/tf_relay/tf_relay.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages/tf_relay-0.0.0-py3.10.egg-info
+[4.705s] running install_scripts
+[4.789s] Installing relay script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/tf_relay
+[4.790s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log'
+[4.899s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed

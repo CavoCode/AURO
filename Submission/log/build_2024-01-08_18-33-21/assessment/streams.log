@@ -1,0 +1,24 @@
+[5.053s] Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
+[6.143s] running egg_info
+[6.145s] writing ../../build/assessment/assessment.egg-info/PKG-INFO
+[6.146s] writing dependency_links to ../../build/assessment/assessment.egg-info/dependency_links.txt
+[6.146s] writing entry points to ../../build/assessment/assessment.egg-info/entry_points.txt
+[6.147s] writing requirements to ../../build/assessment/assessment.egg-info/requires.txt
+[6.148s] writing top-level names to ../../build/assessment/assessment.egg-info/top_level.txt
+[6.152s] reading manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'
+[6.154s] writing manifest file '../../build/assessment/assessment.egg-info/SOURCES.txt'
+[6.154s] running build
+[6.155s] running build_py
+[6.156s] running install
+[6.157s] running install_lib
+[6.161s] running install_data
+[6.165s] running install_egg_info
+[6.177s] removing '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment-0.0.0-py3.10.egg-info' (and everything under it)
+[6.178s] Copying ../../build/assessment/assessment.egg-info to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages/assessment-0.0.0-py3.10.egg-info
+[6.178s] running install_scripts
+[6.242s] Installing home_zone_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[6.243s] Installing item_manager script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[6.243s] Installing item_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[6.243s] Installing robot_sensor script to /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/assessment
+[6.244s] writing list of installed files to '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log'
+[6.817s] Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
