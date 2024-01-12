@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/solution_interfaces/msg/__init__.py"
   "../rosidl_generator_py/solution_interfaces/msg/_example.py"
   "../rosidl_generator_py/solution_interfaces/msg/_example_s.c"
+  "../rosidl_generator_py/solution_interfaces/msg/_home_pub_position.py"
+  "../rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c"
   "../rosidl_generator_py/solution_interfaces/msg/_item_assessment.py"
   "../rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c"
   "../rosidl_generator_py/solution_interfaces/msg/_robot_pub_position.py"

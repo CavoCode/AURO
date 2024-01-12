@@ -82,7 +82,7 @@ class ItemAssessor(Node):
         ## Initialise Timer ##
         ######################
 
-        self.timer_period = 0.3 # 100 milliseconds = 10 Hz
+        self.timer_period = 1 # 100 milliseconds = 10 Hz
         self.timer = self.create_timer(self.timer_period, self.control_loop)
         
     ############################
@@ -132,7 +132,7 @@ class ItemAssessor(Node):
                 else:
                     self.get_logger().info(f"Item of value {self.goal_value} found...")
 
-                angle = self.goal_item.x / 320.0
+                angle = self.goal_item.x / 360.0
                 goal_point = Point()
                 goal_point.x = self.pose.position.x + (self.goal_distance * math.cos(angle))
                 goal_point.y = self.pose.position.y + (self.goal_distance * math.sin(angle))
@@ -159,7 +159,7 @@ class ItemAssessor(Node):
     def assess_items(self, value_to_compare):
         for i in range(0, len(self.items.data)):
             item = self.items.data[i]
-            distance_to_item = (69.0 * (float(item.diameter) ** (-0.89))) - 0.2
+            distance_to_item = 0.6 * (69.0 * (float(item.diameter) ** (-0.89)))
 
             if self.goal_item.value != 0:
                 # Assess if the item is better and closer

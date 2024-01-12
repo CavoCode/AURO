@@ -1,0 +1,372 @@
+[2.410s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.411s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f619c214760>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f619c214730>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f619c214730>>)
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.518s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission'
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.544s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.544s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.544s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extensions ['ignore', 'ignore_ament_install']
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extension 'ignore'
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extension 'ignore_ament_install'
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extensions ['colcon_pkg']
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extension 'colcon_pkg'
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extensions ['colcon_meta']
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extension 'colcon_meta'
+[2.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extensions ['ros']
+[2.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment) by extension 'ros'
+[2.553s] DEBUG:colcon.colcon_core.package_identification:Package 'src/assessment' with type 'ros.ament_python' and name 'assessment'
+[2.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[2.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extension 'ignore'
+[2.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extension 'ignore_ament_install'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extensions ['colcon_pkg']
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extension 'colcon_pkg'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extensions ['colcon_meta']
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extension 'colcon_meta'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extensions ['ros']
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/assessment_interfaces) by extension 'ros'
+[2.555s] DEBUG:colcon.colcon_core.package_identification:Package 'src/assessment_interfaces' with type 'ros.ament_cmake' and name 'assessment_interfaces'
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extensions ['ignore', 'ignore_ament_install']
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extension 'ignore'
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extension 'ignore_ament_install'
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extensions ['colcon_pkg']
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extension 'colcon_pkg'
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extensions ['colcon_meta']
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extension 'colcon_meta'
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extensions ['ros']
+[2.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution) by extension 'ros'
+[2.557s] DEBUG:colcon.colcon_core.package_identification:Package 'src/solution' with type 'ros.ament_python' and name 'solution'
+[2.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[2.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extension 'ignore'
+[2.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extension 'ignore_ament_install'
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extensions ['colcon_pkg']
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extension 'colcon_pkg'
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extensions ['colcon_meta']
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extension 'colcon_meta'
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extensions ['ros']
+[2.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/solution_interfaces) by extension 'ros'
+[2.559s] DEBUG:colcon.colcon_core.package_identification:Package 'src/solution_interfaces' with type 'ros.ament_cmake' and name 'solution_interfaces'
+[2.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extensions ['ignore', 'ignore_ament_install']
+[2.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extension 'ignore'
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extension 'ignore_ament_install'
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extensions ['colcon_pkg']
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extension 'colcon_pkg'
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extensions ['colcon_meta']
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extension 'colcon_meta'
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extensions ['ros']
+[2.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_relay) by extension 'ros'
+[2.561s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tf_relay' with type 'ros.ament_python' and name 'tf_relay'
+[2.561s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.561s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.561s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.561s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.561s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.775s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.775s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.848s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install
+[2.902s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 15 installed packages in /home/mc2148/turtlebot3_ws/install
+[2.940s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 414 installed packages in /opt/ros/humble
+[2.945s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.193s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_args' from command line to 'None'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_target' from command line to 'None'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_clean_cache' from command line to 'False'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_clean_first' from command line to 'False'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'cmake_force_configure' from command line to 'False'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'ament_cmake_args' from command line to 'None'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'catkin_cmake_args' from command line to 'None'
+[3.194s] Level 5:colcon.colcon_core.verb:set package 'assessment' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.194s] DEBUG:colcon.colcon_core.verb:Building package 'assessment' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment', 'merge_install': False, 'path': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment', 'symlink_install': False, 'test_result_base': None}
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_args' from command line to 'None'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_target' from command line to 'None'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[3.229s] Level 5:colcon.colcon_core.verb:set package 'assessment_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.230s] DEBUG:colcon.colcon_core.verb:Building package 'assessment_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces', 'merge_install': False, 'path': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces', 'symlink_install': False, 'test_result_base': None}
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_args' from command line to 'None'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_target' from command line to 'None'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_clean_cache' from command line to 'False'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_clean_first' from command line to 'False'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'cmake_force_configure' from command line to 'False'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'ament_cmake_args' from command line to 'None'
+[3.265s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'catkin_cmake_args' from command line to 'None'
+[3.266s] Level 5:colcon.colcon_core.verb:set package 'solution' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.266s] DEBUG:colcon.colcon_core.verb:Building package 'solution' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution', 'merge_install': False, 'path': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution', 'symlink_install': False, 'test_result_base': None}
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_args' from command line to 'None'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_target' from command line to 'None'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[3.302s] Level 5:colcon.colcon_core.verb:set package 'solution_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.302s] DEBUG:colcon.colcon_core.verb:Building package 'solution_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces', 'merge_install': False, 'path': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces', 'symlink_install': False, 'test_result_base': None}
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_args' from command line to 'None'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_target' from command line to 'None'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_clean_cache' from command line to 'False'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_clean_first' from command line to 'False'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'cmake_force_configure' from command line to 'False'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'ament_cmake_args' from command line to 'None'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'catkin_cmake_args' from command line to 'None'
+[3.338s] Level 5:colcon.colcon_core.verb:set package 'tf_relay' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.338s] DEBUG:colcon.colcon_core.verb:Building package 'tf_relay' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay', 'merge_install': False, 'path': '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay', 'symlink_install': False, 'test_result_base': None}
+[3.373s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.409s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.410s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment' with build type 'ament_python'
+[3.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment', 'ament_prefix_path')
+[3.451s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/ament_prefix_path.ps1'
+[3.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/ament_prefix_path.dsv'
+[3.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/ament_prefix_path.sh'
+[3.491s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.491s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.643s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces' with build type 'ament_cmake'
+[3.644s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment_interfaces'
+[3.681s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.681s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.832s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution' with build type 'ament_python'
+[3.833s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution', 'ament_prefix_path')
+[3.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/ament_prefix_path.ps1'
+[3.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/ament_prefix_path.dsv'
+[3.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/ament_prefix_path.sh'
+[3.906s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.907s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.058s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces' with build type 'ament_cmake'
+[4.058s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces'
+[4.096s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.096s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.893s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment'
+[4.929s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.930s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces -- -j4 -l4
+[6.198s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution'
+[6.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[6.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces -- -j4 -l4
+[8.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces
+[8.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[8.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assessment_interfaces)
+[8.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment_interfaces
+[8.664s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces' for CMake module files
+[8.666s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces' for CMake config files
+[8.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment_interfaces', 'cmake_prefix_path')
+[8.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.ps1'
+[8.728s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.dsv'
+[8.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.sh'
+[8.730s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib'
+[8.730s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment_interfaces', 'ld_library_path_lib')
+[8.777s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.ps1'
+[8.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.dsv'
+[8.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.sh'
+[8.781s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/bin'
+[8.781s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/pkgconfig/assessment_interfaces.pc'
+[8.782s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/python3.10/site-packages'
+[8.783s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/bin'
+[8.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.ps1'
+[8.857s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.dsv'
+[8.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.sh'
+[8.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.bash'
+[8.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.zsh'
+[8.865s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/colcon-core/packages/assessment_interfaces)
+[8.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
+[8.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[9.548s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+[9.900s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assessment_interfaces)
+[9.936s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces' for CMake module files
+[9.937s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces' for CMake config files
+[9.938s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment_interfaces', 'cmake_prefix_path')
+[10.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.ps1'
+[10.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.dsv'
+[10.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/cmake_prefix_path.sh'
+[10.038s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib'
+[10.038s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment_interfaces', 'ld_library_path_lib')
+[10.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.ps1'
+[10.105s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.dsv'
+[10.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/hook/ld_library_path_lib.sh'
+[10.107s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/bin'
+[10.107s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/pkgconfig/assessment_interfaces.pc'
+[10.108s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/lib/python3.10/site-packages'
+[10.109s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/bin'
+[10.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.ps1'
+[10.154s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.dsv'
+[10.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.sh'
+[10.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.bash'
+[10.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/assessment_interfaces/package.zsh'
+[10.158s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment_interfaces/share/colcon-core/packages/assessment_interfaces)
+[10.159s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay' with build type 'ament_python'
+[10.159s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_relay', 'ament_prefix_path')
+[10.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/ament_prefix_path.ps1'
+[10.204s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/ament_prefix_path.dsv'
+[10.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/ament_prefix_path.sh'
+[10.241s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.391s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(solution_interfaces)
+[10.392s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+[10.430s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces' for CMake module files
+[10.431s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces' for CMake config files
+[10.432s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution_interfaces', 'cmake_prefix_path')
+[10.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.ps1'
+[10.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.dsv'
+[10.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.sh'
+[10.488s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib'
+[10.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution_interfaces', 'ld_library_path_lib')
+[10.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.ps1'
+[10.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.dsv'
+[10.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.sh'
+[10.527s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/bin'
+[10.527s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/pkgconfig/solution_interfaces.pc'
+[10.527s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/python3.10/site-packages'
+[10.528s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/bin'
+[10.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.ps1'
+[10.564s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.dsv'
+[10.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.sh'
+[10.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.bash'
+[10.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.zsh'
+[10.567s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/colcon-core/packages/solution_interfaces)
+[10.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[10.612s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution' for CMake module files
+[10.613s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution' for CMake config files
+[10.615s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib'
+[10.615s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/bin'
+[10.615s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/pkgconfig/solution.pc'
+[10.616s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages'
+[10.617s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution', 'pythonpath')
+[10.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/pythonpath.ps1'
+[10.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/pythonpath.dsv'
+[10.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/hook/pythonpath.sh'
+[10.657s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/bin'
+[10.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(solution)
+[10.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/package.ps1'
+[10.701s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/package.dsv'
+[10.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/package.sh'
+[10.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/package.bash'
+[10.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/solution/package.zsh'
+[10.706s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/share/colcon-core/packages/solution)
+[10.710s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/assessment' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/assessment build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/assessment/install.log --single-version-externally-managed
+[10.751s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment' for CMake module files
+[10.752s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment' for CMake config files
+[10.754s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib'
+[10.754s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/bin'
+[10.755s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/pkgconfig/assessment.pc'
+[10.755s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/lib/python3.10/site-packages'
+[10.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('assessment', 'pythonpath')
+[10.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/pythonpath.ps1'
+[10.798s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/pythonpath.dsv'
+[10.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/hook/pythonpath.sh'
+[10.800s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/bin'
+[10.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assessment)
+[10.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/package.ps1'
+[10.841s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/package.dsv'
+[10.842s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/package.sh'
+[10.842s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/package.bash'
+[10.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/assessment/package.zsh'
+[10.844s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/assessment/share/colcon-core/packages/assessment)
+[11.480s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay'
+[11.515s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.700s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(solution_interfaces)
+[11.736s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces' for CMake module files
+[11.737s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces' for CMake config files
+[11.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution_interfaces', 'cmake_prefix_path')
+[11.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.ps1'
+[11.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.dsv'
+[11.774s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/cmake_prefix_path.sh'
+[11.775s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib'
+[11.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('solution_interfaces', 'ld_library_path_lib')
+[11.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.ps1'
+[11.811s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.dsv'
+[11.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/hook/ld_library_path_lib.sh'
+[11.812s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/bin'
+[11.813s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/pkgconfig/solution_interfaces.pc'
+[11.813s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/lib/python3.10/site-packages'
+[11.814s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/bin'
+[11.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.ps1'
+[11.850s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.dsv'
+[11.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.sh'
+[11.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.bash'
+[11.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.zsh'
+[11.853s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution_interfaces/share/colcon-core/packages/solution_interfaces)
+[12.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed
+[13.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/tf_relay' returned '0': PYTHONPATH=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/prefix_override:/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tf_relay build --build-base /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/build install --record /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/tf_relay/install.log --single-version-externally-managed
+[13.457s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay' for CMake module files
+[13.458s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay' for CMake config files
+[13.459s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib'
+[13.459s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/bin'
+[13.460s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/pkgconfig/tf_relay.pc'
+[13.460s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/lib/python3.10/site-packages'
+[13.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_relay', 'pythonpath')
+[13.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/pythonpath.ps1'
+[13.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/pythonpath.dsv'
+[13.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/hook/pythonpath.sh'
+[13.498s] Level 1:colcon.colcon_core.environment:checking '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/bin'
+[13.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tf_relay)
+[13.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/package.ps1'
+[13.535s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/package.dsv'
+[13.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/package.sh'
+[13.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/package.bash'
+[13.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/tf_relay/package.zsh'
+[13.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/tf_relay/share/colcon-core/packages/tf_relay)
+[13.538s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.539s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.539s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.539s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.587s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.608s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.644s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/local_setup.ps1'
+[13.646s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/_local_setup_util_ps1.py'
+[13.649s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/setup.ps1'
+[13.692s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/local_setup.sh'
+[13.693s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/_local_setup_util_sh.py'
+[13.694s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/setup.sh'
+[13.732s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/local_setup.bash'
+[13.733s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/setup.bash'
+[13.772s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/local_setup.zsh'
+[13.773s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/setup.zsh'

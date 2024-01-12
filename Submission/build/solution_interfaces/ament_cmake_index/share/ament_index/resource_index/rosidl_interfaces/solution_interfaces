@@ -1,5 +1,7 @@
 msg/Example.idl
 msg/Example.msg
+msg/HomePubPosition.idl
+msg/HomePubPosition.msg
 msg/ItemAssessment.idl
 msg/ItemAssessment.msg
 msg/RobotPubPosition.idl

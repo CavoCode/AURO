@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o"
   "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o"
+  "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o.d"
   "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o"
   "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o.d"
   "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o"

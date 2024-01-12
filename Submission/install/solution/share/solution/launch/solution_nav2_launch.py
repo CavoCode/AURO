@@ -67,6 +67,13 @@ def robot_controller_actions(context : LaunchContext):
                 prefix=['gnome-terminal --tab --execute'],
                 output='screen'),
 
+            Node(
+                package='solution',
+                executable='home_position',
+                prefix=['gnome-terminal --tab --execute'],
+                output='screen'),
+
+
             # Node(
             #     package='turtlebot3_gazebo',
             #     executable='turtlebot3_drive',

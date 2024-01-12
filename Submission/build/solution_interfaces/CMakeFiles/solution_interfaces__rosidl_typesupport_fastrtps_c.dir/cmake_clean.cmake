@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/example__type_support_c.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/example__type_support_c.cpp.o.d"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/home_pub_position__type_support_c.cpp.o"
+  "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/home_pub_position__type_support_c.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp.o"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp.o.d"
   "CMakeFiles/solution_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_pub_position__type_support_c.cpp.o"
@@ -15,6 +17,8 @@ file(REMOVE_RECURSE
   "libsolution_interfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/example__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/home_pub_position__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/home_pub_position__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/item_assessment__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/solution_interfaces/msg/detail/robot_pub_position__rosidl_typesupport_fastrtps_c.h"

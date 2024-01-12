@@ -1,0 +1,2 @@
+/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/item_assessor.py:162: SyntaxWarning: 'float' object is not callable; perhaps you missed a comma?
+  distance_to_item = 0.25 (69.0 * (float(item.diameter) ** (-0.89)))

@@ -263,6 +263,9 @@ CMakeFiles/solution_interfaces__rosidl_typesupport_introspection_c__pyext.dir/ro
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__type_support.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__struct.h \
+  rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__functions.h \
   rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h \
   rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h \
   rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h \
@@ -276,6 +279,10 @@ rosidl_generator_c/solution_interfaces/srv/detail/random_goal__functions.h:
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__functions.h:
 
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__struct.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__struct.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__type_support.h:
 
 rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__functions.h:
 
@@ -394,6 +401,8 @@ rosidl_generator_c/solution_interfaces/msg/rosidl_generator_c__visibility_contro
 rosidl_generator_c/solution_interfaces/msg/detail/string_with_pose__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+rosidl_generator_c/solution_interfaces/msg/detail/home_pub_position__functions.h:
 
 rosidl_generator_c/solution_interfaces/msg/detail/robot_pub_position__struct.h:
 
