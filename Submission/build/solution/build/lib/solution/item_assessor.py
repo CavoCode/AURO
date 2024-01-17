@@ -9,6 +9,9 @@ from geometry_msgs.msg import Point, Pose, PointStamped
 from assessment_interfaces.msg import ItemHolders, ItemHolder, Item, ItemList
 from solution_interfaces.msg import ItemAssessment, RobotStart, RobotPubPosition
 
+focal_length = 640 / (2 * math.tan(1.085595  / 2))
+actual_diameter = 0.15
+
 class ItemAssessor(Node):
 
     def __init__(self):
@@ -36,7 +39,8 @@ class ItemAssessor(Node):
         self.robot_holding = False
         self.items = ItemList()
         self.goal_item = Item()
-        self.goal_distance = 0
+        self.goal_distance = 0.0
+        self.goal_angle = 0.0
         self.goal_value = 0
         self.holding_value = 0
 
@@ -132,10 +136,9 @@ class ItemAssessor(Node):
                 else:
                     self.get_logger().info(f"Item of value {self.goal_value} found...")
 
-                angle = self.goal_item.x / 360.0
                 goal_point = Point()
-                goal_point.x = self.pose.position.x + (self.goal_distance * math.cos(angle))
-                goal_point.y = self.pose.position.y + (self.goal_distance * math.sin(angle))
+                goal_point.x = self.pose.position.x + (self.goal_distance * math.cos(self.goal_angle))
+                goal_point.y = self.pose.position.y + (self.goal_distance * math.sin(self.goal_angle))
                 
                 self.get_logger().info(f"Found at: X({goal_point.x}), Y({goal_point.y})")
                 self.get_logger().info(f"Distance to New Item: {self.goal_distance}")
@@ -148,7 +151,7 @@ class ItemAssessor(Node):
                 item_assessment = ItemAssessment()
                 item_assessment.goal_point_stamped = item_goal_point
                 item_assessment.goal_type = 'Collect'
-                item_assessment.goal_angle = angle
+                item_assessment.goal_angle = self.goal_angle
 
                 self.get_logger().info(f"Publishing to /item_assessor...")
                 self.item_assessor_publisher.publish(item_assessment)
@@ -159,7 +162,9 @@ class ItemAssessor(Node):
     def assess_items(self, value_to_compare):
         for i in range(0, len(self.items.data)):
             item = self.items.data[i]
-            distance_to_item = 0.6 * (69.0 * (float(item.diameter) ** (-0.89)))
+            distance_to_item = distance_to_item = ((focal_length * actual_diameter) / float(item.diameter))
+            #angle = (1.085595 * ((item.x * (640/2)) / 640)) * (math.pi / 180)
+            angle = item.x / 320.0
 
             if self.goal_item.value != 0:
                 # Assess if the item is better and closer
@@ -167,12 +172,14 @@ class ItemAssessor(Node):
                     self.goal_item = item
                     self.goal_value = item.value
                     self.goal_distance = distance_to_item
+                    self.goal_angle = angle
                     return True
                  
             else:
                 self.goal_item = item
                 self.goal_value = item.value
                 self.goal_distance = distance_to_item
+                self.goal_angle = angle
                 return True
             
         return False

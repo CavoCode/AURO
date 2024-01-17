@@ -209,7 +209,6 @@ class RobotController(Node):
             self.robot_start_publisher.publish(self.robot_started)
             return
         
-        self.get_logger().info(f"Current Position: X({self.pose.position.x}), Y({self.pose.position.y})")
         time_difference = self.get_clock().now() - self.previous_time
 
         if time_difference > Duration(seconds = 300):
@@ -303,23 +302,14 @@ class RobotController(Node):
                         case TaskResult.SUCCEEDED:
                             self.get_logger().info(f"Goal succeeded!")
                                 
-                            match self.current_goal_type:
-                                case 'Search':
-                                    self.get_logger().info(f"Spinning")
-                                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                                    self.state = State.SPINNING
-
-                                case 'Collect':
-                                    if self.robot_holding:
-                                        self.state = State.SET_HOME_GOAL
-                                        self.current_goal_type = 'Home'
-                                    else:
-                                        self.state = State.SET_SEARCH
-                                        self.current_goal_type = 'Search'
-                                        
-                                case _:
-                                    self.state = State.SET_SEARCH
-                                    self.current_goal_type = 'Search'
+                            if self.robot_holding:
+                                self.state = State.SET_HOME_GOAL
+                                self.current_goal_type = 'Home'
+                                return
+                            else:
+                                self.get_logger().info(f"Spinning")
+                                self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
+                                self.state = State.SPINNING
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
@@ -413,6 +403,7 @@ class RobotController(Node):
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
+                            self.current_goal_type = 'Search'
                             self.state = State.SET_SEARCH
 
                         case TaskResult.FAILED:
