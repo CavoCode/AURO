@@ -8,26 +8,21 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.duration import Duration
 
 from geometry_msgs.msg import PoseStamped, Point, Pose
-from assessment_interfaces.msg import ItemHolders, ItemHolder
-from solution_interfaces.msg import ItemAssessment, RobotStart, RobotPubPosition, HomePubPosition
-from solution_interfaces.srv import RandomGoal
+from assessment_interfaces.msg import ItemHolders, ItemHolder, ItemList, Item
+from solution_interfaces.msg import RobotPubPosition
+from solution_interfaces.srv import RandomGoal, ItemAssessment
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 
-from tf2_ros import TransformException
-from tf2_ros.buffer import Buffer
-from tf2_ros.transform_listener import TransformListener
-
-from tf_transformations import euler_from_quaternion, quaternion_from_euler
+from tf_transformations import quaternion_from_euler
 
 from enum import Enum
 
 class State(Enum):
-    SET_SEARCH = 0
-    SET_COLLECT = 1
-    NAVIGATING = 2
-    SPINNING = 3
-    SET_HOME_GOAL = 4
-    HOMING = 5
+    CHECK_ITEMS = 0
+    FIND_NEAREST_ITEM = 1
+    SET_HOME = 2
+    SET_SEARCH = 3
+    NAVIGATING = 4
 
 class RobotController(Node):
 
@@ -51,29 +46,17 @@ class RobotController(Node):
         ## Initialise variables ##
         ##########################
 
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
-
-        self.robot_started = RobotStart()
-        self.robot_started.start_assessment = False
-
-        self.item_assessment = ItemAssessment()
-        self.item_updated = False
-
-        self.state = State.SET_SEARCH
-        self.new_search = True
+        self.state = State.CHECK_ITEMS
         self.robot_holding = False
+        self.item_value = 0
 
         self.pose = Pose()
         self.pose.position.x = init_pose[0]
         self.pose.position.y = init_pose[1]
 
         self.home_point = Point()
-        self.home_angle = 0.0
-
-        self.current_goal = Point()
-        self.current_goal_type = 'Search'
-        self.current_goal_angle = 0.0
+        self.random_goal = Point()
+        self.random_goal_angle = 0.0
 
         #############################
         ## Initialise Initial Pose ##
@@ -107,13 +90,6 @@ class RobotController(Node):
         ## Initialise ROS Subscribers ##
         ################################
 
-        self.item_assessor_subscriber = self.create_subscription(
-            ItemAssessment,
-            'item_assessor',
-            self.item_assessor_callback,
-            1
-        )
-
         self.item_holder_subscriber = self.create_subscription(
             ItemHolders,
             '/item_holders',
@@ -121,25 +97,19 @@ class RobotController(Node):
             10
         )
 
+        self.item_subscriber = self.create_subscription(
+            msg_type=ItemList,
+            topic='items',
+            callback=self.item_callback,
+            qos_profile=10,
+            )
+
         self.robot_position_subscriber = self.create_subscription(
             RobotPubPosition,
             'robot_position',
             self.robot_position_callback,
             10
         )
-
-        self.home_position_subscriber = self.create_subscription(
-            HomePubPosition,
-            'home_position',
-            self.home_position_callback,
-            10
-        )
-
-        ###############################
-        ## Initialise ROS Publishers ##
-        ###############################
-
-        self.robot_start_publisher = self.create_publisher(RobotStart, 'robot_start_trigger', 10)
 
         ##############################
         ## Initialise ROS Services ##
@@ -150,6 +120,12 @@ class RobotController(Node):
         while not self.random_goal_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
         self.random_goal_request = RandomGoal.Request()
+
+        item_client_callback_group = MutuallyExclusiveCallbackGroup()
+        self.item_assessment_client = self.create_client(ItemAssessment, 'item_assessor', callback_group=item_client_callback_group)
+        while not self.item_assessment_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting again...')
+        self.item_assessment_request = ItemAssessment.Request()
 
         ###########################
         ## Update Nav2 Navigator ##
@@ -183,68 +159,52 @@ class RobotController(Node):
             
         self.robot_holding = False
 
-    def item_assessor_callback(self, msg):
-        self.item_assessment = msg
-        self.get_logger().info(f"Updated with new item position from /item_assessor")
-        self.current_goal = self.item_assessment.goal_point_stamped.point
-        self.current_goal_type = self.item_assessment.goal_type
-        self.current_goal_angle = self.item_assessment.goal_angle
-        self.item_updated = True
+    def item_callback(self, msg):
+        self.items = msg
 
     def robot_position_callback(self, msg):
         self.pose = msg.pose
-
-    def home_position_callback(self, msg):
-        self.home_point = msg.point
-        self.home_angle = msg.angle
     
     ##################
     ## Control Loop ##
     ##################
 
     def control_loop(self):
-        if self.robot_started.start_assessment == False:
-            self.get_logger().info(f"Robot Controller Started...")
-            self.robot_started.start_assessment = True
-            self.robot_start_publisher.publish(self.robot_started)
-            return
-        
         time_difference = self.get_clock().now() - self.previous_time
 
         if time_difference > Duration(seconds = 300):
             self.navigator.cancelTask()
             self.previous_time = self.get_clock().now()
             self.get_logger().info(f"Homing...")
-            self.current_goal_type = 'Home'
-            self.state = State.SET_HOME_GOAL
-        
-        if self.item_updated and self.current_goal_type != 'Home':
-            self.navigator.cancelTask()
-            self.state = State.SET_COLLECT
-            self.current_goal_type = 'Collect'
-            self.item_updated = False
+            self.state = State.SET_HOME
 
         self.get_logger().info(f"State: {self.state}")
 
         match self.state:
 
-            case State.SET_SEARCH:
-                if self.new_search:
+            case State.CHECK_ITEMS:
+                if len(self.items.data) > 0:
+                    self.item_assessment_request.items = self.items
+                    self.item_assessment_request.value = self.item_value
+                    self.item_assessment_response = self.item_assessment_client.call_async(self.item_assessment_request)
+                    self.state = State.FIND_NEAREST_ITEM
+                else:
                     self.random_goal_request.x = self.pose.position.x
                     self.random_goal_request.y = self.pose.position.y
-
                     self.random_goal_response = self.random_goal_client.call_async(self.random_goal_request)
-                    self.new_search = False
-                            
-                if self.random_goal_response.done():
+                    self.state = State.SET_SEARCH
+                return
+
+            case State.FIND_NEAREST_ITEM:
+                if self.item_assessment_response.done():
                     try:
                         # Process the response
-                        response = self.random_goal_response.result()
-                        self.get_logger().info('Response recieved from Random Goal Service')
-                        self.current_goal.x = response.new_x
-                        self.current_goal.y = response.new_y
-                        self.current_goal_angle = response.angle
-                        self.new_search = True
+                        response = self.item_assessment_response.result()
+                        self.get_logger().info('Response recieved from Item Assessment Service')
+                        self.item = response.item
+                        self.item_distance = response.distance
+                        self.item_angle = response.angle
+                        self.item_value = response.item.value
 
                     except Exception as e:
                         self.get_logger().info('Service call failed %r' % (e,))
@@ -252,35 +212,73 @@ class RobotController(Node):
                 else:
                     return
 
+                item_point = Point()
+                item_point.x = self.pose.position.x + (self.item_distance * math.cos(self.item_angle))
+                item_point.y = self.pose.position.y + (self.item_distance * math.sin(self.item_angle))
+
                 goal_pose = PoseStamped()
                 goal_pose.header.frame_id = 'map'
                 goal_pose.header.stamp = self.get_clock().now().to_msg()                
-                goal_pose.pose.position = self.current_goal
+                goal_pose.pose.position = item_point
 
                 (goal_pose.pose.orientation.x,
                 goal_pose.pose.orientation.y,
                 goal_pose.pose.orientation.z,
-                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.current_goal_angle, axes='sxyz')
+                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.item_angle, axes='sxyz')
                                 
-                self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.current_goal_angle:.2f} degrees")
+                self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.item_angle:.2f} degrees")
 
                 self.navigator.goToPose(goal_pose)
                 self.state = State.NAVIGATING
 
-            case State.SET_COLLECT:
-                goal_pose = PoseStamped()
-                goal_pose.header.frame_id = 'map'
-                goal_pose.header.stamp = self.get_clock().now().to_msg()                
-                goal_pose.pose.position = self.current_goal
+            case State.SET_HOME:
+                self.home_point.y = self.pose.position.y
+                self.home_point.x = -3.5
+                
+                home_pose = PoseStamped()
+                home_pose.header.frame_id = 'map'
+                home_pose.header.stamp = self.get_clock().now().to_msg()                
+                home_pose.pose.position = self.home_point
 
-                (goal_pose.pose.orientation.x,
-                goal_pose.pose.orientation.y,
-                goal_pose.pose.orientation.z,
-                goal_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.current_goal_angle, axes='sxyz')
+                (home_pose.pose.orientation.x,
+                home_pose.pose.orientation.y,
+                home_pose.pose.orientation.z,
+                home_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(0), axes='sxyz')
                                 
-                self.get_logger().info(f"Navigating to: ({goal_pose.pose.position.x:.2f}, {goal_pose.pose.position.y:.2f}), {self.current_goal_angle:.2f} degrees")
+                self.get_logger().info(f"Navigating to home: ({home_pose.pose.position.x:.2f}, {home_pose.pose.position.y:.2f})")
 
-                self.navigator.goToPose(goal_pose)
+                self.navigator.goToPose(home_pose)
+                self.state = State.NAVIGATING
+
+            case State.SET_SEARCH:
+                if self.random_goal_response.done():
+                    try:
+                        # Process the response
+                        response = self.random_goal_response.result()
+                        self.get_logger().info('Response recieved from Random Goal Service')
+                        self.random_goal.x = response.new_x
+                        self.random_goal.y = response.new_y
+                        self.random_goal_angle = response.angle
+
+                    except Exception as e:
+                        self.get_logger().info('Service call failed %r' % (e,))
+
+                else:
+                    return
+
+                search_pose = PoseStamped()
+                search_pose.header.frame_id = 'map'
+                search_pose.header.stamp = self.get_clock().now().to_msg()                
+                search_pose.pose.position = self.random_goal
+
+                (search_pose.pose.orientation.x,
+                search_pose.pose.orientation.y,
+                search_pose.pose.orientation.z,
+                search_pose.pose.orientation.w) = quaternion_from_euler(0, 0, self.random_goal_angle, axes='sxyz')
+                                
+                self.get_logger().info(f"Navigating to: ({search_pose.pose.position.x:.2f}, {search_pose.pose.position.y:.2f}), {self.random_goal_angle:.2f} degrees")
+
+                self.navigator.goToPose(search_pose)
                 self.state = State.NAVIGATING
 
             case State.NAVIGATING:
@@ -293,6 +291,7 @@ class RobotController(Node):
                     if Duration.from_msg(feedback.navigation_time) > Duration(seconds = 30):
                         self.get_logger().info(f"Navigation took too long... cancelling")
                         self.navigator.cancelTask()
+                        self.state = State.CHECK_ITEMS
 
                 else:
                     result = self.navigator.getResult()
@@ -303,112 +302,18 @@ class RobotController(Node):
                             self.get_logger().info(f"Goal succeeded!")
                                 
                             if self.robot_holding:
-                                self.state = State.SET_HOME_GOAL
-                                self.current_goal_type = 'Home'
+                                self.state = State.SET_HOME
                                 return
                             else:
-                                self.get_logger().info(f"Spinning")
-                                self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                                self.state = State.SPINNING
+                                self.state = State.CHECK_ITEMS
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
-                            self.current_goal_type = 'Search'
-                            self.state = State.SET_SEARCH
+                            self.state = State.CHECK_ITEMS
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
-                            self.current_goal_type = 'Search'
-                            self.state = State.SET_SEARCH
-
-                        case _:
-                            self.get_logger().info(f"Goal has an invalid return status!")
-
-            case State.SPINNING:
-                if not self.navigator.isTaskComplete():
-
-                    feedback = self.navigator.getFeedback()
-                    self.get_logger().info(f"Turned: {math.degrees(feedback.angular_distance_traveled):.2f} degrees")
-
-                else:
-
-                    result = self.navigator.getResult()
-
-                    match result:
-
-                        case TaskResult.SUCCEEDED:
-                            self.get_logger().info(f"Goal succeeded!")
-                            self.state = State.SET_SEARCH
-
-                        case TaskResult.CANCELED:
-                            self.get_logger().info(f"Goal was canceled!")
-
-                            self.state = State.SET_SEARCH
-
-                        case TaskResult.FAILED:
-                            self.get_logger().info(f"Goal failed!")
-
-                            self.state = State.SET_SEARCH
-
-                        case _:
-                            self.get_logger().info(f"Goal has an invalid return status!")
-
-            case State.SET_HOME_GOAL:
-                home_pose = PoseStamped()
-                home_pose.header.frame_id = 'map'
-                home_pose.header.stamp = self.get_clock().now().to_msg()                
-                home_pose.pose.position = self.home_point
-
-                (home_pose.pose.orientation.x,
-                home_pose.pose.orientation.y,
-                home_pose.pose.orientation.z,
-                home_pose.pose.orientation.w) = quaternion_from_euler(0, 0, math.radians(self.home_angle), axes='sxyz')
-                                
-                self.get_logger().info(f"Navigating to home: ({home_pose.pose.position.x:.2f}, {home_pose.pose.position.y:.2f}), {self.home_angle:.2f} degrees")
-
-                self.navigator.goToPose(home_pose)
-                self.state = State.HOMING
-
-
-            case State.HOMING:
-
-                distance = math.sqrt(self.home_point.x ** 2 + self.home_point.y ** 2)
-
-                if distance < 0.1:
-                    self.navigator.cancelTask()
-                    self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                    self.previous_time = self.get_clock().now()
-                    self.get_logger().info(f"Made it home!")
-                    self.state = State.SPINNING
-                    return
-
-                if not self.navigator.isTaskComplete():
-
-                    feedback = self.navigator.getFeedback()
-                    self.get_logger().info(f"Estimated time of arrival: {(Duration.from_msg(feedback.estimated_time_remaining).nanoseconds / 1e9):.0f} seconds")
-
-                else:
-
-                    result = self.navigator.getResult()
-
-                    match result:
-
-                        case TaskResult.SUCCEEDED:
-                            self.get_logger().info(f"Goal succeeded!")
-
-                            self.navigator.spin(spin_dist=math.radians(180), time_allowance=10)
-                            self.previous_time = self.get_clock().now()
-                            self.get_logger().info(f"Made it home!")
-                            self.state = State.SET_SEARCH
-
-                        case TaskResult.CANCELED:
-                            self.get_logger().info(f"Goal was canceled!")
-                            self.current_goal_type = 'Search'
-                            self.state = State.SET_SEARCH
-
-                        case TaskResult.FAILED:
-                            self.get_logger().info(f"Goal failed!")
-                            self.state = State.SET_HOME_GOAL
+                            self.state = State.CHECK_ITEMS
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")

@@ -1,0 +1,60 @@
+[1.798s] Invoking command in '/home/mc2148/AURO/Submission/src/solution': PYTHONPATH=/home/mc2148/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[2.133s] running egg_info
+[2.134s] creating ../../build/solution/solution.egg-info
+[2.134s] writing ../../build/solution/solution.egg-info/PKG-INFO
+[2.135s] writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt
+[2.135s] writing entry points to ../../build/solution/solution.egg-info/entry_points.txt
+[2.136s] writing requirements to ../../build/solution/solution.egg-info/requires.txt
+[2.136s] writing top-level names to ../../build/solution/solution.egg-info/top_level.txt
+[2.137s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[2.141s] reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[2.142s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[2.143s] running build
+[2.143s] running build_py
+[2.143s] creating /home/mc2148/AURO/Submission/build/solution/build
+[2.143s] creating /home/mc2148/AURO/Submission/build/solution/build/lib
+[2.144s] creating /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.144s] copying solution/robot_controller.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.145s] copying solution/randomised_goal_service.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.146s] copying solution/item_assessor.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.147s] copying solution/home_position_publisher.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.147s] copying solution/__init__.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.148s] copying solution/data_logger.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.148s] copying solution/robot_position_publisher.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[2.149s] running install
+[2.150s] running install_lib
+[2.151s] creating /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.151s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/robot_controller.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.151s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/randomised_goal_service.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.151s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/item_assessor.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.151s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/home_position_publisher.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.152s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/__init__.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.152s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/data_logger.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.152s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/robot_position_publisher.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[2.153s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_controller.py to robot_controller.cpython-310.pyc
+[2.156s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/randomised_goal_service.py to randomised_goal_service.cpython-310.pyc
+[2.157s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/item_assessor.py to item_assessor.cpython-310.pyc
+[2.158s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/home_position_publisher.py to home_position_publisher.cpython-310.pyc
+[2.159s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/__init__.py to __init__.cpython-310.pyc
+[2.159s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/data_logger.py to data_logger.cpython-310.pyc
+[2.160s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/robot_position_publisher.py to robot_position_publisher.cpython-310.pyc
+[2.160s] running install_data
+[2.161s] creating /home/mc2148/AURO/Submission/install/solution/share/ament_index
+[2.161s] creating /home/mc2148/AURO/Submission/install/solution/share/ament_index/resource_index
+[2.161s] creating /home/mc2148/AURO/Submission/install/solution/share/ament_index/resource_index/packages
+[2.162s] copying resource/solution -> /home/mc2148/AURO/Submission/install/solution/share/ament_index/resource_index/packages
+[2.162s] copying package.xml -> /home/mc2148/AURO/Submission/install/solution/share/solution
+[2.162s] creating /home/mc2148/AURO/Submission/install/solution/share/solution/launch
+[2.162s] copying launch/solution_launch.py -> /home/mc2148/AURO/Submission/install/solution/share/solution/launch/
+[2.162s] copying launch/solution_nav2_launch.py -> /home/mc2148/AURO/Submission/install/solution/share/solution/launch/
+[2.162s] running install_egg_info
+[2.165s] Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info
+[2.166s] running install_scripts
+[2.188s] Installing data_logger script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.199s] Installing home_position script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.199s] Installing item_assessor script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.199s] Installing randomised_goal_service script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.200s] Installing robot_controller script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.200s] Installing robot_position script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.200s] writing list of installed files to '/home/mc2148/AURO/Submission/build/solution/install.log'
+[2.254s] Invoked command in '/home/mc2148/AURO/Submission/src/solution' returned '0': PYTHONPATH=/home/mc2148/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/Submission/build/solution/install.log --single-version-externally-managed

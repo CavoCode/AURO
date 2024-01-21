@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Utility rule file for solution_interfaces__py.
 
@@ -70,21 +70,17 @@ solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_c.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example.py
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_pub_position.py
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_home_pub_position.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal.py
+solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_item_assessment.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/__init__.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/__init__.py
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example_s.c
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
-solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
+solution_interfaces__py/CMakeFiles/solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c
 
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -100,12 +96,10 @@ rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesup
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/Example.idl
-rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl
-rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/RobotStart.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl
-rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/HomePubPosition.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/srv/RandomGoal.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/solution_interfaces/srv/ItemAssessment.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -165,8 +159,16 @@ rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesup
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/solution_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
+rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces/solution_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -177,23 +179,17 @@ rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesup
 rosidl_generator_py/solution_interfaces/msg/_example.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_example.py
 
-rosidl_generator_py/solution_interfaces/msg/_item_assessment.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
-
-rosidl_generator_py/solution_interfaces/msg/_robot_start.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_start.py
-
 rosidl_generator_py/solution_interfaces/msg/_robot_pub_position.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_pub_position.py
-
-rosidl_generator_py/solution_interfaces/msg/_home_pub_position.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_home_pub_position.py
 
 rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 
 rosidl_generator_py/solution_interfaces/srv/_random_goal.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/srv/_random_goal.py
+
+rosidl_generator_py/solution_interfaces/srv/_item_assessment.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/srv/_item_assessment.py
 
 rosidl_generator_py/solution_interfaces/msg/__init__.py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/__init__.py
@@ -204,17 +200,8 @@ rosidl_generator_py/solution_interfaces/srv/__init__.py: rosidl_generator_py/sol
 rosidl_generator_py/solution_interfaces/msg/_example_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_example_s.c
 
-rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
-
-rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
-
 rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
-
-rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c
 
 rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
@@ -222,23 +209,22 @@ rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c: rosidl_genera
 rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
 
+rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c
+
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_c.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/__init__.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_example_s.c
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_home_pub_position.py
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment.py
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_pub_position.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start.py
-solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/__init__.py
+solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_item_assessment.py
+solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal.py
 solution_interfaces__py: rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
 solution_interfaces__py: solution_interfaces__py/CMakeFiles/solution_interfaces__py
@@ -250,10 +236,10 @@ solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/build: solution_i
 .PHONY : solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/build
 
 solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/clean:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/solution_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/solution_interfaces__py.dir/cmake_clean.cmake
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces/solution_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/solution_interfaces__py.dir/cmake_clean.cmake
 .PHONY : solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/clean
 
 solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/solution_interfaces__py /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/solution_interfaces__py /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/solution_interfaces__py /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/solution_interfaces__py /home/mc2148/AURO/Submission/build/solution_interfaces/solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : solution_interfaces__py/CMakeFiles/solution_interfaces__py.dir/depend
 

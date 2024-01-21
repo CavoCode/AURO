@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Utility rule file for solution_interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/solution_interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/solution_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/solution_interfaces_uninstall:
-	/usr/bin/cmake -P /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/mc2148/AURO/Submission/build/solution_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 solution_interfaces_uninstall: CMakeFiles/solution_interfaces_uninstall
 solution_interfaces_uninstall: CMakeFiles/solution_interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/solution_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/solution_interfaces_uninstall.dir/clean
 
 CMakeFiles/solution_interfaces_uninstall.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/solution_interfaces_uninstall.dir/depend
 

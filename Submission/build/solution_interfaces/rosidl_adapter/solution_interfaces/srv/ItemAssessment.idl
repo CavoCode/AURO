@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from solution_interfaces/srv/ItemAssessment.srv
+// generated code does not contain a copyright notice
+
+#include "assessment_interfaces/msg/Item.idl"
+#include "assessment_interfaces/msg/ItemList.idl"
+
+module solution_interfaces {
+  module srv {
+    struct ItemAssessment_Request {
+      uint8 value;
+
+      assessment_interfaces::msg::ItemList items;
+    };
+    struct ItemAssessment_Response {
+      assessment_interfaces::msg::Item item;
+
+      float distance;
+
+      float angle;
+    };
+  };
+};

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/solution_interfaces__rosidl_generator_py.dir/depend.make
@@ -72,139 +72,110 @@ include CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o: rosidl_generator_py/solution_interfaces/msg/_example_s.c
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o -c /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.i
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.s
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o: rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.i
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.s
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o: rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.i
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_example_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.s
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o: rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o -c /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.i
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.s
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o: rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.i
-
-CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.s
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o: rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o -c /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.i
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.s
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o: rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o -c /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o -c /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.i
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.s
+
+CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o: rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c
+CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o -MF CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o.d -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o -c /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c
+
+CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c > CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.i
+
+CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c -o CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.s
 
 # Object files for target solution_interfaces__rosidl_generator_py
 solution_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o" \
-"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o" \
-"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o" \
-"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o" \
 "CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o" \
-"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o"
+"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o" \
+"CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o"
 
 # External object files for target solution_interfaces__rosidl_generator_py
 solution_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_example_s.c.o
-rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_item_assessment_s.c.o
-rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_start_s.c.o
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_robot_pub_position_s.c.o
-rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_home_pub_position_s.c.o
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/msg/_string_with_pose_s.c.o
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_random_goal_s.c.o
+rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/rosidl_generator_py/solution_interfaces/srv/_item_assessment_s.c.o
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/build.make
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: libsolution_interfaces__rosidl_typesupport_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
+rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /home/mc2148/auro-practicals/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_generator_py.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: libsolution_interfaces__rosidl_generator_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
+rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /home/mc2148/auro-practicals/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_typesupport_c.so
+rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /home/mc2148/auro-practicals/install/assessment_interfaces/lib/libassessment_interfaces__rosidl_generator_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so: CMakeFiles/solution_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library rosidl_generator_py/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/solution_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +187,6 @@ CMakeFiles/solution_interfaces__rosidl_generator_py.dir/clean:
 .PHONY : CMakeFiles/solution_interfaces__rosidl_generator_py.dir/clean
 
 CMakeFiles/solution_interfaces__rosidl_generator_py.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces__rosidl_generator_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces__rosidl_generator_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/solution_interfaces__rosidl_generator_py.dir/depend
 

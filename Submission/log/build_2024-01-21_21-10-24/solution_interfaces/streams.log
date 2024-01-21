@@ -1,0 +1,289 @@
+[0.604s] Invoking command in '/home/mc2148/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/AURO/Submission/install/tf_transformations:/home/mc2148/AURO/Submission/install/solution:/home/mc2148/auro-practicals/install/week_8:/home/mc2148/auro-practicals/install/week_7:/home/mc2148/auro-practicals/install/week_6:/home/mc2148/auro-practicals/install/week_5:/home/mc2148/auro-practicals/install/week_4:/home/mc2148/auro-practicals/install/week_3:/home/mc2148/auro-practicals/install/week_2:/home/mc2148/auro-practicals/install/week_1:/home/mc2148/auro-practicals/install/tf_relay:/home/mc2148/auro-practicals/install/assessment:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[0.675s] [  1%] Built target solution_interfaces__cpp
+[0.688s] [ 12%] Built target solution_interfaces__rosidl_generator_c
+[0.714s] [ 12%] Built target ament_cmake_python_copy_solution_interfaces
+[0.729s] [ 23%] Built target solution_interfaces__rosidl_typesupport_cpp
+[0.734s] [ 34%] Built target solution_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.751s] [ 46%] Built target solution_interfaces__rosidl_typesupport_introspection_cpp
+[0.769s] [ 57%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c
+[0.771s] [ 68%] Built target solution_interfaces__rosidl_typesupport_c
+[0.784s] [ 79%] Built target solution_interfaces__rosidl_typesupport_introspection_c
+[0.814s] [ 79%] Built target solution_interfaces
+[0.844s] [ 80%] Built target solution_interfaces__py
+[0.875s] [ 90%] Built target solution_interfaces__rosidl_generator_py
+[0.915s] [ 93%] Built target solution_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.925s] [ 96%] Built target solution_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.929s] [100%] Built target solution_interfaces__rosidl_typesupport_c__pyext
+[1.055s] running egg_info
+[1.056s] writing solution_interfaces.egg-info/PKG-INFO
+[1.057s] writing dependency_links to solution_interfaces.egg-info/dependency_links.txt
+[1.057s] writing top-level names to solution_interfaces.egg-info/top_level.txt
+[1.059s] reading manifest file 'solution_interfaces.egg-info/SOURCES.txt'
+[1.060s] writing manifest file 'solution_interfaces.egg-info/SOURCES.txt'
+[1.090s] [100%] Built target ament_cmake_python_build_solution_interfaces_egg
+[1.106s] Invoked command in '/home/mc2148/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/AURO/Submission/install/tf_transformations:/home/mc2148/AURO/Submission/install/solution:/home/mc2148/auro-practicals/install/week_8:/home/mc2148/auro-practicals/install/week_7:/home/mc2148/auro-practicals/install/week_6:/home/mc2148/auro-practicals/install/week_5:/home/mc2148/auro-practicals/install/week_4:/home/mc2148/auro-practicals/install/week_3:/home/mc2148/auro-practicals/install/week_2:/home/mc2148/auro-practicals/install/week_1:/home/mc2148/auro-practicals/install/tf_relay:/home/mc2148/auro-practicals/install/assessment:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/mc2148/AURO/Submission/build/solution_interfaces -- -j4 -l4
+[1.397s] Invoking command in '/home/mc2148/AURO/Submission/build/solution_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/AURO/Submission/install/tf_transformations:/home/mc2148/AURO/Submission/install/solution:/home/mc2148/auro-practicals/install/week_8:/home/mc2148/auro-practicals/install/week_7:/home/mc2148/auro-practicals/install/week_6:/home/mc2148/auro-practicals/install/week_5:/home/mc2148/auro-practicals/install/week_4:/home/mc2148/auro-practicals/install/week_3:/home/mc2148/auro-practicals/install/week_2:/home/mc2148/auro-practicals/install/week_1:/home/mc2148/auro-practicals/install/tf_relay:/home/mc2148/auro-practicals/install/assessment:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/Submission/build/solution_interfaces
+[1.409s] -- Install configuration: ""
+[1.409s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/rosidl_interfaces/solution_interfaces
+[1.410s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.411s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.416s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/string_with_pose.h
+[1.416s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.416s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/example.h
+[1.416s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.417s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__functions.h
+[1.417s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__type_support.h
+[1.418s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__struct.h
+[1.418s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__functions.h
+[1.418s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__functions.c
+[1.421s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__struct.h
+[1.423s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__type_support.h
+[1.424s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__functions.c
+[1.424s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__functions.c
+[1.425s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__type_support.h
+[1.426s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.h
+[1.426s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__functions.h
+[1.427s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__functions.h
+[1.428s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__functions.h
+[1.428s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.h
+[1.429s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__functions.c
+[1.431s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__struct.h
+[1.432s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__type_support.h
+[1.432s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__functions.c
+[1.432s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__functions.h
+[1.432s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__struct.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__functions.c
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__struct.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__struct.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/robot_start.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/robot_pub_position.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/home_pub_position.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/item_assessment.h
+[1.433s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__type_support.h
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__functions.c
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__struct.h
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__functions.h
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__type_support.h
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__functions.h
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__functions.c
+[1.434s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__struct.h
+[1.435s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/random_goal.h
+[1.435s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/item_assessment.h
+[1.435s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/library_path.sh
+[1.436s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/library_path.dsv
+[1.436s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_generator_c.so
+[1.436s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.437s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.437s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.437s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__rosidl_typesupport_fastrtps_c.h
+[1.437s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_c.h
+[1.437s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__rosidl_typesupport_fastrtps_c.h
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_c.h
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__rosidl_typesupport_fastrtps_c.h
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__rosidl_typesupport_fastrtps_c.h
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.438s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.439s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__rosidl_typesupport_fastrtps_c.h
+[1.439s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__rosidl_typesupport_fastrtps_c.h
+[1.439s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/example.hpp
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/item_assessment.hpp
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__builder.hpp
+[1.440s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__traits.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__builder.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__struct.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__struct.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__builder.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__builder.hpp
+[1.441s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__traits.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__traits.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__struct.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__traits.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__traits.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__struct.hpp
+[1.442s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__struct.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__builder.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__traits.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/string_with_pose.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/home_pub_position.hpp
+[1.443s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/robot_pub_position.hpp
+[1.444s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/robot_start.hpp
+[1.444s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.444s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/item_assessment.hpp
+[1.444s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/random_goal.hpp
+[1.444s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__traits.hpp
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__struct.hpp
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__builder.hpp
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__traits.hpp
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__builder.hpp
+[1.445s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__struct.hpp
+[1.446s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.446s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.446s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.446s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__rosidl_typesupport_fastrtps_cpp.hpp
+[1.446s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[1.447s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__rosidl_typesupport_fastrtps_cpp.hpp
+[1.447s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_fastrtps_cpp.hpp
+[1.447s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__rosidl_typesupport_fastrtps_cpp.hpp
+[1.447s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/dds_fastrtps
+[1.447s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__rosidl_typesupport_fastrtps_cpp.hpp
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__rosidl_typesupport_fastrtps_cpp.hpp
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/dds_fastrtps
+[1.448s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[1.449s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.449s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.449s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.450s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.450s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.450s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__type_support.c
+[1.450s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__rosidl_typesupport_introspection_c.h
+[1.450s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__type_support.c
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_introspection_c.h
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__rosidl_typesupport_introspection_c.h
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_introspection_c.h
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__type_support.c
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__rosidl_typesupport_introspection_c.h
+[1.451s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__rosidl_typesupport_introspection_c.h
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__type_support.c
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.c
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.c
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.452s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__rosidl_typesupport_introspection_c.h
+[1.453s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__type_support.c
+[1.453s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__type_support.c
+[1.453s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__rosidl_typesupport_introspection_c.h
+[1.453s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_introspection_c.so
+[1.454s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_c.so
+[1.454s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces
+[1.454s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg
+[1.454s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail
+[1.455s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__type_support.cpp
+[1.455s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__type_support.cpp
+[1.455s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/item_assessment__rosidl_typesupport_introspection_cpp.hpp
+[1.455s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__type_support.cpp
+[1.455s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__type_support.cpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__type_support.cpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/example__rosidl_typesupport_introspection_cpp.hpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__type_support.cpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/home_pub_position__rosidl_typesupport_introspection_cpp.hpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/string_with_pose__rosidl_typesupport_introspection_cpp.hpp
+[1.456s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_pub_position__rosidl_typesupport_introspection_cpp.hpp
+[1.457s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/msg/detail/robot_start__rosidl_typesupport_introspection_cpp.hpp
+[1.457s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv
+[1.457s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail
+[1.457s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__type_support.cpp
+[1.457s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/item_assessment__rosidl_typesupport_introspection_cpp.hpp
+[1.458s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__rosidl_typesupport_introspection_cpp.hpp
+[1.458s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/include/solution_interfaces/solution_interfaces/srv/detail/random_goal__type_support.cpp
+[1.458s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.459s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_typesupport_cpp.so
+[1.459s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/pythonpath.sh
+[1.459s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/pythonpath.dsv
+[1.460s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info
+[1.460s] -- Installing: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.460s] -- Installing: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.461s] -- Installing: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[1.461s] -- Installing: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[1.461s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces
+[1.462s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.462s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_c.c
+[1.462s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.462s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.462s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_robot_start_s.c
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_example.py
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_example_s.c
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_robot_pub_position.py
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_robot_start.py
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_item_assessment_s.c
+[1.463s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_string_with_pose.py
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/__init__.py
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_home_pub_position_s.c
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_home_pub_position.py
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_item_assessment.py
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_robot_pub_position_s.c
+[1.464s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg/_string_with_pose_s.c
+[1.465s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/libsolution_interfaces__rosidl_generator_py.so
+[1.465s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/_solution_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.465s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.465s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/__init__.py
+[1.466s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv
+[1.466s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv/_random_goal_s.c
+[1.466s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv/_random_goal.py
+[1.466s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv/_item_assessment_s.c
+[1.466s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv/__init__.py
+[1.467s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv/_item_assessment.py
+[1.515s] Listing '/home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces'...
+[1.515s] Listing '/home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/msg'...
+[1.515s] Listing '/home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/srv'...
+[1.529s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/lib/libsolution_interfaces__rosidl_generator_py.so
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/Example.idl
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/RobotPubPosition.idl
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/StringWithPose.idl
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/RandomGoal.idl
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/ItemAssessment.idl
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/Example.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/RobotPubPosition.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/msg/StringWithPose.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/RandomGoal.srv
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/RandomGoal_Request.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/RandomGoal_Response.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/ItemAssessment.srv
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/ItemAssessment_Request.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/srv/ItemAssessment_Response.msg
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/package_run_dependencies/solution_interfaces
+[1.530s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/parent_prefix_path/solution_interfaces
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/ament_prefix_path.sh
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/ament_prefix_path.dsv
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/path.sh
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/environment/path.dsv
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.bash
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.sh
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.zsh
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/local_setup.dsv
+[1.531s] -- Installing: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.dsv
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/ament_index/resource_index/packages/solution_interfaces
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cExport.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_cppExport.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.531s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.532s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cExport.cmake
+[1.532s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.532s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.532s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.533s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cppExport.cmake
+[1.533s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.533s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_pyExport.cmake
+[1.534s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/export_solution_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.534s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.534s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.534s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.535s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.535s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.535s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.536s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.536s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfacesConfig.cmake
+[1.537s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/cmake/solution_interfacesConfig-version.cmake
+[1.537s] -- Up-to-date: /home/mc2148/AURO/Submission/install/solution_interfaces/share/solution_interfaces/package.xml
+[1.550s] Invoked command in '/home/mc2148/AURO/Submission/build/solution_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mc2148/AURO/Submission/install/tf_transformations:/home/mc2148/AURO/Submission/install/solution:/home/mc2148/auro-practicals/install/week_8:/home/mc2148/auro-practicals/install/week_7:/home/mc2148/auro-practicals/install/week_6:/home/mc2148/auro-practicals/install/week_5:/home/mc2148/auro-practicals/install/week_4:/home/mc2148/auro-practicals/install/week_3:/home/mc2148/auro-practicals/install/week_2:/home/mc2148/auro-practicals/install/week_1:/home/mc2148/auro-practicals/install/tf_relay:/home/mc2148/auro-practicals/install/assessment:/home/mc2148/turtlebot3_ws/install/turtlebot3_teleop:/home/mc2148/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/mc2148/AURO/Submission/build/solution_interfaces

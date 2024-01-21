@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROSIDL_TYPESUPPORT_FASTRTPS_CPP_BUILDING_DLL_solution_interfaces -DROS_PACKAGE_NAME=\"solution_interfaces\"
 
-CXX_INCLUDES = -I/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_typesupport_fastrtps_cpp -I/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_cpp -isystem /opt/ros/humble/include/fastcdr -isystem /opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces
+CXX_INCLUDES = -I/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_typesupport_fastrtps_cpp -I/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_cpp -isystem /opt/ros/humble/include/fastcdr -isystem /opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /home/mc2148/auro-practicals/install/assessment_interfaces/include/assessment_interfaces
 
 CXX_FLAGS = -fPIC -Wall -Wextra -Wpedantic -Wredundant-decls -std=gnu++14
 

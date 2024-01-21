@@ -1,12 +1,10 @@
 {
   "package_name": "solution_interfaces",
   "non_idl_tuples": [
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/Example.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/ItemAssessment.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/RobotStart.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/RobotPubPosition.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/HomePubPosition.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:msg/StringWithPose.msg",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces:srv/RandomGoal.srv"
+    "/home/mc2148/AURO/Submission/src/solution_interfaces:msg/Example.msg",
+    "/home/mc2148/AURO/Submission/src/solution_interfaces:msg/RobotPubPosition.msg",
+    "/home/mc2148/AURO/Submission/src/solution_interfaces:msg/StringWithPose.msg",
+    "/home/mc2148/AURO/Submission/src/solution_interfaces:srv/RandomGoal.srv",
+    "/home/mc2148/AURO/Submission/src/solution_interfaces:srv/ItemAssessment.srv"
   ]
 }

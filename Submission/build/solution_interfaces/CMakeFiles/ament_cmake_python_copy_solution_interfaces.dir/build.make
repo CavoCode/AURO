@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Utility rule file for ament_cmake_python_copy_solution_interfaces.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/compiler_depe
 include CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_solution_interfaces:
-	/usr/bin/cmake -E copy_directory /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/ament_cmake_python/solution_interfaces/solution_interfaces
+	/usr/bin/cmake -E copy_directory /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/ament_cmake_python/solution_interfaces/solution_interfaces
 
 ament_cmake_python_copy_solution_interfaces: CMakeFiles/ament_cmake_python_copy_solution_interfaces
 ament_cmake_python_copy_solution_interfaces: CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_solution_interfaces.dir/depend
 
