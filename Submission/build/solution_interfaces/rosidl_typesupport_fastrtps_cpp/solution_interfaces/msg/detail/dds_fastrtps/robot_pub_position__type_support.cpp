@@ -60,6 +60,8 @@ cdr_serialize(
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.pose,
     cdr);
+  // Member: yaw
+  cdr << ros_message.yaw;
   return true;
 }
 
@@ -72,6 +74,9 @@ cdr_deserialize(
   // Member: pose
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.pose);
+
+  // Member: yaw
+  cdr >> ros_message.yaw;
 
   return true;
 }
@@ -94,6 +99,12 @@ get_serialized_size(
   current_alignment +=
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.pose, current_alignment);
+  // Member: yaw
+  {
+    size_t item_size = sizeof(ros_message.yaw);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -137,6 +148,15 @@ max_serialized_size_RobotPubPosition(
     }
   }
 
+  // Member: yaw
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -145,7 +165,7 @@ max_serialized_size_RobotPubPosition(
     using DataType = solution_interfaces::msg::RobotPubPosition;
     is_plain =
       (
-      offsetof(DataType, pose) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }

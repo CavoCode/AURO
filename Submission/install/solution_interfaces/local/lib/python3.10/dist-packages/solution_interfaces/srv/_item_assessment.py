@@ -213,18 +213,15 @@ class ItemAssessment_Response(metaclass=Metaclass_ItemAssessment_Response):
     __slots__ = [
         '_item',
         '_distance',
-        '_angle',
     ]
 
     _fields_and_field_types = {
         'item': 'assessment_interfaces/Item',
         'distance': 'float',
-        'angle': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['assessment_interfaces', 'msg'], 'Item'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
@@ -235,7 +232,6 @@ class ItemAssessment_Response(metaclass=Metaclass_ItemAssessment_Response):
         from assessment_interfaces.msg import Item
         self.item = kwargs.get('item', Item())
         self.distance = kwargs.get('distance', float())
-        self.angle = kwargs.get('angle', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -269,8 +265,6 @@ class ItemAssessment_Response(metaclass=Metaclass_ItemAssessment_Response):
         if self.item != other.item:
             return False
         if self.distance != other.distance:
-            return False
-        if self.angle != other.angle:
             return False
         return True
 
@@ -307,21 +301,6 @@ class ItemAssessment_Response(metaclass=Metaclass_ItemAssessment_Response):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'distance' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._distance = value
-
-    @builtins.property
-    def angle(self):
-        """Message field 'angle'."""
-        return self._angle
-
-    @angle.setter
-    def angle(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'angle' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._angle = value
 
 
 class Metaclass_ItemAssessment(type):

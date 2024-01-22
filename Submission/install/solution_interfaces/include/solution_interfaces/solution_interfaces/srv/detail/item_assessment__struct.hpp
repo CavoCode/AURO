@@ -175,7 +175,6 @@ struct ItemAssessment_Response_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->distance = 0.0f;
-      this->angle = 0.0f;
     }
   }
 
@@ -186,7 +185,6 @@ struct ItemAssessment_Response_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->distance = 0.0f;
-      this->angle = 0.0f;
     }
   }
 
@@ -197,9 +195,6 @@ struct ItemAssessment_Response_
   using _distance_type =
     float;
   _distance_type distance;
-  using _angle_type =
-    float;
-  _angle_type angle;
 
   // setters for named parameter idiom
   Type & set__item(
@@ -212,12 +207,6 @@ struct ItemAssessment_Response_
     const float & _arg)
   {
     this->distance = _arg;
-    return *this;
-  }
-  Type & set__angle(
-    const float & _arg)
-  {
-    this->angle = _arg;
     return *this;
   }
 
@@ -267,9 +256,6 @@ struct ItemAssessment_Response_
       return false;
     }
     if (this->distance != other.distance) {
-      return false;
-    }
-    if (this->angle != other.angle) {
       return false;
     }
     return true;

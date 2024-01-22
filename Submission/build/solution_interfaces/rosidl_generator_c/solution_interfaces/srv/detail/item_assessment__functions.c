@@ -274,7 +274,6 @@ solution_interfaces__srv__ItemAssessment_Response__init(solution_interfaces__srv
     return false;
   }
   // distance
-  // angle
   return true;
 }
 
@@ -287,7 +286,6 @@ solution_interfaces__srv__ItemAssessment_Response__fini(solution_interfaces__srv
   // item
   assessment_interfaces__msg__Item__fini(&msg->item);
   // distance
-  // angle
 }
 
 bool
@@ -304,10 +302,6 @@ solution_interfaces__srv__ItemAssessment_Response__are_equal(const solution_inte
   }
   // distance
   if (lhs->distance != rhs->distance) {
-    return false;
-  }
-  // angle
-  if (lhs->angle != rhs->angle) {
     return false;
   }
   return true;
@@ -329,8 +323,6 @@ solution_interfaces__srv__ItemAssessment_Response__copy(
   }
   // distance
   output->distance = input->distance;
-  // angle
-  output->angle = input->angle;
   return true;
 }
 

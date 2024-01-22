@@ -198,15 +198,6 @@ bool solution_interfaces__srv__item_assessment__response__convert_from_py(PyObje
     ros_message->distance = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // angle
-    PyObject * field = PyObject_GetAttrString(_pymsg, "angle");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->angle = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -248,17 +239,6 @@ PyObject * solution_interfaces__srv__item_assessment__response__convert_to_py(vo
     field = PyFloat_FromDouble(ros_message->distance);
     {
       int rc = PyObject_SetAttrString(_pymessage, "distance", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // angle
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->angle);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "angle", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

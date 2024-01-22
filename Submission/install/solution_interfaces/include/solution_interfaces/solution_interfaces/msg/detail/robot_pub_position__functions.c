@@ -26,6 +26,7 @@ solution_interfaces__msg__RobotPubPosition__init(solution_interfaces__msg__Robot
     solution_interfaces__msg__RobotPubPosition__fini(msg);
     return false;
   }
+  // yaw
   return true;
 }
 
@@ -37,6 +38,7 @@ solution_interfaces__msg__RobotPubPosition__fini(solution_interfaces__msg__Robot
   }
   // pose
   geometry_msgs__msg__Pose__fini(&msg->pose);
+  // yaw
 }
 
 bool
@@ -49,6 +51,10 @@ solution_interfaces__msg__RobotPubPosition__are_equal(const solution_interfaces_
   if (!geometry_msgs__msg__Pose__are_equal(
       &(lhs->pose), &(rhs->pose)))
   {
+    return false;
+  }
+  // yaw
+  if (lhs->yaw != rhs->yaw) {
     return false;
   }
   return true;
@@ -68,6 +74,8 @@ solution_interfaces__msg__RobotPubPosition__copy(
   {
     return false;
   }
+  // yaw
+  output->yaw = input->yaw;
   return true;
 }
 

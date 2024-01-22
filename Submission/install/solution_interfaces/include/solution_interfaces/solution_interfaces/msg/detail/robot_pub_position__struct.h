@@ -25,6 +25,7 @@ extern "C"
 typedef struct solution_interfaces__msg__RobotPubPosition
 {
   geometry_msgs__msg__Pose pose;
+  float yaw;
 } solution_interfaces__msg__RobotPubPosition;
 
 // Struct for a sequence of solution_interfaces__msg__RobotPubPosition.

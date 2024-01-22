@@ -78,6 +78,11 @@ static bool _RobotPubPosition__cdr_serialize(
     }
   }
 
+  // Field name: yaw
+  {
+    cdr << ros_message->yaw;
+  }
+
   return true;
 }
 
@@ -104,6 +109,11 @@ static bool _RobotPubPosition__cdr_deserialize(
     }
   }
 
+  // Field name: yaw
+  {
+    cdr >> ros_message->yaw;
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -125,6 +135,12 @@ size_t get_serialized_size_solution_interfaces__msg__RobotPubPosition(
 
   current_alignment += get_serialized_size_geometry_msgs__msg__Pose(
     &(ros_message->pose), current_alignment);
+  // field.name yaw
+  {
+    size_t item_size = sizeof(ros_message->yaw);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -173,6 +189,14 @@ size_t max_serialized_size_solution_interfaces__msg__RobotPubPosition(
       is_plain &= inner_is_plain;
     }
   }
+  // member: yaw
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -182,7 +206,7 @@ size_t max_serialized_size_solution_interfaces__msg__RobotPubPosition(
     using DataType = solution_interfaces__msg__RobotPubPosition;
     is_plain =
       (
-      offsetof(DataType, pose) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }

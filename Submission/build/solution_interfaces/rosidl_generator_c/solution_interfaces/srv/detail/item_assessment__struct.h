@@ -50,7 +50,6 @@ typedef struct solution_interfaces__srv__ItemAssessment_Response
 {
   assessment_interfaces__msg__Item item;
   float distance;
-  float angle;
 } solution_interfaces__srv__ItemAssessment_Response;
 
 // Struct for a sequence of solution_interfaces__srv__ItemAssessment_Response.

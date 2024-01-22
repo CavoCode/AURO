@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_RobotPubPosition_yaw
+{
+public:
+  explicit Init_RobotPubPosition_yaw(::solution_interfaces::msg::RobotPubPosition & msg)
+  : msg_(msg)
+  {}
+  ::solution_interfaces::msg::RobotPubPosition yaw(::solution_interfaces::msg::RobotPubPosition::_yaw_type arg)
+  {
+    msg_.yaw = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::solution_interfaces::msg::RobotPubPosition msg_;
+};
+
 class Init_RobotPubPosition_pose
 {
 public:
   Init_RobotPubPosition_pose()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::solution_interfaces::msg::RobotPubPosition pose(::solution_interfaces::msg::RobotPubPosition::_pose_type arg)
+  Init_RobotPubPosition_yaw pose(::solution_interfaces::msg::RobotPubPosition::_pose_type arg)
   {
     msg_.pose = std::move(arg);
-    return std::move(msg_);
+    return Init_RobotPubPosition_yaw(msg_);
   }
 
 private:

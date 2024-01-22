@@ -16,8 +16,6 @@ module solution_interfaces {
       assessment_interfaces::msg::Item item;
 
       float distance;
-
-      float angle;
     };
   };
 };

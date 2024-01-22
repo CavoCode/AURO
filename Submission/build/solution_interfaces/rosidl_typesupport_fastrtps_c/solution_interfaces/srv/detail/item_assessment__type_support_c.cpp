@@ -342,11 +342,6 @@ static bool _ItemAssessment_Response__cdr_serialize(
     cdr << ros_message->distance;
   }
 
-  // Field name: angle
-  {
-    cdr << ros_message->angle;
-  }
-
   return true;
 }
 
@@ -378,11 +373,6 @@ static bool _ItemAssessment_Response__cdr_deserialize(
     cdr >> ros_message->distance;
   }
 
-  // Field name: angle
-  {
-    cdr >> ros_message->angle;
-  }
-
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -407,12 +397,6 @@ size_t get_serialized_size_solution_interfaces__srv__ItemAssessment_Response(
   // field.name distance
   {
     size_t item_size = sizeof(ros_message->distance);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name angle
-  {
-    size_t item_size = sizeof(ros_message->angle);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -472,14 +456,6 @@ size_t max_serialized_size_solution_interfaces__srv__ItemAssessment_Response(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: angle
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -489,7 +465,7 @@ size_t max_serialized_size_solution_interfaces__srv__ItemAssessment_Response(
     using DataType = solution_interfaces__srv__ItemAssessment_Response;
     is_plain =
       (
-      offsetof(DataType, angle) +
+      offsetof(DataType, distance) +
       last_member_size
       ) == ret_val;
   }

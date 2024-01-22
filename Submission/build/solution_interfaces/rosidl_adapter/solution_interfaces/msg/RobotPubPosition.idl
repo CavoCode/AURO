@@ -8,6 +8,8 @@ module solution_interfaces {
   module msg {
     struct RobotPubPosition {
       geometry_msgs::msg::Pose pose;
+
+      float yaw;
     };
   };
 };

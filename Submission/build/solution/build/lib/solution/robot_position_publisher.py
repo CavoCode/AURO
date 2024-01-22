@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 
 import rclpy
@@ -23,6 +25,7 @@ class RobotPosition(Node):
         ##########################
 
         self.pose = Pose()
+        self.prev_pose = Pose()
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
@@ -55,12 +58,14 @@ class RobotPosition(Node):
                                                         t.transform.rotation.w])
             
             self.get_logger().info(f"Robot currently at: X({x}), Y({y})")
-            
+
+            self.prev_pose = self.pose
             self.pose.position.x = x
             self.pose.position.y = y
 
             msg = RobotPubPosition()
             msg.pose = self.pose
+            msg.yaw = yaw
             self.robot_position_publisher.publish(msg)
 
         except TransformException as e:

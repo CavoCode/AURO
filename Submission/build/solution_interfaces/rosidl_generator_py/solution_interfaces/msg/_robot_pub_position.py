@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -60,14 +62,17 @@ class RobotPubPosition(metaclass=Metaclass_RobotPubPosition):
 
     __slots__ = [
         '_pose',
+        '_yaw',
     ]
 
     _fields_and_field_types = {
         'pose': 'geometry_msgs/Pose',
+        'yaw': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Pose'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -76,6 +81,7 @@ class RobotPubPosition(metaclass=Metaclass_RobotPubPosition):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from geometry_msgs.msg import Pose
         self.pose = kwargs.get('pose', Pose())
+        self.yaw = kwargs.get('yaw', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -108,6 +114,8 @@ class RobotPubPosition(metaclass=Metaclass_RobotPubPosition):
             return False
         if self.pose != other.pose:
             return False
+        if self.yaw != other.yaw:
+            return False
         return True
 
     @classmethod
@@ -128,3 +136,18 @@ class RobotPubPosition(metaclass=Metaclass_RobotPubPosition):
                 isinstance(value, Pose), \
                 "The 'pose' field must be a sub message of type 'Pose'"
         self._pose = value
+
+    @builtins.property
+    def yaw(self):
+        """Message field 'yaw'."""
+        return self._yaw
+
+    @yaw.setter
+    def yaw(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'yaw' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'yaw' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._yaw = value

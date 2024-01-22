@@ -79,32 +79,16 @@ namespace srv
 namespace builder
 {
 
-class Init_ItemAssessment_Response_angle
-{
-public:
-  explicit Init_ItemAssessment_Response_angle(::solution_interfaces::srv::ItemAssessment_Response & msg)
-  : msg_(msg)
-  {}
-  ::solution_interfaces::srv::ItemAssessment_Response angle(::solution_interfaces::srv::ItemAssessment_Response::_angle_type arg)
-  {
-    msg_.angle = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::solution_interfaces::srv::ItemAssessment_Response msg_;
-};
-
 class Init_ItemAssessment_Response_distance
 {
 public:
   explicit Init_ItemAssessment_Response_distance(::solution_interfaces::srv::ItemAssessment_Response & msg)
   : msg_(msg)
   {}
-  Init_ItemAssessment_Response_angle distance(::solution_interfaces::srv::ItemAssessment_Response::_distance_type arg)
+  ::solution_interfaces::srv::ItemAssessment_Response distance(::solution_interfaces::srv::ItemAssessment_Response::_distance_type arg)
   {
     msg_.distance = std::move(arg);
-    return Init_ItemAssessment_Response_angle(msg_);
+    return std::move(msg_);
   }
 
 private:

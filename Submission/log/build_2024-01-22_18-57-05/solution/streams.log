@@ -1,0 +1,28 @@
+[1.646s] Invoking command in '/home/mc2148/AURO/Submission/src/solution': PYTHONPATH=/home/mc2148/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/Submission/build/solution/install.log --single-version-externally-managed
+[1.983s] running egg_info
+[1.983s] writing ../../build/solution/solution.egg-info/PKG-INFO
+[1.984s] writing dependency_links to ../../build/solution/solution.egg-info/dependency_links.txt
+[1.985s] writing entry points to ../../build/solution/solution.egg-info/entry_points.txt
+[1.985s] writing requirements to ../../build/solution/solution.egg-info/requires.txt
+[1.985s] writing top-level names to ../../build/solution/solution.egg-info/top_level.txt
+[1.988s] reading manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[1.989s] writing manifest file '../../build/solution/solution.egg-info/SOURCES.txt'
+[1.989s] running build
+[1.989s] running build_py
+[1.990s] copying solution/item_assessor_service.py -> /home/mc2148/AURO/Submission/build/solution/build/lib/solution
+[1.990s] running install
+[1.991s] running install_lib
+[1.992s] copying /home/mc2148/AURO/Submission/build/solution/build/lib/solution/item_assessor_service.py -> /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution
+[1.994s] byte-compiling /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution/item_assessor_service.py to item_assessor_service.cpython-310.pyc
+[1.995s] running install_data
+[1.996s] running install_egg_info
+[2.002s] removing '/home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info' (and everything under it)
+[2.004s] Copying ../../build/solution/solution.egg-info to /home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages/solution-0.0.0-py3.10.egg-info
+[2.005s] running install_scripts
+[2.034s] Installing data_logger script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.037s] Installing item_assessor_service script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.037s] Installing randomised_goal_service script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.037s] Installing robot_controller script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.037s] Installing robot_position script to /home/mc2148/AURO/Submission/install/solution/lib/solution
+[2.037s] writing list of installed files to '/home/mc2148/AURO/Submission/build/solution/install.log'
+[2.121s] Invoked command in '/home/mc2148/AURO/Submission/src/solution' returned '0': PYTHONPATH=/home/mc2148/AURO/Submission/build/solution/prefix_override:/home/mc2148/AURO/Submission/install/solution/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/solution build --build-base /home/mc2148/AURO/Submission/build/solution/build install --record /home/mc2148/AURO/Submission/build/solution/install.log --single-version-externally-managed

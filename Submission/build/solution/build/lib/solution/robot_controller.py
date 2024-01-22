@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
+
 import sys
 import math
 
 import rclpy
 from rclpy.node import Node
-from rclpy.executors import ExternalShutdownException
+from rclpy.executors import ExternalShutdownException, MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.duration import Duration
 
@@ -53,6 +55,7 @@ class RobotController(Node):
         self.pose = Pose()
         self.pose.position.x = init_pose[0]
         self.pose.position.y = init_pose[1]
+        self.yaw = 0.0
 
         self.home_point = Point()
         self.random_goal = Point()
@@ -86,6 +89,14 @@ class RobotController(Node):
         self.navigator.setInitialPose(initial_pose)
         self.navigator.waitUntilNav2Active()
 
+        ####################################
+        ## Initialise ROS Callback Groups ##
+        ####################################
+
+        subscriber_callback_group = MutuallyExclusiveCallbackGroup()
+        service_callback_group = MutuallyExclusiveCallbackGroup()
+        timer_callback_group = MutuallyExclusiveCallbackGroup()
+
         ################################
         ## Initialise ROS Subscribers ##
         ################################
@@ -94,35 +105,33 @@ class RobotController(Node):
             ItemHolders,
             '/item_holders',
             self.item_holder_callback,
-            10
-        )
+            1,
+            callback_group=subscriber_callback_group)
 
         self.item_subscriber = self.create_subscription(
-            msg_type=ItemList,
-            topic='items',
-            callback=self.item_callback,
-            qos_profile=10,
-            )
+            ItemList,
+            'items',
+            self.item_callback,
+            10,
+            callback_group=subscriber_callback_group)
 
         self.robot_position_subscriber = self.create_subscription(
             RobotPubPosition,
             'robot_position',
             self.robot_position_callback,
-            10
-        )
+            1,
+            callback_group=subscriber_callback_group)
 
         ##############################
         ## Initialise ROS Services ##
         ##############################
 
-        random_client_callback_group = MutuallyExclusiveCallbackGroup()
-        self.random_goal_client = self.create_client(RandomGoal, 'random_goal', callback_group=random_client_callback_group)
+        self.random_goal_client = self.create_client(RandomGoal, 'random_goal', callback_group=service_callback_group)
         while not self.random_goal_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
         self.random_goal_request = RandomGoal.Request()
 
-        item_client_callback_group = MutuallyExclusiveCallbackGroup()
-        self.item_assessment_client = self.create_client(ItemAssessment, 'item_assessor', callback_group=item_client_callback_group)
+        self.item_assessment_client = self.create_client(ItemAssessment, 'item_assessor', callback_group=service_callback_group)
         while not self.item_assessment_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
         self.item_assessment_request = ItemAssessment.Request()
@@ -139,7 +148,7 @@ class RobotController(Node):
         ######################
 
         self.timer_period = 0.1 # 100 milliseconds = 10 Hz
-        self.timer = self.create_timer(self.timer_period, self.control_loop)
+        self.timer = self.create_timer(self.timer_period, self.control_loop, callback_group=timer_callback_group)
 
         self.previous_time = self.get_clock().now()
 
@@ -155,6 +164,7 @@ class RobotController(Node):
         for itemHolder in itemHolders.data:
             if itemHolder.robot_id == self.robot_name and itemHolder.holding_item == True:
                 self.robot_holding = True
+                self.item_value = itemHolder.item_value
                 return
             
         self.robot_holding = False
@@ -164,6 +174,7 @@ class RobotController(Node):
 
     def robot_position_callback(self, msg):
         self.pose = msg.pose
+        self.yaw = msg.yaw
     
     ##################
     ## Control Loop ##
@@ -203,7 +214,6 @@ class RobotController(Node):
                         self.get_logger().info('Response recieved from Item Assessment Service')
                         self.item = response.item
                         self.item_distance = response.distance
-                        self.item_angle = response.angle
                         self.item_value = response.item.value
 
                     except Exception as e:
@@ -211,10 +221,15 @@ class RobotController(Node):
 
                 else:
                     return
+                
+                focal_length = 640 / (2 * math.tan(1.085595  / 2))
+                angle_rel_robot = math.atan2((self.item.x), focal_length)
+                angle = self.yaw + angle_rel_robot
+                self.item_angle = (angle + math.pi) % (2 * math.pi) - math.pi  # Normalize
 
                 item_point = Point()
-                item_point.x = self.pose.position.x + (self.item_distance * math.cos(self.item_angle))
-                item_point.y = self.pose.position.y + (self.item_distance * math.sin(self.item_angle))
+                item_point.x = self.pose.position.x + ((self.item_distance) * math.cos(self.item_angle))
+                item_point.y = self.pose.position.y + ((self.item_distance) * math.sin(self.item_angle))
 
                 goal_pose = PoseStamped()
                 goal_pose.header.frame_id = 'map'
@@ -292,6 +307,7 @@ class RobotController(Node):
                         self.get_logger().info(f"Navigation took too long... cancelling")
                         self.navigator.cancelTask()
                         self.state = State.CHECK_ITEMS
+                        self.item_value = 0
 
                 else:
                     result = self.navigator.getResult()
@@ -306,14 +322,17 @@ class RobotController(Node):
                                 return
                             else:
                                 self.state = State.CHECK_ITEMS
+                                self.item_value = 0
 
                         case TaskResult.CANCELED:
                             self.get_logger().info(f"Goal was canceled!")
                             self.state = State.CHECK_ITEMS
+                            self.item_value = 0
 
                         case TaskResult.FAILED:
                             self.get_logger().info(f"Goal failed!")
                             self.state = State.CHECK_ITEMS
+                            self.item_value = 0
 
                         case _:
                             self.get_logger().info(f"Goal has an invalid return status!")
@@ -331,15 +350,20 @@ class RobotController(Node):
 def main(args=None):
 
     rclpy.init(args = args)
+
     node = RobotController()
 
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+
     try:
-        rclpy.spin(node)
+        executor.spin()
     except KeyboardInterrupt:
         pass
     except ExternalShutdownException:
         sys.exit(1)
     finally:
+        executor.shutdown()
         node.destroy_node()
         rclpy.try_shutdown()
 
