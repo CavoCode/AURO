@@ -1,5 +1,0 @@
-uint8 value
-assessment_interfaces/ItemList items
----
-assessment_interfaces/Item item
-float32 distance

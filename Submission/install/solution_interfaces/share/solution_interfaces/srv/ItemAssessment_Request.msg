@@ -1,2 +1,0 @@
-uint8 value
-assessment_interfaces/ItemList items
