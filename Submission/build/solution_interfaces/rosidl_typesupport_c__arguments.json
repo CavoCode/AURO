@@ -1,14 +1,13 @@
 {
   "package_name": "solution_interfaces",
-  "output_dir": "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_typesupport_c/solution_interfaces",
+  "output_dir": "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_typesupport_c/solution_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_c/resource",
   "idl_tuples": [
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/Example.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/ItemAssessment.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/RobotStart.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/RobotPubPosition.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/StringWithPose.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:srv/RandomGoal.idl"
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/Example.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/RobotPubPosition.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:msg/StringWithPose.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:srv/RandomGoal.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces:srv/ItemAssessment.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -69,7 +68,15 @@
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt64.idl",
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl",
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8.idl",
-    "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl"
+    "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl",
+    "assessment_interfaces:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c",
@@ -78,12 +85,11 @@
     "/opt/ros/humble/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/Example.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/RobotStart.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/StringWithPose.idl",
-    "/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/srv/RandomGoal.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/Example.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/msg/StringWithPose.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/srv/RandomGoal.idl",
+    "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_adapter/solution_interfaces/srv/ItemAssessment.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",
@@ -142,6 +148,14 @@
     "/opt/ros/humble/share/std_msgs/msg/UInt64.idl",
     "/opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl",
     "/opt/ros/humble/share/std_msgs/msg/UInt8.idl",
-    "/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl"
+    "/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl",
+    "/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl"
   ]
 }

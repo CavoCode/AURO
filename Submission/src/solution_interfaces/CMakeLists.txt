@@ -12,16 +12,16 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 find_package(geometry_msgs REQUIRED)
+find_package(assessment_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Example.msg"
-  "msg/ItemAssessment.msg"
-  "msg/RobotStart.msg"
   "msg/RobotPubPosition.msg"
   "msg/StringWithPose.msg"
   "srv/RandomGoal.srv"
-  DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Example.msg
+  "srv/ItemAssessment.srv"
+  DEPENDENCIES geometry_msgs assessment_interfaces # Add packages that above messages depend on, in this case geometry_msgs for Example.msg
 )
 
 if(BUILD_TESTING)

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Utility rule file for solution_interfaces__cpp.
 
@@ -70,14 +70,6 @@ CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/ms
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/item_assessment.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__builder.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__struct.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__traits.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_start.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp
-CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
@@ -90,6 +82,10 @@ CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/sr
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__builder.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__struct.hpp
 CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__traits.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/item_assessment.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__builder.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__struct.hpp
+CMakeFiles/solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__traits.hpp
 
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -107,11 +103,10 @@ rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/Example.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/ItemAssessment.idl
-rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/RobotStart.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/RobotPubPosition.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/msg/StringWithPose.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/srv/RandomGoal.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: rosidl_adapter/solution_interfaces/srv/ItemAssessment.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -171,8 +166,16 @@ rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_cpp__arguments.json
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
+rosidl_generator_cpp/solution_interfaces/msg/example.hpp: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp
@@ -182,30 +185,6 @@ rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp: rosidl_
 
 rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/item_assessment.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/item_assessment.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__builder.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__struct.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__traits.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/robot_start.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/robot_start.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp
-
-rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
 
 rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
@@ -243,30 +222,38 @@ rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__struct.hpp: ros
 rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__traits.hpp
 
+rosidl_generator_cpp/solution_interfaces/srv/item_assessment.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/srv/item_assessment.hpp
+
+rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__builder.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__builder.hpp
+
+rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__struct.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__struct.hpp
+
+rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__traits.hpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__traits.hpp
+
 solution_interfaces__cpp: CMakeFiles/solution_interfaces__cpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/example__traits.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__builder.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__struct.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/item_assessment__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_pub_position__traits.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__builder.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__struct.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/robot_start__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/detail/string_with_pose__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/example.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/item_assessment.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_pub_position.hpp
-solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/robot_start.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/msg/string_with_pose.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__builder.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__struct.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/item_assessment__traits.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__builder.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__struct.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/detail/random_goal__traits.hpp
+solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/item_assessment.hpp
 solution_interfaces__cpp: rosidl_generator_cpp/solution_interfaces/srv/random_goal.hpp
 solution_interfaces__cpp: CMakeFiles/solution_interfaces__cpp.dir/build.make
 .PHONY : solution_interfaces__cpp
@@ -280,6 +267,6 @@ CMakeFiles/solution_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/solution_interfaces__cpp.dir/clean
 
 CMakeFiles/solution_interfaces__cpp.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/solution_interfaces__cpp.dir/depend
 

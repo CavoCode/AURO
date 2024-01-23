@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
@@ -18,13 +20,14 @@ class RandomisedGoalService(Node):
         # Extracting the initial position values
         x = request.x
         y = request.y
-
+        
+        self.get_logger().info(f'---------------------------------------------------------------------------------')
         self.get_logger().info(f'Incoming request for random goal...')
         self.get_logger().info(f'Current Point: X - {x} , Y - {y}')
 
         # Generating a random angle in radians
-        random_angle = random.uniform(-0.7853975, 0.7853975)
-        random_distance = random.uniform(0.5, 1.0)
+        random_angle = random.uniform(-0.5427975, 0.5427975)
+        random_distance = random.uniform(1.0, 1.5)
 
         # Calculating the new position on the robot's radius of between 0.5 and 1.0
         response.new_x = x + (random_distance * math.cos(random_angle))

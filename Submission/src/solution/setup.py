@@ -48,7 +48,7 @@ setup(
     entry_points={
         'console_scripts': [
             'robot_controller = solution.robot_controller:main',
-            'item_assessor = solution.item_assessor:main',
+            'item_assessor_service = solution.item_assessor_service:main',
             'randomised_goal_service = solution.randomised_goal_service:main',
             'robot_position = solution.robot_position_publisher:main',
             'data_logger=solution.data_logger:main'

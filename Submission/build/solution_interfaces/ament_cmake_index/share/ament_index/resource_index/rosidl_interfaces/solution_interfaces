@@ -1,13 +1,13 @@
 msg/Example.idl
 msg/Example.msg
-msg/ItemAssessment.idl
-msg/ItemAssessment.msg
 msg/RobotPubPosition.idl
 msg/RobotPubPosition.msg
-msg/RobotStart.idl
-msg/RobotStart.msg
 msg/StringWithPose.idl
 msg/StringWithPose.msg
+srv/ItemAssessment.idl
+srv/ItemAssessment.srv
+srv/ItemAssessment_Request.msg
+srv/ItemAssessment_Response.msg
 srv/RandomGoal.idl
 srv/RandomGoal.srv
 srv/RandomGoal_Request.msg

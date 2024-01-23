@@ -13,7 +13,8 @@ launch/solution_nav2_launch.py
 resource/solution
 solution/__init__.py
 solution/data_logger.py
-solution/item_assessor.py
+solution/item_assessor_service.py
+solution/item_assessor_servicev2.py
 solution/randomised_goal_service.py
 solution/robot_controller.py
 solution/robot_position_publisher.py

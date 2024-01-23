@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"solution_interfaces\" -Dsolution_interfaces__rosidl_generator_py_EXPORTS
 
-C_INCLUDES = -I/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_c -I/home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface
+C_INCLUDES = -I/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_c -I/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/include/assessment_interfaces
 
 C_FLAGS = -fPIC -Wall -Wextra
 

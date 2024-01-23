@@ -40,25 +40,42 @@ struct RobotPubPosition_
   explicit RobotPubPosition_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : pose(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->yaw = 0.0f;
+    }
   }
 
   explicit RobotPubPosition_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : pose(_alloc, _init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->yaw = 0.0f;
+    }
   }
 
   // field types and members
   using _pose_type =
     geometry_msgs::msg::Pose_<ContainerAllocator>;
   _pose_type pose;
+  using _yaw_type =
+    float;
+  _yaw_type yaw;
 
   // setters for named parameter idiom
   Type & set__pose(
     const geometry_msgs::msg::Pose_<ContainerAllocator> & _arg)
   {
     this->pose = _arg;
+    return *this;
+  }
+  Type & set__yaw(
+    const float & _arg)
+  {
+    this->yaw = _arg;
     return *this;
   }
 
@@ -105,6 +122,9 @@ struct RobotPubPosition_
   bool operator==(const RobotPubPosition_ & other) const
   {
     if (this->pose != other.pose) {
+      return false;
+    }
+    if (this->yaw != other.yaw) {
       return false;
     }
     return true;

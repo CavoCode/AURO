@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces
+CMAKE_SOURCE_DIR = /home/mc2148/AURO/Submission/src/solution_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces
+CMAKE_BINARY_DIR = /home/mc2148/AURO/Submission/build/solution_interfaces
 
 # Utility rule file for solution_interfaces.
 
@@ -66,14 +66,15 @@ include CMakeFiles/solution_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/solution_interfaces.dir/progress.make
 
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/Example.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/ItemAssessment.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/RobotStart.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/RobotPubPosition.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/msg/StringWithPose.msg
-CMakeFiles/solution_interfaces: /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces/srv/RandomGoal.srv
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/Submission/src/solution_interfaces/msg/Example.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/Submission/src/solution_interfaces/msg/RobotPubPosition.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/Submission/src/solution_interfaces/msg/StringWithPose.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/Submission/src/solution_interfaces/srv/RandomGoal.srv
 CMakeFiles/solution_interfaces: rosidl_cmake/srv/RandomGoal_Request.msg
 CMakeFiles/solution_interfaces: rosidl_cmake/srv/RandomGoal_Response.msg
+CMakeFiles/solution_interfaces: /home/mc2148/AURO/Submission/src/solution_interfaces/srv/ItemAssessment.srv
+CMakeFiles/solution_interfaces: rosidl_cmake/srv/ItemAssessment_Request.msg
+CMakeFiles/solution_interfaces: rosidl_cmake/srv/ItemAssessment_Response.msg
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -103,6 +104,14 @@ CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3.
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
 
 solution_interfaces: CMakeFiles/solution_interfaces
 solution_interfaces: CMakeFiles/solution_interfaces.dir/build.make
@@ -117,6 +126,6 @@ CMakeFiles/solution_interfaces.dir/clean:
 .PHONY : CMakeFiles/solution_interfaces.dir/clean
 
 CMakeFiles/solution_interfaces.dir/depend:
-	cd /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/GIT-SUBMISSION/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mc2148/AURO/Submission/build/solution_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/src/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces /home/mc2148/AURO/Submission/build/solution_interfaces/CMakeFiles/solution_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/solution_interfaces.dir/depend
 

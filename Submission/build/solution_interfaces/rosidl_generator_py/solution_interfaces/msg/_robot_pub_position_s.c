@@ -65,6 +65,15 @@ bool solution_interfaces__msg__robot_pub_position__convert_from_py(PyObject * _p
     }
     Py_DECREF(field);
   }
+  {  // yaw
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yaw = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -95,6 +104,17 @@ PyObject * solution_interfaces__msg__robot_pub_position__convert_to_py(void * ra
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "pose", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // yaw
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->yaw);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
