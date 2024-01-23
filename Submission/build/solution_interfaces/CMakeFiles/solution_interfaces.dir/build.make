@@ -104,14 +104,14 @@ CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3.
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/solution_interfaces: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
-CMakeFiles/solution_interfaces: /home/mc2148/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemLog.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolder.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemHolders.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Item.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/ItemList.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/HomeZone.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/Robot.idl
+CMakeFiles/solution_interfaces: /home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/share/assessment_interfaces/msg/RobotList.idl
 
 solution_interfaces: CMakeFiles/solution_interfaces
 solution_interfaces: CMakeFiles/solution_interfaces.dir/build.make

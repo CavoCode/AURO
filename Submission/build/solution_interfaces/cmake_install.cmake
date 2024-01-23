@@ -70,7 +70,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_c.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_c.so")
@@ -97,7 +97,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_c.so")
@@ -128,7 +128,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_fastrtps_cpp.so")
@@ -155,7 +155,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_c.so")
@@ -178,7 +178,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_c.so")
@@ -205,7 +205,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_cpp.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_introspection_cpp.so")
@@ -228,7 +228,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_cpp.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_typesupport_cpp.so")
@@ -275,7 +275,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
@@ -298,7 +298,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
@@ -321,7 +321,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces/rosidl_generator_py/solution_interfaces:/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/solution_interfaces/solution_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
@@ -344,7 +344,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_py.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_py.so"
-         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/auro-practicals/install/assessment_interfaces/lib:"
+         OLD_RPATH "/home/mc2148/AURO/Submission/build/solution_interfaces:/opt/ros/humble/lib:/home/mc2148/ROS2-additionals/auro-practicals/install/assessment_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsolution_interfaces__rosidl_generator_py.so")
