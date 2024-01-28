@@ -129,14 +129,14 @@ def generate_launch_description():
                           'rviz_config': rviz_config,
                           'rviz_windows': rviz_windows,
                           'obstacles': 'true',
-                          'item_manager': 'false',
+                          'item_manager': 'true',
                           'random_seed': random_seed,
                           'use_nav2': 'True',
                           'map': map,
                           'params_file': params,
                           'headless': 'false',
                           'limit_real_time_factor': 'true',
-                          'wait_for_items': 'false',
+                          'wait_for_items': 'true',
                           # 'extra_gazebo_args': '--verbose',
                           }.items()
     )
