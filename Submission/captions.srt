@@ -1,0 +1,261 @@
+1
+00:00:01,450 --> 00:00:06,420
+This is an autonomous robotics demonstration for
+Ros two using my solution towards the
+
+2
+00:00:06,420 --> 00:00:11,700
+assessment. First locate where
+we have downloaded the submission files which
+
+3
+00:00:11,700 --> 00:00:16,680
+contain our source code. First you
+want to extract the folder,
+
+4
+00:00:17,760 --> 00:00:25,620
+within this zip file, unzipping the file
+you will find four items. The first bing readme.txt
+
+5
+00:00:25,620 --> 00:00:30,060
+,which contains all the information
+needed to set up the environment.
+
+6
+00:00:30,060 --> 00:00:36,480
+Making it ready to use and test our package
+on the assessment.
+
+7
+00:00:36,480 --> 00:00:42,300
+Going back we have the src folder 
+containing the program files for our solution.
+
+8
+00:00:42,300 --> 00:00:47,280
+You will need to copy this src folder
+into a new workspace folder.
+
+9
+00:00:47,280 --> 00:00:50,650
+Let's call the workspace 'solution'.
+
+10
+00:00:52,350 --> 00:00:57,870
+And within this folder 
+paste the src folder.
+
+11
+00:00:57,870 --> 00:01:03,480
+It will have the package folders 
+and source code required inside.
+
+12
+00:01:03,480 --> 00:01:06,060
+Now opening
+up a terminal.
+
+13
+00:01:06,850 --> 00:01:19,070
+Let's navigate into the solutions folder
+and check that our src is there.
+
+14
+00:01:19,070 --> 00:01:24,680
+Good. Then we use Colcon Build to
+build the packages, and this should take only a
+
+15
+00:01:24,680 --> 00:01:26:880
+couple
+of moments.
+
+16
+00:01:27,200 --> 00:01:31,790
+And just check that that has created
+the build, install and log folders containing
+
+17
+00:01:31,790 --> 00:01:33,889
+everything to
+run our packages.
+
+18
+00:01:33,889 --> 00:01:38,720
+Next we need to source
+install/local_setup.bash 
+
+19
+00:01:38,720 --> 00:01:44,750
+This allows us to call our
+our program packages in ROS2.
+
+20
+00:01:44,750 --> 00:01:50,900
+Then clear the screen for easier use (optional)
+
+21
+00:01:50,900 --> 00:01:54,350
+Check that Ros two is running
+in this terminal. Yep it is.
+
+22
+00:01:54,350 --> 00:01:59,060
+And then Ros two launch
+solution and then launch the solution.
+
+23
+00:01:59,060 --> 00:02:03,350
+Using the launch file
+solution_nav_launch.py
+
+24
+00:02:03,350 --> 00:02:07,790
+You can also set the number of
+robots here though defaults to one.
+
+25
+00:02:07,790 --> 00:02:13,430
+By typing num_robots := and the
+number you can set it between one, two and
+
+26
+00:02:13,430 --> 00:02:19,730
+three. For the purpose of this demo, we
+will be using two robots with our
+
+27
+00:02:19,730 --> 00:02:22,520
+package: the solution
+towards the assessment.
+
+28
+00:02:24,070 --> 00:02:28:020
+And we will
+let that run.
+
+29
+00:02:34,520 --> 00:02:39,760
+Skipping ahead a little bit.
+So after it's all loaded up.
+
+30
+00:02:39,760 --> 00:02:45,460
+Here are our two robots already in motion, 
+heading towards items for retrieval.
+
+31
+00:02:45,460 --> 00:02:49,690
+So they have detected items in
+the environment and are heading towards them.
+
+32
+00:02:49,690 --> 00:02:53,440
+So we have robot one on the
+left and robot two on the right.
+
+33
+00:02:53,440 --> 00:02:59,320
+Let's look at robot one, you can
+see it is picking up an item, and it is
+
+34
+00:02:59,320 --> 00:03:01,750
+just coming to the end
+of where it's determined path.
+
+35
+00:03:01,750 --> 00:03:06,190
+Reaching its goal, and it should then
+set a position back in the home zone to
+
+36
+00:03:06,190 --> 00:03:11,110
+immediately navigate down towards. This happens as soon
+as a robot is holding an item and
+
+37
+00:03:11,110 --> 00:03:14,860
+has reached any goal,
+and is constantly checked.
+
+38
+00:03:18,310 --> 00:03:24,070
+Now let's look at robot two.
+Robot two is nearing the goal position.
+
+39
+00:03:24,070 --> 00:03:26,200
+on a green item.
+
+40
+00:03:26,200 --> 00:03:32,950
+And due to longer distances, there can be 
+little inaccuracies in location of items
+
+41
+00:03:32,950 --> 00:03:35,890
+Not getting close enough to retrieve.
+
+42
+00:03:35,890 --> 00:03:39,580
+However, as it's right there
+it ends up searching because no items can be fully seen
+
+43
+00:03:39,580 --> 00:03:45,279
+And by nature, it will run into it 
+as it navigates to a new position due to turning.
+
+44
+00:03:45,279 --> 00:03:48,610
+It just means it's delayed home by
+a position.
+
+45
+00:03:48,610 --> 00:03:54,160
+Meanwhile robot one has reached the
+home goal, we can now see it turning
+
+46
+00:03:54,160 --> 00:03:59,230
+around, ready to navigate to more items. And
+it has identified some red items and it is
+
+47
+00:03:59,230 --> 00:04:05,860
+heading there now, whereas robot two has
+reached that randomised point and is now closer
+
+48
+00:04:05,860 --> 00:04:13,810
+to home, and to now realises it is
+holding an item and will navigate directly down to
+
+49
+00:04:13,810 --> 00:04:18,970
+drop this off. Meanwhile, Robot one
+has now picked up another red item.
+
+50
+00:04:21,390 --> 00:04:24,930
+And has immediately decided that
+it needs to go home.
+
+51
+00:04:24,930 --> 00:04:29,640
+Robot two has now reached home and
+dropped off the item, allowing it to respawn.
+
+52
+00:04:30,720 --> 00:04:36,360
+This has all happened within 25 seconds
+of simulation time to 4min real-time
+
+53
+00:04:36,360 --> 00:04:40,420
+A little slow due to computational limitations, 
+but shows an effective autonomous system. Thank you.
+
