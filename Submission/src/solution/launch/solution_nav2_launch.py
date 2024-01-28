@@ -129,7 +129,7 @@ def generate_launch_description():
                           'rviz_config': rviz_config,
                           'rviz_windows': rviz_windows,
                           'obstacles': 'true',
-                          'item_manager': 'true',
+                          'item_manager': 'false',
                           'random_seed': random_seed,
                           'use_nav2': 'True',
                           'map': map,
